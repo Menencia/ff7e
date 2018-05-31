@@ -1,0 +1,527 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
+
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+/** DESIGN TWO COLUMNS **/
+
+header {
+    background: url(/assets/fanart/000-the-prelude.jpg) top left #464646;
+    text-align: center;
+    color: #aaa;
+}
+
+.header-main {
+    padding: 30px 0;
+}
+
+.header-nav {
+    padding-bottom: 30px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 1.3em;
+    vertical-align: middle;
+}
+
+nav ul li:hover {
+}
+
+nav a, nav a:visited {
+    text-decoration: none;
+    color: #aaa;
+}
+
+nav a:hover {
+    color: #ccc;
+    text-decoration: underline;
+}
+
+nav a.current {
+    color: #ccc;
+    font-size: 1.5em;
+}
+
+.page {
+    padding: 30px 0;
+    background-color: #fff;
+}
+
+.teaser {
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+/**  TEASER **/
+
+.embed-responsive {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.embed-responsive.embed-responsive-16by9 {
+    padding-bottom: 56.25%;
+}
+
+.embed-responsive-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/** COMBINED vIEWS **/
+
+.cover {
+    box-shadow: #eee 2px 1px 2px 1px;
+}
+
+footer {
+    background: url(/assets/fanart/000-the-prelude.jpg) top right #999;
+    padding: 30px 0;
+    font-size: 1.5em;
+    color: #eee;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer a {
+    line-height: 1.8em;
+    color: #ddd;
+}
+
+footer a:hover {
+    color: #eee;
+    text-decoration: none;
+    border-bottom: 1px dotted #eee;
+}
+
+/* Hack pour magnificPopup */
+
+figure {
+    margin: 0;
+}
+
+/** GENERAL **/
+
+h1 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+    color: #fff;
+    font-size: 2.2em;
+    margin: 0;
+}
+
+fieldset {
+    border: 0;
+    border-top: 1px solid #3d73a9;
+}
+
+legend {
+    font-size: 1.6em;
+    color: #3d73a9;
+}
+
+.lead {
+    font-size: 1.6em;
+    text-align: justify;
+    color: #666;
+    line-height: 1.4em;
+}
+
+.quote {
+    font-size: 1.6em;
+    text-align: justify;
+    color: #999;
+    margin: 2em 1em;
+    padding: 0 10px;
+    line-height: 1.4em;
+}
+
+.quote span {
+    color: #3d73a9;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.info {
+    font-size: 1.6em;
+    text-align: justify;
+    color: #666;
+    line-height: 1.4em;
+}
+
+.label {
+    font-size: 0.7em;
+    margin: 0 2px;
+    display: inline-block;
+    padding: 0 4px;
+    border-radius: 4px;
+    vertical-align: 10%;
+    line-height: normal;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+}
+
+hr {
+    margin-top: 75px;
+    border: none;
+}
+
+/** HOME LIST STYLE **/
+
+ul.list {
+    list-style: none;
+    padding: 0;
+}
+
+ul.list li {
+    border-left: 3px solid #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-top: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+ul.list li a {
+    display: block;
+    text-decoration: none;
+}
+
+.icon {
+    position: absolute;
+    opacity: 0.1;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    display: none;
+}
+
+.li-first {
+    font-size: 1.5em;
+    line-height: 2em;
+    color: #666;
+}
+
+.li-warning {
+    font-size: 1.2em;
+    line-height: 2em;
+    color: #900;
+}
+
+.li-second {
+    font-size: 1.3em;
+    margin-left: 5px;
+    color: #999;
+}
+
+.button {
+    float: right;
+    font-size: 1.4em;
+    line-height: 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    color: #ddd;
+
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-top: 3px solid #fefefe;
+    padding: 0 6px;
+    font-weight: bold;
+    background-color: #fefefe;
+    box-shadow: #ddd 0 1px 1px 0;
+}
+
+.button:before {
+    content: " ";
+}
+
+.button2 {
+    font-size: 1.4em;
+    line-height: 2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    color: #999;
+
+    border: 1px solid #ddd;
+    padding: 0 6px;
+    font-weight: bold;
+    background-color: #fefefe;
+    box-shadow: #ddd 0 1px 1px 0;
+}
+
+.button2:before {
+    content: " ";
+}
+
+.right li:hover .button {
+    color: #666;
+}
+
+/** HOME LIST HOVER **/
+
+ul.list li:hover {
+    background-color: #f5f5f5;
+}
+
+ul.list li.nolink:hover {
+    cursor: default;
+}
+
+ul.list li:hover .button {
+    color: #444;
+}
+
+ul.list li:hover .button:before {
+    content: url('/assets/cursor.png');
+    position: relative;
+    top: 2px;
+    right: 2px;
+    animation: cursorMove 1s linear infinite;
+    -webkit-animation: cursorMove 1s linear infinite;
+}
+
+.button2:hover {
+    color: #444;
+}
+
+.button2:hover:before {
+    content: url('/assets/cursor.png');
+    position: relative;
+    top: 2px;
+    right: 2px;
+    animation: cursorMove 1s linear infinite;
+    -webkit-animation: cursorMove 1s linear infinite;
+}
+
+@keyframes cursorMove {
+    50% {
+        right: 6px;
+    }
+    100% {
+        right: 2px;
+    }
+}
+
+@-webkit-keyframes cursorMove {
+    50% {
+        right: 6px;
+    }
+    100% {
+        right: 2px;
+    }
+}
+
+/**
+ * HISTORY
+ */
+
+.line {
+    text-align: center;
+}
+
+/**
+ * LIST FOOTER
+ */
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer ul li.muted {
+    margin: 0 5px;
+    color: #fff;
+}
+
+/**
+ * CHAPTERS STYLE
+ */
+
+.chapters {
+    text-align: left;
+}
+
+.chapter {
+    display: inline-block;
+    margin: 5px;
+    width: 200px;
+    height: 150px;
+    position: relative;
+    border: none;
+    box-shadow: #999 2px 2px 2px;
+}
+
+.chapter .legend {
+    position: absolute;
+    left: 0;
+    right: 0;
+    color: #fff;
+    background-color: #000;
+    opacity: 0.7;
+    padding: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    text-decoration: none;
+    height: 18px;
+}
+
+.chapter .legend .details {
+    opacity: 0;
+    height: 0;
+    font-size: 12px;
+    color: #bbb;
+}
+
+.chapter:hover .legend .details {
+    opacity: 1;
+    height: auto;
+    -webkit-transition: opacity 0.4s ease;
+}
+
+.chapter:hover .legend {
+    height: 36px;
+    -webkit-transition: height 0.2s ease;
+}
+
+.chapter .screen {
+    position: absolute;
+    left: 0;
+    -webkit-filter: sepia(60%);
+    -moz-filter: sepia(60%);
+    -o-filter: sepia(60%);
+    -ms-filter: sepia(60%);
+    filter: sepia(60%);
+}
+
+.chapter:hover .screen {
+    -webkit-filter: sepia(0%);
+    -moz-filter: sepia(0%);
+    -o-filter: sepia(0%);
+    -ms-filter: sepia(0%);
+    filter: sepia(0%);
+}
+
+h2 a, h2 a:visited {
+    color: #999;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+h2 a:hover {
+    color: #444;
+}
+
+/* RIBBON */
+.ribbon {
+    position: absolute;
+    right: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px; height: 75px;
+    text-align: right;
+}
+.ribbon span {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 100px;
+    display: block;
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; right: -21px;
+}
+.ribbon span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+}
+.ribbon span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+}
+
+/* RIBBON SPECIAL */
+.special span {
+    background: linear-gradient(#F6005E 0%, #BA0047 100%);
+}
+.special span::before {
+    border-left: 3px solid #BA0047;
+    border-top: 3px solid #BA0047;
+}
+.special span::after {
+    border-right: 3px solid #BA0047;
+    border-top: 3px solid #BA0047;
+}
+
+/* RIBBON FEATURED */
+.featured span {
+    background: linear-gradient(#008DA1 0%, #006B7A 100%);
+}
+.featured span::before {
+    border-left: 3px solid #006B7A;
+    border-top: 3px solid #006B7A;
+}
+.featured span::after {
+    border-right: 3px solid #006B7A;
+    border-top: 3px solid #006B7A;
+}
+
+.featured2 {
+    color: #fff;
+    background-color: #3d73a9;
+}
+
+.lang-en {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    font-variant: small-caps;
+}
+
+.uk-icon-refresh:hover {
+    cursor: pointer;
+    font-weight: bold;
+}

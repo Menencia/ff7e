@@ -1,0 +1,495 @@
+[
+  {
+      "book": 1,
+      "chapters": [
+          {
+              "title": "Prologue",
+              "number": 0,
+              "date": "7 juin 2014",
+              "id": "14l3Qc4Te3cMgPWfZM2qFOd7mjx_fS8yCYHqnYMNgFcA"
+          },
+          {
+              "title": "Chapitre 1 : Avalanche",
+              "number": 1,
+              "date": "22 mai 2011",
+              "id": "1AE8Gmw8Cm4n8ciynbaOePoNjqOPKXJeQJyh03Txrem4"
+          },
+          {
+              "title": "Chapitre 2 : Le Septième Ciel",
+              "number": 2,
+              "date": "17 oct 2011",
+              "id": "1E0lgJ6-khxmH801-z1SQrx0ruJz26Kp0yKEcyNrW2Lk"
+          },
+          {
+              "title": "Chapitre 3 : Opération réacteur numéro 5",
+              "number": 3,
+              "date": "17 oct 2011",
+              "id": "1xeHsRrzsyILU7C56MYpubJzHcZUV_L2p86DXZDZmQX0"
+          },
+          {
+              "title": "Chapitre 4 : Aerith",
+              "number": 4,
+              "date": "17 oct 2011",
+              "id": "1U1HunmqJicZUFYpJGt09jk1Id9eODbKTP5oZ4joKCo8"
+          },
+          {
+              "title": "Chapitre 5 : Don Cornéo",
+              "number": 5,
+              "date": "17 oct 2011",
+              "id": "1OyaCdaflu37ZPYO6gDZ5ms8dU7ZHb1U8OmgiIKGAI6Q"
+          },
+          {
+              "title": "Chapitre 6 : La bataille du secteur 7",
+              "number": 6,
+              "date": "17 oct 2011",
+              "id": "1jeAxZmYXnB2kk17GEB9hecnDrdx9HqlzJOyYk7cKC34"
+          },
+          {
+              "title": "Chapitre 7 : Le Secret d’Aerith",
+              "number": 7,
+              "date": "17 oct 2011",
+              "id": "1oHkyu5KS12JeFWB6viYUXiOOIzOQD-Uo8OvjV7BN3_U"
+          },
+          {
+              "title": "Chapitre 8 : Au cœur de la Shinra",
+              "number": 8,
+              "date": "17 oct 2011",
+              "id": "1qrTpNq83QC7xy77uKqMW9GQs6JboiTRJw2azgkHVVmo"
+          },
+          {
+              "title": "Chapitre 9 : La Terre Promise",
+              "number": 9,
+              "date": "17 oct 2011",
+              "id": "1cI4YiR_wp7HiYZVs-tvfWYnbD2Z0X7ZYUgL55VTXTIo"
+          },
+          {
+              "title": "Chapitre 10 : L’Héritier",
+              "number": 10,
+              "date": "17 oct 2011",
+              "id": "1Pu2lG5q1Y-MJv-Jlj8ZQZZyuhTgJ0sm6XydeMUrNboA"
+          },
+          {
+              "title": "Chapitre 11 : Evasion",
+              "number": 11,
+              "date": "17 oct 2011",
+              "id": "1KQG9moxR7e8EWNkTyBXa8MC4AGkSY4CgKwrUPg1unMU"
+          }
+      ]
+  },
+  {
+      "book": 2,
+      "chapters": [
+          {
+              "title": "Chapitre 12 : L’Homme au Manteau Noir",
+              "number": 12,
+              "date": "21 mars 2012",
+              "id": "1dOC92qM_hjD0xYUDoewsWqJk6hXnytpvxfZnvfZSCHY"
+          },
+          {
+              "title": "Chapitre 13 : Nibelheim",
+              "number": 13,
+              "date": "21 mars 2012",
+              "id": "1Ogo4ZBCrblsrZsOKFP_bSkzPCvt5v1yoN__sZKlUPQU"
+          },
+          {
+              "title": "Chapitre 14 : Le réacteur de Nibelheim",
+              "number": 14,
+              "date": "21 mars 2012",
+              "id": "1Sc-DOaQVVDlpf6DtI3obxdWs7U_A4Q4wdxRbb53wI1I"
+          },
+          {
+              "title": "Chapitre 15 : Le Projet Jenova",
+              "number": 15,
+              "date": "21 mars 2012",
+              "id": "1Ydq0lFbEYB4CpABZlhvCMBhzwaDf7NjjUoeIyBrn1WQ"
+          },
+          {
+              "title": "Chapitre 16 : Les grandes plaines",
+              "number": 16,
+              "date": "4 juil 2012",
+              "id": "1lUMq7hpDOVkuEV6YZY7hGDKyfy3rqxL7iSjvJjCF1BE"
+          },
+          {
+              "title": "Chapitre 17 : La ferme des Chocobos",
+              "number": 17,
+              "date": "4 juil 2012",
+              "id": "1rbQvYUbbR6NlRGkQ697FtgpyNsBger8qQQ690J_WQmk"
+          },
+          {
+              "title": "Chapitre 18 : Cap vers l’Ouest",
+              "number": 18,
+              "date": "4 juil 2012",
+              "id": "1H3q4rLWTF19Xq88puRJLKWwZbBlApSIJ62xuR3vh-rI"
+          },
+          {
+              "title": "Chapitre 19 : L’Apprentie Ninja",
+              "number": 19,
+              "date": "4 juil 2012",
+              "id": "1sl_JhYDFA_w17YoBzqingKV0HfFkmj7FyRyVsIwRHDw"
+          },
+          {
+              "title": "Chapitre 20 : Junon",
+              "number": 20,
+              "date": "20 août 2012",
+              "id": "136beoRyI899t7orlx991MJz2l02VCvQlpAzolpZhct4"
+          },
+          {
+              "title": "Chapitre 21 : La traversée",
+              "number": 21,
+              "date": "20 août 2012",
+              "id": "1wiTVhY253-u0GrnpSQfTWjNiy9Vae-HcG_vXl2H9_ZQ"
+          }
+      ]
+  },
+  {
+      "book": 3,
+      "chapters": [
+          {
+              "title": "Chapitre 22 : Costa Del Sol",
+              "number": 22,
+              "date": "7 mars 2013",
+              "id": "10NlN3mwdcTEsRlgnJnQpW1v1gRPN9h0enKAdDsL9zJg"
+          },
+          {
+              "title": "Chapitre 23 : Corel",
+              "number": 23,
+              "date": "7 avril 2013",
+              "id": "1wAf5jmy2gnUzjFaefU_RGdiYE2k5dX_NP86HLJyj-4U"
+          },
+          {
+              "title": "Chapitre 24 : Le passé de Barret",
+              "number": 24,
+              "date": "7 mai 2013",
+              "id": "1XKTduNraBZZ-wiifn8eBp3zOiO3ASzaRJjvZV--kRW4"
+          },
+          {
+              "title": "Chapitre 25 : Le Gold Saucer",
+              "number": 25,
+              "date": "7 juin 2013",
+              "id": "1jMYHKkJ85IwnfDsFEaSnlNwuEivHs0eDnxYzciY-kDw"
+          },
+          {
+              "title": "Chapitre 26 : La prison du désert",
+              "number": 26,
+              "date": "7 juillet 2013",
+              "id": "1f8OF0y78uwzOnT6iaM0NrHEyslrpm37emMZrzka8DuI"
+          },
+          {
+              "title": "Chapitre 27 : Course de chocobos",
+              "number": 27,
+              "date": "7 août 2013",
+              "id": "1xQd0yhI-dJl-QOtU047OCddtDWEZtXn8KTH2FFS2LC4"
+          },
+          {
+              "title": "Chapitre 28 : Gongaga",
+              "number": 28,
+              "date": "7 septembre 2013",
+              "id": "1pgd17y3utSaXuEOY4lxwFyMzwIF8km-JmCJhyFpjY-c"
+          },
+          {
+              "title": "Chapitre 29 : Cosmo Canyon",
+              "number": 29,
+              "date": "7 octobre 2013",
+              "id": "17nbCmIJ3uD5_SDC8LrfY-q0fJSdZ2JEbce1G3DGT1io"
+          },
+          {
+              "title": "Chapitre 30 : Un grand guerrier",
+              "number": 30,
+              "date": "7 novembre 2013",
+              "id": "1NvDEV4gnSwwuX1D_O42ofqK3ER052YhvvkOR73v3CZU"
+          },
+          {
+              "title": "Chapitre 31 : Retour à Nibelheim",
+              "number": 31,
+              "date": "7 décembre 2013",
+              "id": "1x8fXKUAQNWcG87KRPWdALZGdEjnCDvXyzeH5FWQ0p7g"
+          },
+          {
+              "title": "Chapitre 32 : Vincent Valentine",
+              "number": 32,
+              "date": "7 janvier 2014",
+              "id": "123XaEA--VnLAHcgG04zyaxz6klGS27-Fwty83xdQgfU"
+          }
+      ]
+  },
+  {
+      "book": 4,
+      "chapters": [
+          {
+              "title": "Chapitre 33 : Village-Fusée",
+              "number": 33,
+              "date": "7 février 2014",
+              "id": "1eYRwJ2Co4q97bh4py4U-0iQQfSaPjePnx8u87DZKy-4"
+          },
+          {
+              "title": "Chapitre 34 : Le Tiny Bronco",
+              "number": 34,
+              "date": "7 février 2014",
+              "id": "1fOB7XIKgCZL2PZYA0Kv9gXQhgFAml4h5rpQjoJB3d5A"
+          },
+          {
+              "title": "Chapitre 35 : Wutai",
+              "number": 35,
+              "date": "7 mars 2014",
+              "id": "1uwCISd0OesD7CcUYtOq8CwlY7E8BoYJiO6WCIJUchOo"
+          },
+          {
+              "title": "Chapitre 36 : Une Alliance Inattendue",
+              "number": 36,
+              "date": "7 avril 2014",
+              "id": "1hCu4xPviCRWWtyTJ_30pK99fRwwAVq1MDmE9E4DrZuI"
+          },
+          {
+              "title": "Chapitre 37 : La Clé de Pierre",
+              "number": 37,
+              "date": "7 mai 2014",
+              "id": "14eGQCLcknJmNJSQEOdBq9c5YnUAeO_JxSo4b7ZBoDzE"
+          },
+          {
+              "title": "Chapitre 38 : Attractions",
+              "number": 38,
+              "date": "7 juin 2014",
+              "id": "1NObHpsQZAMPW45v2j5N8n54lxJLTOveSubnZ2bUmZ1I"
+          },
+          {
+              "title": "Chapitre 39 : Le Temple des Anciens",
+              "number": 39,
+              "date": "7 juillet 2014",
+              "id": "1lGhFemeTSeYBHGLtSNbIuGoQ4s-qn4cv8Rif9i3nJhE"
+          },
+          {
+              "title": "Chapitre 40 : La Matéria Noire",
+              "number": 40,
+              "date": "7 juillet 2014",
+              "id": "1iyNKUqtL1fVBUnrXXZZwy3tcBuxYlO41689nh7ufQXs"
+          },
+          {
+              "title": "Chapitre 41 : Hésitations",
+              "number": 41,
+              "date": "7 août 2014",
+              "id": "1CYMo2vgtIntmOwweUQnkQaI_mBqGzfWspIXVvmvylWM"
+          },
+          {
+              "title": "Chapitre 42 : La Harpe Lunaire",
+              "number": 42,
+              "date": "7 septembre 2014",
+              "id": "1O5CGanNj6PnsnUmQ7VQKUMiS8pKYBEHiZX3zZTyiY58"
+          },
+          {
+              "title": "Chapitre 43 : La Capitale Oubliée",
+              "number": 43,
+              "date": "7 octobre 2014",
+              "id": "1IMxVeQKIV-AU13L-jZi6L_nZK4Bt0getb_Ym_FjPQoE"
+          }
+      ]
+  },
+  {
+      "book": 5,
+      "chapters": [
+          {
+              "title": "Chapitre 44 : Gast et Ifalna",
+              "number": 44,
+              "date": "7 novembre 2014",
+              "id": "1WewAo3BZDNz3Hv0NoKmLyZNrm6hckT7mKZzComQPZ3I"
+          },
+          {
+              "title": "Chapitre 45 : Tempête de neige",
+              "number": 45,
+              "date": "7 décembre 2014",
+              "id": "12CPD2B61CHdkFsIxRB6C_HPHlWgiiMirA267LFCgqZA"
+          },
+          {
+              "title": "Chapitre 46 : Ascension",
+              "number": 46,
+              "date": "7 janvier 2015",
+              "id": "1r7MEh48E9bvEXsq29S5QW4YP56GNPRy8Tgfmo_9QGYQ"
+          },
+          {
+              "title": "Chapitre 47 : Terra Incognita",
+              "number": 47,
+              "date": "7 février 2015",
+              "id": "1EXFXSxBMEmVLO_5WfXZM8cXGOfkW_El-Soi-vLZMW7Q"
+          },
+          {
+              "title": "Chapitre 48 : Illusion",
+              "number": 48,
+              "date": "7 mars 2015",
+              "id": "1fCb526VObRQnIt3vkeGaHZAfr3h6GDIgSVVlXwkDoRg"
+          },
+          {
+              "title": "Chapitre 49 : Réunion",
+              "number": 49,
+              "date": "7 avril 2015",
+              "id": "1xV5evhbJbgg2G9zo5FFMCHBHqLi5Na3TpEcpCjVGopc"
+          },
+          {
+              "title": "Chapitre 50 : Châtiment",
+              "number": 50,
+              "date": "7 mai 2015",
+              "id": "1hImkzyuPr-hKv81fs31u_KiJ-GzYXO_k0TwM-YjCTaE"
+          },
+          {
+              "title": "Chapitre 51 : Raid sur Junon",
+              "number": 51,
+              "date": "7 juin 2015",
+              "id": "1bppRSuZKABPghJfkjpVYotGO7v8Sq-qQSNZTkdBINaw"
+          },
+          {
+              "title": "Chapitre 52 : À bord du Hautvent",
+              "number": 52,
+              "date": "7 juillet 2015",
+              "id": "1X-LsanlXOZasFJnCgrkF1jR13COqSZgoQ2qVb8bAYMI"
+          },
+          {
+              "title": "Chapitre 52.5 : Souvenirs inoubliables",
+              "number": 52.5,
+              "date": "24 décembre 2015",
+              "id": "1u-oOmkoXAPJerNW2PRn_NSFE7zMPGZtWFUolePbEPUQ",
+              "special": true
+          },
+          {
+              "title": "Chapitre 53 : Mideel",
+              "number": 53,
+              "date": "7 septembre 2015",
+              "id": "1kZS4lYgDP3OrsCNRGFlTGxO0Yew2DTU1-TsaAsjpjJA"
+          }
+      ]
+  },
+  {
+      "book": 6,
+      "chapters": [
+          {
+              "title": "Chapitre 54 : La prochaine étape",
+              "number": 54,
+              "date": "7 octobre 2015",
+              "id": "139nHKxS_iTYlkRZ5BX1bMrBESw-0FwKv4U95v_DLtSo"
+          },
+          {
+              "title": "Chapitre 55 : À toute vitesse !",
+              "number": 55,
+              "date": "7 novembre 2015",
+              "id": "1gvxcCe3ntWPMP9udqL2yLx_b5jixkba5Iiahg1gR7qg"
+          },
+          {
+              "title": "Chapitre 56 : Fort Condor",
+              "number": 56,
+              "date": "7 décembre 2015",
+              "id": "1XUZ_Z0zmxLxVk9xXyW7WMCQe9hr17bx3S5jEmRHn_ZE"
+          },
+          {
+              "title": "Chapitre 57 : Préparatifs",
+              "number": 57,
+              "date": "7 décembre 2015",
+              "id": "1bX_iZ8D7rkarIocY0qfa2R6-uVwQfkTnw-hHNrG61GM"
+          },
+          {
+              "title": "Chapitre 58 : L'étoffe des héros",
+              "number": 58,
+              "date": "7 janvier 2016",
+              "id": "1hIPqgSc-hn85SSk1U76gtMrV5vQYmSRk_onPVADxHhs"
+          },
+          {
+              "title": "Chapitre 59 : Cataclysme",
+              "number": 59,
+              "date": "7 février 2016",
+              "id": "1qPz1oH_sSIT0IPdL3_cdAUmXnaFVaLtoZ8vZ-rZ3m-0"
+          },
+          {
+              "title": "Chapitre 60 : Introspection",
+              "number": 60,
+              "date": "7 mars 2016",
+              "id": "10go496nXVTmO8GbIZLcD1mVDm3cxMfslGtg2hKBktBE"
+          },
+          {
+              "title": "Chapitre 61 : La vérité",
+              "number": 61,
+              "date": "7 mars 2016",
+              "id": "15iHLWaw86NK_u9dGC7NKrL4EoMIVt-4dE2DjG8ZAIH0"
+          },
+          {
+              "title": "Chapitre 62 : Retour en piste",
+              "number": 62,
+              "date": "7 avril 2016",
+              "id": "1xb-acUuFRWXsjqqhQQAfYTiCx7PLY3jtC1XwQThGey4"
+          },
+          {
+              "title": "Chapitre 62.5 : Le professionnel",
+              "number": 62.5,
+              "date": "24 décembre 2016",
+              "id": "1zsZaB8EaGJzSXaP2y5EGuHQR_ijy984Vxq1MgjhCyu8",
+              "special": true
+          }
+      ]
+  },
+  {
+      "book": 7,
+      "chapters": [
+          {
+              "title": "Chapitre 63 : Réseau Shinra",
+              "number": 63,
+              "date": "7 mai 2016",
+              "id": "1rh40lQnhm_TboVvgJ8Mmjvd_T3tCCyiqctVDZXLit8U"
+          },
+          {
+              "title": "Chapitre 64 : À l’attaque !",
+              "number": 64,
+              "date": "7 juin 2016",
+              "id": "1EdSxTon7oDPmw4fso8KUJFl8E3MDRx2hRPy4bVWG1RI"
+          },
+          {
+              "title": "Chapitre 65 : La base sous-marine",
+              "number": 65,
+              "date": "7 juillet 2016",
+              "id": "1J522sEFYt1ffs96NkEHU345fTa1PS2sUo5UoYZ65lyA"
+          },
+          {
+              "title": "Chapitre 66 : Bataille navale",
+              "number": 66,
+              "date": "7 août 2016",
+              "id": "1OnZwE39ebvsnvvaJlE35d4HXBWwkkwbdiOWaCuSk5Sk"
+          },
+          {
+              "title": "Chapitre 67 : Choix difficiles",
+              "number": 67,
+              "date": "7 septembre 2016",
+              "id": "11sF47vtbRpB6ug0SGP7yyClE_Mfv6a4TXkv0KmxOzuA"
+          },
+          {
+              "title": "Chapitre 68 : Fusée Shinra n°26",
+              "number": 68,
+              "date": "7 octobre 2016",
+              "id": "1kpsM-YsSdReBLXhE0jrLX3-Q65hkPct9U36MjQ0Mjxk"
+          },
+          {
+              "title": "Chapitre 69 : Microgravité",
+              "number": 69,
+              "date": "7 novembre 2016",
+              "id": "11LOMpQSx18NK_t66QSvdaP7s8Vclij35n13DJweNmFA"
+          },
+          {
+              "title": "Chapitre 70 : La Forêt Ancestrale",
+              "number": 70,
+              "date": "7 décembre 2016",
+              "id": "1ImQPb-n1mwIrabchPVFOHPiG3cluZNOXYRiPaZ4Nmo0"
+          },
+          {
+              "title": "Chapitre 71 : Le cercle de vie",
+              "number": 71,
+              "date": "7 janvier 2017",
+              "id": "1mq7Dfa6q7DCeIFif0NffQDlVI6wAm0OgmoPfFeVZqDo"
+          }
+      ]
+  },
+  {
+      "book": 8,
+      "chapters": [
+          {
+              "title": "Chapitre 72 : La sagesse de Bugenhagen",
+              "number": 72,
+              "date": "7 février 2017",
+              "id": "1Wi6Dzp74-FqgPBQxuKRjeA_d6BzLIFg-le8FnC78hUs",
+              "featured": true
+          }
+      ]
+  }
+]

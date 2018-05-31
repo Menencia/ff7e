@@ -1,0 +1,33 @@
+<div class="uk-grid">
+  <div class="uk-width-1-1@s uk-width-1-3@m">
+      <img src="/assets/covers/ff7e.jpg" alt="" class="uk-thumbnail cover"/>
+  </div>
+  <div class="uk-width-1-1@s uk-width-2-3@m">
+
+    <h2>Équipe</h2>
+
+    <ul class="list" *ngIf="contributors">
+      <li *ngFor="let e of contributors['staff-active']" class="nolink">
+        <div class="li-first">
+          <img
+            *ngIf="e.avatar"
+            [src]="'/assets/team/' + e.avatar + '.png'"
+            width="32"
+          />
+          {{ e.name }}
+        </div>
+        <div class="li-second">{{ e.role }}</div>
+      </li>
+    </ul>
+
+    <h2>Contributions</h2>
+
+    <p class="lead" *ngIf="contributors">
+      <span *ngFor="let e of contributors['contributors'];  let last = last;" class="nolink">
+        {{ e }}{{ last ? '' : ', ' }}
+      </span>
+    </p>
+
+  </div>
+
+</div>

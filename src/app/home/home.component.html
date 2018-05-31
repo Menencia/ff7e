@@ -1,0 +1,136 @@
+<div class="row mt-5">
+  <div class="col-sm-4">
+    <img src="/assets/covers/ff7e.jpg" alt="" class="img-fluid img-thumbnail"/>
+
+    <p id="newsletter"></p>
+
+    <!--script type="text/javascript">
+      // jQuery used as an example of delaying until load.
+      $(function () {
+        // Build url params and make the ad call
+        postscribe('#newsletter', '<script src=//app.mailerlite.com/data/webforms/19863/d6n1y9.js?v6><\/script>');
+      });
+    </script-->
+  </div>
+  <div class="col-sm-8">
+
+    <p class="lead">
+      <strong>Ce projet d'écriture a pour ambition de novéliser le jeu Final Fantasy VII<sup>&reg;</sup></strong>.
+      Créé en 1997 par Square Enix, Final Fantasy VII est un jeu de rôle sur Playstation qui est devenu très
+      populaire, grâce à son univers immense et riche, son scénario aux multiples rebondissements et ses
+      personnages charismatiques. Cette fanfiction n'a pas été écrite dans le but de remplacer l'oeuvre originale,
+      mais se positionne davantage comme un contenu additionnel qui se propose de porter un nouveau regard sur ce
+      chef-d'œuvre vidéoludique.
+    </p>
+
+    <p class="quote">
+      <span>SYNOPSIS</span> Cloud Strife, un jeune mercenaire, rejoint le groupe terroriste Avalanche dans les
+      bas-fonds de Midgar. Leur objectif est de délivrer le monde de la domination de la Shinra, une corporation
+      toute-puissante qui exploite sans vergogne l'énergie de la Planète, la tuant à petit feu...
+    </p>
+
+    <ul class="list">
+      <li>
+        <a href="#!/chapitres">
+          <div class="button">Lire</div>
+          <span class="li-first"><i class="uk-icon uk-icon-cloud"></i> Lire en ligne</span>
+          <span class="li-second">Via Google Docs</span>
+        </a>
+      </li>
+      <li>
+        <a [href]="'https://docs.google.com/uc?export=download&amp;id=' + pdf">
+          <div class="button">Télécharger</div>
+          <span class="li-first"><i class="uk-icon uk-icon-book"></i> Version PDF</span>
+          <span class="li-second">Lire hors-ligne</span>
+        </a>
+      </li>
+        <li>
+          <a [href]="'https://docs.google.com/uc?export=download&amp;id=' + kepub">
+            <div class="button">Télécharger</div>
+            <span class="li-first"><i class="uk-icon uk-icon-book"></i> Version KEPUB</span>
+            <span class="li-second">Pour KOBO</span>
+          </a>
+        </li>
+        <li>
+          <a [href]="'https://docs.google.com/uc?export=download&amp;id=' + mobi">
+            <div class="button">Télécharger</div>
+            <span class="li-first"><i class="uk-icon uk-icon-book"></i> Version MOBI</span>
+            <span class="li-second">Pour KINDLE</span>
+          </a>
+        </li>
+      <li>
+        <a [href]="'https://docs.google.com/uc?export=download&amp;id=' + epub">
+          <div class="button">Télécharger</div>
+          <span class="li-first"><i class="uk-icon uk-icon-book"></i> Version EPUB</span>
+          <span class="li-second">Pour les autres liseuses</span>
+        </a>
+      </li>
+      <li *ngFor="let e of featured">
+        <a [href]="'https://docs.google.com/document/d/' + e.id + '/edit'" target="_blank">
+          <div class="button">Lire</div>
+          <span class="li-first"><i class="uk-icon uk-icon-bookmark-o"></i> {{ e.title }} <span
+            class="label featured2">nouveau</span></span>
+          <span class="li-second">{{ e.date }}</span>
+        </a>
+      </li>
+      <li>
+        <span class="li-warning">
+          <i class="uk-icon uk-icon-warning"></i>
+          La publication des chapitres est momentanément en pause.
+        </span>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+<hr />
+
+<!--div class="uk-margin-bottom" uk-grid>
+  <div class="uk-width-1-1@s uk-width-2-3@m uk-margin-bottom uk-align-center"-->
+
+<div class="row justify-content-center mb-5">
+  <div class="col col-sm-8">
+    <div class="embed-responsive embed-responsive-16by9">
+      <youtube-player
+        [videoId]="teaser"
+        (ready)="savePlayer($event)"
+        (change)="onStateChange($event)"
+        class="embed-responsive-item"
+      ></youtube-player>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col col-sm-8">
+      <div class="row">
+        <div class="col">
+          <p class="lead">
+            <strong><i class="uk-icon uk-icon-question-circle-o"></i>
+            Y a-t-il une version papier du roman&nbsp;?</strong><br/>
+            Non, nous n'avons pas les droits malheureusement.
+          </p>
+          <p class="lead">
+            <strong><i class="uk-icon uk-icon-question-circle-o"></i>
+            Depuis combien de temps ce projet existe-t-il ?</strong><br/>
+            La première version du roman a été écrite intégralement par Menencia de 2004 à 2009.
+            Deux ans plus tard, Jam a rejoint le projet en tant qu'auteur. Depuis, les chapitres sont réécrits et publiés de façon régulière.
+            (<a href="#!/historique">en savoir plus</a>)
+          </p>
+        </div>
+
+        <div class="col">
+          <p class="lead">
+            <strong><i class="uk-icon uk-icon-question-circle-o"></i>
+            Je connais déjà l'histoire de FFVII. Ce n'est pas mieux d'y jouer plutôt ?</strong><br/>
+            Ce roman ne remplace pas l'expérience de jeu. Si vous aimez lire, il peut être aussi immersif,
+            passionnant et surprenant. Une telle adaptation a également l'ambition d'étendre davantage
+            l'histoire du jeu : des scènes inédites ont été écrites, des ajustements ont été apportés pour
+            réduire les incohérences du jeu et certains personnages de l'histoire profitent d'un bien
+            meilleur développement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,30 @@
+<div class="uk-text-center">
+
+  <div *ngFor="let e of chapters" class="chapter">
+
+    <a
+      class="read-chapter"
+      [href]="'https://docs.google.com/document/d/' + e.id + '/edit'"
+      target="_blank"
+    >
+
+      <img
+        [src]="'/assets/chapters/chapitre-' + e.number + '.jpg'"
+        width="200" height="150" alt="" class="screen"
+      />
+
+      <div class="ribbon featured" *ngIf="e.featured"><span>nouveau</span></div>
+      <div class="ribbon special" *ngIf="e.special"><span>spécial</span></div>
+
+      <div class="legend">
+        {{ e.title }}
+        <div class="details">
+          {{ e.date }}
+        </div>
+      </div>
+
+      </a>
+
+  </div>
+
+</div>
