@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
 
   quote;
 
-  constructor(public http: Http) {}
+  constructor(public http: HttpClient) {}
 
   ngOnInit() {
     this.http.get('assets/data/quotes.json').subscribe((data: any) => {
