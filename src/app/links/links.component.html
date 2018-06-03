@@ -11,8 +11,8 @@
         <a [href]="e.url" target="_blank">
           <div class="button">Voir</div>
           <div class="li-first">
-              <span ng-if="link.lang" class="label lang-en">en anglais</span>
-              {{ e.title }}
+            <span *ngIf="e.lang" class="label lang-en">en anglais</span>
+            {{ e.title }}
           </div>
           <div class="li-second">{{ e.desc }}</div>
         </a>
