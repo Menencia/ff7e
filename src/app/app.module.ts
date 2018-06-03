@@ -29,7 +29,7 @@ import { YoutubePlayerModule } from 'ngx-youtube-player';
     BrowserModule,
     AppRoutingModule,
     HttpModule,
-    DisqusModule,
+    DisqusModule.forRoot('ff7e'),
     YoutubePlayerModule
   ],
   providers: [],
