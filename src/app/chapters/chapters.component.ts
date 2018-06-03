@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-chapters',
@@ -9,7 +9,7 @@ export class ChaptersComponent implements OnInit {
 
   chapters;
 
-  constructor(public http: HttpClient) { }
+  constructor(public http: Http) { }
 
   ngOnInit() {
     this.http.get('assets/data/chapters.json').subscribe((data: any) => {

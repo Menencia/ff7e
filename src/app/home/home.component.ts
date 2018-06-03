@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   featured;
   next;
 
-  constructor(public http: HttpClient) { }
+  constructor(public http: Http) { }
 
   ngOnInit() {
     this.http.get('assets/data/chapters.json').subscribe((data: any) => {

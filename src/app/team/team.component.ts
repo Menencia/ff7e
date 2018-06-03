@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Http } from '@angular/http';
 
 @Component({
   selector: 'app-team',
@@ -9,7 +9,7 @@ export class TeamComponent implements OnInit {
 
   contributors;
 
-  constructor(public http: HttpClient) { }
+  constructor(public http: Http) { }
 
   ngOnInit() {
     this.http.get('assets/data/contributors.json').subscribe((data: any) => {
