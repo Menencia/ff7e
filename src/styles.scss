@@ -1,193 +1,199 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import "~bootstrap/dist/css/bootstrap.css";
+@import "~uikit/dist/css/uikit.css";
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
 
 body {
-    font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 14px;
 }
 
 /** DESIGN TWO COLUMNS **/
 
 header {
-    background: url(/assets/fanart/000-the-prelude.jpg) top left #464646;
-    text-align: center;
-    color: #aaa;
+  background: url(/assets/fanart/000-the-prelude.jpg) top left #464646;
+  text-align: center;
+  color: #aaa;
 }
 
 .header-main {
-    padding: 30px 0;
+  padding: 30px 0;
 }
 
 .header-nav {
-    padding-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 nav ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    display: inline-block;
-    margin-right: 20px;
-    font-size: 1.3em;
-    vertical-align: middle;
-}
-
-nav ul li:hover {
-}
-
-nav a, nav a:visited {
-    text-decoration: none;
-    color: #aaa;
-}
-
-nav a:hover {
-    color: #ccc;
-    text-decoration: underline;
-}
-
-nav a.current {
-    color: #ccc;
-    font-size: 1.5em;
-}
-
-.page {
-    padding: 30px 0;
-    background-color: #fff;
-}
-
-.teaser {
-    letter-spacing: 2px;
-    font-style: italic;
-}
-
-/**  TEASER **/
-
-.embed-responsive {
-    position: relative;
-    display: block;
-    height: 0;
-    padding: 0;
-    overflow: hidden;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 1.3em;
+  vertical-align: middle;
 }
 
 .embed-responsive.embed-responsive-16by9 {
-    padding-bottom: 56.25%;
+  padding-bottom: 56.25%;
+}
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .embed-responsive-item {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+nav a, nav a:visited {
+  text-decoration: none;
+  color: #aaa;
+}
+
+nav a:hover {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+nav a.current {
+  color: #ccc;
+  font-size: 1.5em;
+}
+
+.page {
+  padding: 30px 0;
+  background-color: #fff;
+}
+
+.teaser {
+  letter-spacing: 2px;
+  font-style: italic;
 }
 
 /** COMBINED vIEWS **/
 
 .cover {
-    box-shadow: #eee 2px 1px 2px 1px;
+  box-shadow: #eee 2px 1px 2px 1px;
 }
 
 footer {
-    background: url(/assets/fanart/000-the-prelude.jpg) top right #999;
-    padding: 30px 0;
-    font-size: 1.5em;
-    color: #eee;
-    text-align: center;
-    margin-top: 50px;
+  background: url(/assets/fanart/000-the-prelude.jpg) top right #999;
+  padding: 30px 0;
+  font-size: 1.5em;
+  color: #eee;
+  text-align: center;
+  margin-top: 50px;
 }
 
 footer a {
-    line-height: 1.8em;
-    color: #ddd;
+  line-height: 1.8em;
+  color: #ddd;
 }
 
 footer a:hover {
-    color: #eee;
-    text-decoration: none;
-    border-bottom: 1px dotted #eee;
+  color: #eee;
+  text-decoration: none;
+  border-bottom: 1px dotted #eee;
 }
 
 /* Hack pour magnificPopup */
 
 figure {
-    margin: 0;
+  margin: 0;
 }
 
 /** GENERAL **/
 
 h1 {
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    display: inline-block;
-    font-weight: bold;
-    color: #fff;
-    font-size: 2.2em;
-    margin: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: inline-block;
+  font-weight: bold;
+  color: #fff;
+  font-size: 2.2em;
+  margin: 0;
+  line-height: 42px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 fieldset {
-    border: 0;
-    border-top: 1px solid #3d73a9;
+  border: 0;
+  border-top: 1px solid #3d73a9;
 }
 
 legend {
-    font-size: 1.6em;
-    color: #3d73a9;
+  font-size: 1.6em;
+  color: #3d73a9;
 }
 
 .lead {
-    font-size: 1.6em;
-    text-align: justify;
-    color: #666;
-    line-height: 1.4em;
+  font-size: 1.6em;
+  text-align: justify;
+  color: #666;
+  line-height: 1.4em;
 }
 
 .quote {
-    font-size: 1.6em;
-    text-align: justify;
-    color: #999;
-    margin: 2em 1em;
-    padding: 0 10px;
-    line-height: 1.4em;
+  font-size: 1.6em;
+  text-align: justify;
+  color: #999;
+  margin: 2em 1em;
+  padding: 0 10px;
+  line-height: 1.4em;
 }
 
 .quote span {
-    color: #3d73a9;
-    font-weight: bold;
-    text-transform: uppercase;
+  color: #3d73a9;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .info {
-    font-size: 1.6em;
-    text-align: justify;
-    color: #666;
-    line-height: 1.4em;
+  font-size: 1.6em;
+  text-align: justify;
+  color: #666;
+  line-height: 1.4em;
 }
 
 .label {
-    font-size: 0.7em;
-    margin: 0 2px;
-    display: inline-block;
-    padding: 0 4px;
-    border-radius: 4px;
-    vertical-align: 10%;
-    line-height: normal;
-    font-variant: small-caps;
-    letter-spacing: 2px;
+  font-size: 0.7em;
+  margin: 0 2px;
+  display: inline-block;
+  padding: 0 4px;
+  border-radius: 4px;
+  vertical-align: 10%;
+  line-height: normal;
+  font-variant: small-caps;
+  letter-spacing: 2px;
 }
 
 hr {
-    margin-top: 75px;
-    border: none;
+  margin-top: 75px;
+  border: none;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+*+p {
+  margin-top: 15px;
 }
 
 /** HOME LIST STYLE **/

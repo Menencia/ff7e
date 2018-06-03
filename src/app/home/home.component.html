@@ -1,6 +1,6 @@
-<div class="row mt-5">
-  <div class="col-sm-4">
-    <img src="/assets/covers/ff7e.jpg" alt="" class="img-fluid img-thumbnail"/>
+<div class="uk-margin-top" uk-grid>
+  <div class="uk-width-1-1@s uk-width-1-3@m uk-text-center">
+    <img src="/assets/covers/ff7e.jpg" alt="" class="uk-thumbnail cover"/>
 
     <p id="newsletter"></p>
 
@@ -12,7 +12,7 @@
       });
     </script-->
   </div>
-  <div class="col-sm-8">
+  <div class="uk-width-1-1@s uk-width-2-3@m">
 
     <p class="lead">
       <strong>Ce projet d'écriture a pour ambition de novéliser le jeu Final Fantasy VII<sup>&reg;</sup></strong>.
@@ -33,44 +33,44 @@
       <li>
         <a href="#!/chapitres">
           <div class="button">Lire</div>
-          <span class="li-first"><i class="uk-icon uk-icon-cloud"></i> Lire en ligne</span>
+          <span class="li-first"><i uk-icon="folder"></i> Lire en ligne</span>
           <span class="li-second">Via Google Docs</span>
         </a>
       </li>
       <li>
-        <a [href]="'https://docs.google.com/uc?export=download&amp;id=' + pdf">
+        <a href="https://docs.google.com/uc?export=download&amp;id={{pdf}}">
           <div class="button">Télécharger</div>
-          <span class="li-first"><i class="uk-icon uk-icon-book"></i> Version PDF</span>
+          <span class="li-first"><i uk-icon="cloud-download"></i> Version PDF</span>
           <span class="li-second">Lire hors-ligne</span>
         </a>
       </li>
-        <li>
-          <a [href]="'https://docs.google.com/uc?export=download&amp;id=' + kepub">
-            <div class="button">Télécharger</div>
-            <span class="li-first"><i class="uk-icon uk-icon-book"></i> Version KEPUB</span>
-            <span class="li-second">Pour KOBO</span>
-          </a>
-        </li>
-        <li>
-          <a [href]="'https://docs.google.com/uc?export=download&amp;id=' + mobi">
-            <div class="button">Télécharger</div>
-            <span class="li-first"><i class="uk-icon uk-icon-book"></i> Version MOBI</span>
-            <span class="li-second">Pour KINDLE</span>
-          </a>
-        </li>
       <li>
-        <a [href]="'https://docs.google.com/uc?export=download&amp;id=' + epub">
+        <a href="https://docs.google.com/uc?export=download&amp;id={{kepub}}">
           <div class="button">Télécharger</div>
-          <span class="li-first"><i class="uk-icon uk-icon-book"></i> Version EPUB</span>
+          <span class="li-first"><i uk-icon="cloud-download"></i> Version KEPUB</span>
+          <span class="li-second">Pour KOBO</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://docs.google.com/uc?export=download&amp;id={{mobi}}">
+          <div class="button">Télécharger</div>
+          <span class="li-first"><i uk-icon="cloud-download"></i> Version MOBI</span>
+          <span class="li-second">Pour KINDLE</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://docs.google.com/uc?export=download&amp;id={{epub}}">
+          <div class="button">Télécharger</div>
+          <span class="li-first"><i uk-icon="cloud-download"></i> Version EPUB</span>
           <span class="li-second">Pour les autres liseuses</span>
         </a>
       </li>
-      <li *ngFor="let e of featured">
-        <a [href]="'https://docs.google.com/document/d/' + e.id + '/edit'" target="_blank">
+      <li *ngFor="let chapter of featured">
+        <a href="https://docs.google.com/document/d/{{chapter.id}}/edit" target="_blank">
           <div class="button">Lire</div>
-          <span class="li-first"><i class="uk-icon uk-icon-bookmark-o"></i> {{ e.title }} <span
-            class="label featured2">nouveau</span></span>
-          <span class="li-second">{{ e.date }}</span>
+          <span class="li-first"><i uk-icon="bookmark"></i> {{chapter.title}} <span
+                  class="label featured2">nouveau</span></span>
+          <span class="li-second">{{chapter.date}}</span>
         </a>
       </li>
       <li>
@@ -86,51 +86,49 @@
 
 <hr />
 
-<!--div class="uk-margin-bottom" uk-grid>
-  <div class="uk-width-1-1@s uk-width-2-3@m uk-margin-bottom uk-align-center"-->
-
-<div class="row justify-content-center mb-5">
-  <div class="col col-sm-8">
+<div class="uk-margin-bottom" uk-grid>
+  <div class="uk-width-1-1@s uk-width-2-3@m uk-margin-bottom uk-margin-auto">
     <div class="embed-responsive embed-responsive-16by9">
       <youtube-player
         [videoId]="teaser"
         (ready)="savePlayer($event)"
         (change)="onStateChange($event)"
+        width="100%" height="100%"
         class="embed-responsive-item"
       ></youtube-player>
     </div>
   </div>
 </div>
 
-<div class="row justify-content-center">
-  <div class="col col-sm-8">
-      <div class="row">
-        <div class="col">
-          <p class="lead">
-            <strong><i class="uk-icon uk-icon-question-circle-o"></i>
-            Y a-t-il une version papier du roman&nbsp;?</strong><br/>
-            Non, nous n'avons pas les droits malheureusement.
-          </p>
-          <p class="lead">
-            <strong><i class="uk-icon uk-icon-question-circle-o"></i>
-            Depuis combien de temps ce projet existe-t-il ?</strong><br/>
-            La première version du roman a été écrite intégralement par Menencia de 2004 à 2009.
-            Deux ans plus tard, Jam a rejoint le projet en tant qu'auteur. Depuis, les chapitres sont réécrits et publiés de façon régulière.
-            (<a href="#!/historique">en savoir plus</a>)
-          </p>
-        </div>
+<div class="uk-margin-bottom" uk-grid>
+  <div class="uk-width-1-1@s uk-width-2-3@m uk-margin-auto">
+    <div uk-grid>
+      <div class="uk-width-1-1@s uk-width-1-2@m">
+        <p class="lead">
+          <strong><i uk-icon="question"></i>
+          Y a-t-il une version papier du roman ?</strong><br/>
+          Non, nous n'avons pas les droits malheureusement.
+        </p>
+        <p class="lead">
+          <strong><i uk-icon="question"></i>
+          Depuis combien de temps ce projet existe-t-il ?</strong><br/>
+          La première version du roman a été écrite intégralement par Menencia de 2004 à 2009.
+          Deux ans plus tard, Jam a rejoint le projet en tant qu'auteur. Depuis, les chapitres sont réécrits et publiés de façon régulière.
+          (<a href="#!/historique">en savoir plus</a>)
+        </p>
+      </div>
 
-        <div class="col">
-          <p class="lead">
-            <strong><i class="uk-icon uk-icon-question-circle-o"></i>
-            Je connais déjà l'histoire de FFVII. Ce n'est pas mieux d'y jouer plutôt ?</strong><br/>
-            Ce roman ne remplace pas l'expérience de jeu. Si vous aimez lire, il peut être aussi immersif,
-            passionnant et surprenant. Une telle adaptation a également l'ambition d'étendre davantage
-            l'histoire du jeu : des scènes inédites ont été écrites, des ajustements ont été apportés pour
-            réduire les incohérences du jeu et certains personnages de l'histoire profitent d'un bien
-            meilleur développement.
-          </p>
-        </div>
+      <div class="uk-width-1-1@s uk-width-1-2@m">
+        <p class="lead">
+          <strong><i uk-icon="question"></i>
+          Je connais déjà l'histoire de FFVII. Ce n'est pas mieux d'y jouer plutôt ?</strong><br/>
+          Ce roman ne remplace pas l'expérience de jeu. Si vous aimez lire, il peut être aussi immersif,
+          passionnant et surprenant. Une telle adaptation a également l'ambition d'étendre davantage
+          l'histoire du jeu : des scènes inédites ont été écrites, des ajustements ont été apportés pour
+          réduire les incohérences du jeu et certains personnages de l'histoire profitent d'un bien
+          meilleur développement.
+        </p>
       </div>
     </div>
   </div>
+</div>
