@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import postscribe from 'postscribe';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,7 @@ export class HomeComponent implements OnInit {
   mobi = '0B-rTqD9hKNHPZkhzdEFFYWttdFU';
 
   teaser = '3NI6BUgH-P4';
+  newsletter;
 
   featured;
   next;
@@ -30,6 +32,10 @@ export class HomeComponent implements OnInit {
       this.featured = chapters.filter(e => e.featured);
       this.next = chapters.filter(e => e.next);
     });
+
+    postscribe('#newsletter',
+      '<script src=//app.mailerlite.com/data/webforms/19863/d6n1y9.js?v6><\/script>'
+    );
   }
 
   savePlayer(ev) {}
