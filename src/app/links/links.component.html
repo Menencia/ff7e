@@ -7,9 +7,9 @@
     <h2>Ressources</h2>
 
     <ul class="list">
-      <li *ngFor="let e of links">
+      <li *ngFor="let e of links | async">
         <a [href]="e.url" target="_blank">
-          <div class="button">Voir</div>
+          <div class="button">{{ e.action }}</div>
           <div class="li-first">
             <span *ngIf="e.lang" class="label lang-en">en anglais</span>
             {{ e.title }}
