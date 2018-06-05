@@ -86,6 +86,12 @@ nav a.current {
   font-style: italic;
 }
 
+header {
+  [uk-icon]:hover {
+    cursor: pointer;
+  }
+}
+
 /** COMBINED vIEWS **/
 
 .cover {

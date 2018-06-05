@@ -8,14 +8,20 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent implements OnInit {
 
+  quotes;
   quote;
 
   constructor(public http: HttpClient) {}
 
   ngOnInit() {
     this.http.get('assets/data/quotes.json').subscribe((data: any) => {
-      this.quote = data[Math.floor(Math.random() * data.length)];
+      this.quotes = data;
+      this.changeQuote();
     });
+  }
+
+  changeQuote() {
+    this.quote = this.quotes[Math.floor(Math.random() * this.quotes.length)];
   }
 
 }

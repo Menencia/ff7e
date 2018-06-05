@@ -6,7 +6,7 @@
       <h1>『Final Fantasy VII: Expérience』</h1>
 
       <p class="teaser" *ngIf="quote">「{{ quote.content }}」 — {{ quote.character }}, chapitre {{ quote.chapter }}
-      <i class="uk-icon uk-icon-refresh" ng-click="changeQuote()"></i></p>
+      <i uk-icon="refresh" (click)="changeQuote()"></i></p>
     </div>
 
   </div>
@@ -91,7 +91,7 @@
 
     <ul class="list-inline">
       <li>
-        <i uk-icon="mail"></i>
+        <i uk-icon="mail"></i>&nbsp;
         <a
           href="mailto:contact@ff7e.com"
           target="_blank"
@@ -99,7 +99,7 @@
       </li>
       <li class="muted">·</li>
       <li>
-        <i uk-icon="facebook"></i>
+        <i uk-icon="facebook"></i>&nbsp;
         <a
           href="https://www.facebook.com/ff7experience"
           target="_blank"
@@ -107,7 +107,7 @@
       </li>
       <li class="muted">·</li>
       <li>
-          <i uk-icon="twitter"></i>
+          <i uk-icon="twitter"></i>&nbsp;
           <a
             href="https://twitter.com/ff7experience"
             target="_blank"
