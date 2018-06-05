@@ -15,7 +15,7 @@ import { CommentsComponent } from './comments/comments.component';
 import { DisqusModule } from 'ngx-disqus';
 import { YoutubePlayerModule } from 'ngx-youtube-player';
 import { AngularFireModule } from 'angularfire2';
-import { environment } from '../environments/environment';
+import { firebaseConfig } from '../environments/firebase';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 @NgModule({
@@ -34,7 +34,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     HttpClientModule,
     DisqusModule.forRoot('ff7e'),
     YoutubePlayerModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule
   ],
   providers: [],
