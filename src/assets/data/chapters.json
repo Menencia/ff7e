@@ -487,8 +487,15 @@
               "title": "Chapitre 72 : La sagesse de Bugenhagen",
               "number": 72,
               "date": "7 février 2017",
-              "id": "1Wi6Dzp74-FqgPBQxuKRjeA_d6BzLIFg-le8FnC78hUs",
-              "featured": true
+              "id": "1Wi6Dzp74-FqgPBQxuKRjeA_d6BzLIFg-le8FnC78hUs"
+          },
+          {
+            "title": "Chapitre 72.5 : Une blessure d'orgueil",
+            "number": 72.5,
+            "date": "24 décembre 2018",
+            "id": "1N1L8MVYxOIDXJDGeE09wKkUrVIzCnRyzJASHJQIqWwk",
+            "special": true,
+            "featured": true
           }
       ]
   }
