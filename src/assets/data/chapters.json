@@ -481,22 +481,28 @@
       ]
   },
   {
-      "book": 8,
-      "chapters": [
-          {
-              "title": "Chapitre 72 : La sagesse de Bugenhagen",
-              "number": 72,
-              "date": "7 février 2017",
-              "id": "1Wi6Dzp74-FqgPBQxuKRjeA_d6BzLIFg-le8FnC78hUs"
-          },
-          {
-            "title": "Chapitre 72.5 : Une blessure d'orgueil",
-            "number": 72.5,
-            "date": "24 décembre 2018",
-            "id": "1N1L8MVYxOIDXJDGeE09wKkUrVIzCnRyzJASHJQIqWwk",
-            "special": true,
-            "featured": true
-          }
-      ]
+    "book": 8,
+    "chapters": [
+      {
+        "title": "Chapitre 72 : La sagesse de Bugenhagen",
+        "number": 72,
+        "date": "7 février 2017",
+        "id": "1Wi6Dzp74-FqgPBQxuKRjeA_d6BzLIFg-le8FnC78hUs"
+      },
+      {
+        "title": "Chapitre 72.5 : Une blessure d'orgueil",
+        "number": 72.5,
+        "date": "24 décembre 2018",
+        "id": "1N1L8MVYxOIDXJDGeE09wKkUrVIzCnRyzJASHJQIqWwk",
+        "special": true
+      },
+      {
+        "title": "Chapitre 73 : Devenir un héros",
+        "number": 73,
+        "date": "7 janvier 2019",
+        "id": "1KbTASxRwGsItBAJ07Z0XPxrHv9yU8JuZl1BhCrHHQnE",
+        "featured": true
+      }
+    ]
   }
 ]
