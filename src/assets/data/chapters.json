@@ -577,8 +577,7 @@
         "title": "Chapitre 85 : L'Ennemi de la Planète",
         "number": 85,
         "date": "7 décembre 2019",
-        "id": "1cwUjO7k2ZlMojf0j5q-MC48eKqhJpt1GXPjdXgD9RPY",
-        "featured": true
+        "id": "1cwUjO7k2ZlMojf0j5q-MC48eKqhJpt1GXPjdXgD9RPY"
       },
       {
         "title": "Chapitre 85.5 : La Dernière Cetra",
@@ -586,6 +585,20 @@
         "date": "24 décembre 2019",
         "id": "1XO1fUDQTNiub8Hf_yBb6lksSyxhNNe8xavJcOZ3D8HQ",
         "special": true
+      },
+      {
+        "title": "Chapitre 86 : La Rivière de la Vie",
+        "number": 86,
+        "date": "7 janvier 2020",
+        "id": "16RCCMcyFxD8Lzkbjfwwz3FvTl7aEIrYwYlGGWCDRj2Q",
+        "featured": true
+      },
+      {
+        "title": "Epilogue",
+        "number": 87,
+        "date": "7 janvier 2020",
+        "id": "1rVGOni55ecSvDsQMi5TxsTAt4ItzpDOmO8ZGRvVV6QA",
+        "featured": true
       }
     ]
   }
