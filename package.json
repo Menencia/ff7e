@@ -25,7 +25,7 @@
     "angularfire2": "^5.0.0-rc.10",
     "core-js": "^2.4.1",
     "firebase": "^5.0.4",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "ngx-disqus": "^2.3.7",
     "ngx-youtube-player": "^6.0.0",
     "postscribe": "^2.0.8",
