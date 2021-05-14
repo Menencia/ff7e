@@ -24,6 +24,7 @@
     "@angular/router": "12.0.0",
     "@tailwindcss/forms": "^0.3.2",
     "@tailwindcss/typography": "^0.4.0",
+    "ng-heroicons": "^11.0.0",
     "ngx-disqus": "^2.4.3",
     "ngx-youtube-player": "^9.1.0",
     "postscribe": "^2.0.8",

@@ -14,6 +14,10 @@ import { CommentsComponent } from './comments/comments.component';
 
 import { DisqusModule } from 'ngx-disqus';
 import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
+import {
+  questionMarkCircle, folder, cloudDownload,
+  HeroIconsModule
+} from 'ng-heroicons';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,7 @@ import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
     HttpClientModule,
     DisqusModule.forRoot('ff7e'),
     NgxYoutubePlayerModule.forRoot(),
+    HeroIconsModule.withIcons({questionMarkCircle, folder, cloudDownload}),
   ],
   providers: [],
   bootstrap: [AppComponent]

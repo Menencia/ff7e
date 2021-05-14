@@ -11,6 +11,10 @@ body {
   font-size: 14px;
 }
 
+hero-icon {
+  @apply align-middle;
+}
+
 /** DESIGN TWO COLUMNS **/
 
 header {
@@ -36,28 +40,6 @@ nav ul li {
   @apply uppercase align-middle mr-5 inline-block;
   letter-spacing: 1px;
   font-size: 1.3em;
-}
-
-.embed-responsive.embed-responsive-16by9 {
-  padding-bottom: 56.25%;
-}
-
-.embed-responsive {
-  position: relative;
-  display: block;
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-.embed-responsive-item {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
 }
 
 nav a, nav a:visited {
