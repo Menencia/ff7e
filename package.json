@@ -21,19 +21,15 @@
     "@angular/platform-browser": "12.0.0",
     "@angular/platform-browser-dynamic": "12.0.0",
     "@angular/router": "12.0.0",
-    "angularfire2": "^5.0.0-rc.10",
-    "core-js": "^2.4.1",
-    "firebase": "^5.0.4",
-    "jquery": "^3.3.1",
-    "ngx-disqus": "^2.3.7",
-    "ngx-youtube-player": "^6.0.0",
+    "ngx-disqus": "^2.4.3",
+    "ngx-youtube-player": "^9.1.0",
     "postscribe": "^2.0.8",
     "rxjs": "^6.6.7",
     "tslib": "^2.0.0",
-    "uikit": "^3.0.0-rc.4",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "^12.0.0",
     "@angular/cli": "12.0.0",
     "@angular/compiler-cli": "12.0.0",
     "@angular/language-service": "12.0.0",
@@ -51,7 +47,6 @@
     "protractor": "~7.0.0",
     "ts-node": "~4.1.0",
     "tslint": "~6.1.0",
-    "typescript": "4.2.4",
-    "@angular-devkit/build-angular": "~12.0.0"
+    "typescript": "4.2.4"
   }
 }
