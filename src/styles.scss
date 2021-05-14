@@ -33,12 +33,9 @@ nav ul {
 }
 
 nav ul li {
+  @apply uppercase align-middle mr-5 inline-block;
   letter-spacing: 1px;
-  text-transform: uppercase;
-  display: inline-block;
-  margin-right: 20px;
   font-size: 1.3em;
-  vertical-align: middle;
 }
 
 .embed-responsive.embed-responsive-16by9 {
