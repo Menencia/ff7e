@@ -13,6 +13,7 @@ import { LinksComponent } from './links/links.component';
 import { CommentsComponent } from './comments/comments.component';
 
 import { DisqusModule } from 'ngx-disqus';
+import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { DisqusModule } from 'ngx-disqus';
     AppRoutingModule,
     HttpClientModule,
     DisqusModule.forRoot('ff7e'),
+    NgxYoutubePlayerModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
