@@ -11,8 +11,11 @@ body {
   font-size: 14px;
 }
 
-hero-icon {
-  @apply align-middle;
+question-mark-circle-outline-icon,
+cloud-download-outline-icon,
+folder-outline-icon,
+refresh-outline-icon {
+  @apply inline-block align-middle;
 }
 
 /** DESIGN TWO COLUMNS **/
@@ -65,12 +68,6 @@ nav a.current {
 .teaser {
   letter-spacing: 2px;
   font-style: italic;
-}
-
-header {
-  [uk-icon]:hover {
-    cursor: pointer;
-  }
 }
 
 /** COMBINED vIEWS **/
