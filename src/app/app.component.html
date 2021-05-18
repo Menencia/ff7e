@@ -3,7 +3,7 @@
 
     <div class="container mx-auto">
 
-      <h1>『Final Fantasy VII: Expérience』</h1>
+      <h1>『Final Fantasy VII: Expérience』</h1><span class="cursor-pointer" (click)="toggleDark()">D</span>
 
       <p class="teaser" *ngIf="quote">「{{ quote.content }}」 — {{ quote.character }}, chapitre {{ quote.chapter }}
       <refresh-outline-icon class="text-white cursor-pointer" (click)="changeQuote()"></refresh-outline-icon></p>
@@ -55,8 +55,10 @@
 
 </header>
 
-<div class="container mx-auto">
-  <router-outlet></router-outlet>
+<div class="dark:bg-gray-800 dark:text-white">
+  <div class="container mx-auto">
+    <router-outlet></router-outlet>
+  </div>
 </div>
 
 <footer>

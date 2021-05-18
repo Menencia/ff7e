@@ -82,7 +82,7 @@ footer {
   font-size: 1.5em;
   color: #eee;
   text-align: center;
-  margin-top: 50px;
+  padding-top: 50px;
 }
 
 footer a {
@@ -128,7 +128,7 @@ legend {
 }
 
 .quote span {
-  @apply text-blue-500 font-bold uppercase;
+  @apply text-blue-700 font-bold uppercase;
 }
 
 .info {
