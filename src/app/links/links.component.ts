@@ -9,12 +9,12 @@ export class LinksComponent implements OnInit {
 
   links;
 
-  constructor(public http: HttpClient) {
-
-  }
+  constructor(public http: HttpClient) {}
 
   ngOnInit() {
-
+    this.http.get('/assets/data/links.json').subscribe(links => {
+      this.links = links;
+    });
   }
 
 }

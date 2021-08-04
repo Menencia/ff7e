@@ -6,8 +6,8 @@
 
     <h2>Ressources</h2>
 
-    <ul class="list" *ngIf="links | async as links$; else loading">
-      <li *ngFor="let e of links$">
+    <ul class="list" *ngIf="links; else loading">
+      <li *ngFor="let e of links">
         <a [href]="e.url" target="_blank">
           <div class="button">{{ e.action || 'Voir' }}</div>
           <div class="li-first">

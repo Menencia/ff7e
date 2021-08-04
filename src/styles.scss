@@ -21,9 +21,7 @@ refresh-outline-icon {
 /** DESIGN TWO COLUMNS **/
 
 header {
-  background: url(/assets/fanart/000-the-prelude.jpg) top left #464646;
-  text-align: center;
-  color: #aaa;
+  @apply text-center bg-gray-500 dark:bg-gray-900 dark:text-gray-300;
 }
 
 .header-main {
@@ -66,8 +64,7 @@ nav a.current {
 }
 
 .teaser {
-  letter-spacing: 2px;
-  font-style: italic;
+  @apply text-white tracking-wider italic;
 }
 
 /** COMBINED vIEWS **/
@@ -77,12 +74,7 @@ nav a.current {
 }
 
 footer {
-  background: url(/assets/fanart/000-the-prelude.jpg) top right #999;
-  padding: 30px 0;
-  font-size: 1.5em;
-  color: #eee;
-  text-align: center;
-  padding-top: 50px;
+  @apply bg-gray-400 dark:bg-gray-900 text-center text-gray-300 py-10;
 }
 
 footer a {

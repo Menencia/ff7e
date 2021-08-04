@@ -14,7 +14,6 @@ import { CommentsComponent } from './comments/comments.component';
 
 import { DisqusModule } from 'ngx-disqus';
 import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
-import { NgHeroiconsModule } from "@dimaslz/ng-heroicons";
 
 @NgModule({
   declarations: [
@@ -31,8 +30,7 @@ import { NgHeroiconsModule } from "@dimaslz/ng-heroicons";
     AppRoutingModule,
     HttpClientModule,
     DisqusModule.forRoot('ff7e'),
-    NgxYoutubePlayerModule.forRoot(),
-    NgHeroiconsModule,
+    NgxYoutubePlayerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

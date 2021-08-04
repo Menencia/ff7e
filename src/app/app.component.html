@@ -3,7 +3,15 @@
 
     <div class="container mx-auto">
 
-      <h1>『Final Fantasy VII: Expérience』</h1><span class="cursor-pointer" (click)="toggleDark()">D</span>
+      <h1>『Final Fantasy VII: Expérience』</h1>
+      <div class="cursor-pointer" (click)="toggleDark()">
+        <span *ngIf="theme === 'light'" class="material-icons-outlined">
+          light_mode
+        </span>
+        <span *ngIf="theme === 'dark'" class="material-icons-outlined">
+          dark_mode
+        </span>
+      </div>
 
       <p class="teaser" *ngIf="quote">「{{ quote.content }}」 — {{ quote.character }}, chapitre {{ quote.chapter }}
       <refresh-outline-icon class="text-white cursor-pointer" (click)="changeQuote()"></refresh-outline-icon></p>
@@ -12,44 +20,44 @@
   </div>
 
 
-  <div class="header-nav">
-    <div class="container mx-auto">
+<div class="dark:bg-gray-800 dark:text-white">
+  <div class="container mx-auto">
 
-      <nav>
-        <ul>
-          <li>
-            <a routerLink="/presentation" routerLinkActive="current">
-              Présentation
-            </a>
-          </li>
-          <li>
-            <a routerLink="/chapitres" routerLinkActive="current">
-              Chapitres
-            </a>
-          </li>
-          <li>
-            <a routerLink="/historique" routerLinkActive="current">
-              Historique
-            </a>
-          </li>
-          <li>
-            <a routerLink="/equipe" routerLinkActive="current">
-              Équipe
-            </a>
-          </li>
-          <li>
-            <a routerLink="/liens" routerLinkActive="current">
-              Liens
-            </a>
-          </li>
-          <li>
-            <a routerLink="/commentaires" routerLinkActive="current">
-              Commentaires
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+        <nav>
+          <ul>
+            <li>
+              <a routerLink="/presentation" routerLinkActive="current">
+                Présentation
+              </a>
+            </li>
+            <li>
+              <a routerLink="/chapitres" routerLinkActive="current">
+                Chapitres
+              </a>
+            </li>
+            <li>
+              <a routerLink="/historique" routerLinkActive="current">
+                Historique
+              </a>
+            </li>
+            <li>
+              <a routerLink="/equipe" routerLinkActive="current">
+                Équipe
+              </a>
+            </li>
+            <li>
+              <a routerLink="/liens" routerLinkActive="current">
+                Liens
+              </a>
+            </li>
+            <li>
+              <a routerLink="/commentaires" routerLinkActive="current">
+                Commentaires
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
   </div>
 
