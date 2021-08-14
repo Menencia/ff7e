@@ -1,4 +1,4 @@
-<div class="pt-5 grid sm:grid-cols-1 md:grid-cols-3 gap-8">
+<div class="py-5 grid sm:grid-cols-1 md:grid-cols-3 gap-8">
   <div class="col-span-1 text-center">
     <img src="/assets/covers/ff7e.jpg" alt="" class="uk-thumbnail cover"/>
 
@@ -72,8 +72,13 @@
       <li *ngFor="let chapter of featured">
         <a href="https://docs.google.com/document/d/{{chapter.id}}/edit" target="_blank">
           <div class="button">Lire</div>
-          <span class="li-first"><i uk-icon="bookmark"></i> {{chapter.title}} <span
-                  class="label featured2">nouveau</span></span>
+          <span class="li-first">
+            <span class="material-icons-outlined">
+              bookmark
+            </span>
+            {{chapter.title}}
+            <span class="label featured2">nouveau</span>
+          </span>
           <span class="li-second">{{chapter.date}}</span>
         </a>
       </li>

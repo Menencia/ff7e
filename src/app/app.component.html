@@ -1,10 +1,10 @@
 <header>
-  <div class="header-main">
+  <div class="py-8">
 
     <div class="container mx-auto">
 
       <h1>『Final Fantasy VII: Expérience』</h1>
-      <div class="cursor-pointer" (click)="toggleDark()">
+      <div class="cursor-pointer inline-block text-white" (click)="toggleDark()">
         <span *ngIf="theme === 'light'" class="material-icons-outlined">
           light_mode
         </span>
@@ -14,13 +14,15 @@
       </div>
 
       <p class="teaser" *ngIf="quote">「{{ quote.content }}」 — {{ quote.character }}, chapitre {{ quote.chapter }}
-      <refresh-outline-icon class="text-white cursor-pointer" (click)="changeQuote()"></refresh-outline-icon></p>
+      <span class="material-icons-outlined cursor-pointer" (click)="changeQuote()">
+        refresh
+      </span>
     </div>
 
   </div>
 
 
-<div class="dark:bg-gray-800 dark:text-white">
+<div class="dark:text-white pb-4">
   <div class="container mx-auto">
 
         <nav>
@@ -79,29 +81,29 @@
     <nav>
       <ul class="list-inline">
         <li>
-          <a href="#!/presentation">Présentation</a>
+          <a routerLink="/presentation" routerLinkActive="current">Présentation</a>
         </li>
         <li>
-          <a href="#!/chapitres">Chapitres</a>
+          <a routerLink="/chapitres" routerLinkActive="current">Chapitres</a>
         </li>
         <li>
-          <a href="#!/historique">Historique</a>
+          <a routerLink="/historique" routerLinkActive="current">Historique</a>
         </li>
         <li>
-          <a href="#!/equipe">Équipe</a>
+          <a routerLink="/equipe" routerLinkActive="current">Équipe</a>
         </li>
         <li>
-          <a href="#!/liens">Liens</a>
+          <a routerLink="/liens" routerLinkActive="current">Liens</a>
         </li>
         <li>
-          <a href="#!/commentaires">Commentaires</a>
+          <a routerLink="/commentaires" routerLinkActive="current">Commentaires</a>
         </li>
       </ul>
     </nav>
 
     <ul class="list-inline">
       <li>
-        <i uk-icon="mail"></i>&nbsp;
+        &nbsp;
         <a
           href="mailto:contact@ff7e.com"
           target="_blank"
@@ -109,7 +111,7 @@
       </li>
       <li class="muted">·</li>
       <li>
-        <i uk-icon="facebook"></i>&nbsp;
+        &nbsp;
         <a
           href="https://www.facebook.com/ff7experience"
           target="_blank"
@@ -117,7 +119,7 @@
       </li>
       <li class="muted">·</li>
       <li>
-          <i uk-icon="twitter"></i>&nbsp;
+          &nbsp;
           <a
             href="https://twitter.com/ff7experience"
             target="_blank"

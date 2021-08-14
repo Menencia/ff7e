@@ -1,4 +1,4 @@
-<div class="mt-5 grid sm:grid-cols-1 md:grid-cols-3 gap-8">
+<div class="py-5 grid sm:grid-cols-1 md:grid-cols-3 gap-8">
   <div>
       <img src="/assets/covers/ff7e.jpg" alt="" class="uk-thumbnail cover"/>
   </div>
@@ -10,6 +10,7 @@
       <li *ngFor="let e of contributors['staff-active']" class="nolink">
         <div class="li-first">
           <img
+            class="inline-block"
             *ngIf="e.avatar"
             [src]="'/assets/team/' + e.avatar + '.png'"
             width="32"

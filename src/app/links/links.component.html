@@ -1,4 +1,4 @@
-<div class="mt-5 grid sm:grid-cols-1 md:grid-cols-3 gap-8">
+<div class="py-5 grid sm:grid-cols-1 md:grid-cols-3 gap-8">
   <div>
       <img src="/assets/covers/ff7e.jpg" alt="" class="uk-thumbnail cover"/>
   </div>
@@ -18,7 +18,11 @@
         </a>
       </li>
     </ul>
-    <ng-template #loading><i uk-icon="loading"></i> ~loading~</ng-template>
+    <ng-template #loading>
+      <span class="material-icons-outlined">
+        pending
+      </span> ~loading~
+    </ng-template>
 
   </div>
 

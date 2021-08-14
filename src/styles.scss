@@ -11,30 +11,11 @@ body {
   font-size: 14px;
 }
 
-question-mark-circle-outline-icon,
-cloud-download-outline-icon,
-folder-outline-icon,
-refresh-outline-icon {
-  @apply inline-block align-middle;
-}
-
 /** DESIGN TWO COLUMNS **/
 
 header {
   @apply text-center bg-gray-500 dark:bg-gray-900 dark:text-gray-300;
-}
-
-.header-main {
-  padding: 30px 0;
-}
-
-.header-nav {
-  padding-bottom: 30px;
-}
-
-nav ul {
-  margin: 0;
-  padding: 0;
+  background: url(/assets/fanart/000-the-prelude.jpg) top left #464646;
 }
 
 nav ul li {
@@ -44,54 +25,25 @@ nav ul li {
 }
 
 nav a, nav a:visited {
-  text-decoration: none;
-  color: #aaa;
+  @apply text-gray-400 no-underline;
 }
 
 nav a:hover {
-  color: #ccc;
-  text-decoration: underline;
+  @apply text-gray-300 underline;
 }
 
 nav a.current {
-  color: #ccc;
-  font-size: 1.5em;
-}
-
-.page {
-  padding: 30px 0;
-  background-color: #fff;
+  @apply text-gray-300 text-2xl;
 }
 
 .teaser {
-  @apply text-white tracking-wider italic;
+  @apply text-gray-400 tracking-wider italic;
 }
 
 /** COMBINED vIEWS **/
 
 .cover {
   box-shadow: #eee 2px 1px 2px 1px;
-}
-
-footer {
-  @apply bg-gray-400 dark:bg-gray-900 text-center text-gray-300 py-10;
-}
-
-footer a {
-  line-height: 1.8em;
-  color: #ddd;
-}
-
-footer a:hover {
-  color: #eee;
-  text-decoration: none;
-  border-bottom: 1px dotted #eee;
-}
-
-/* Hack pour magnificPopup */
-
-figure {
-  margin: 0;
 }
 
 /** GENERAL **/
@@ -101,9 +53,9 @@ h1 {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-fieldset {
-  border: 0;
-  border-top: 1px solid #3d73a9;
+h2 {
+  @apply font-bold m-0 inline-block text-xl;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 legend {
@@ -121,6 +73,7 @@ legend {
 
 .quote span {
   @apply text-blue-700 font-bold uppercase;
+  @apply dark:text-blue-300;
 }
 
 .info {
@@ -155,164 +108,137 @@ b, strong {
   margin-top: 15px;
 }
 
-/** HOME LIST STYLE **/
+/** LIST STYLE **/
 
 ul.list {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 ul.list li {
-    border-left: 3px solid #fff;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-top: 1px solid #ddd;
-    margin-bottom: 10px;
+  border-left: 3px solid #fff;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top: 1px solid #ddd;
+  margin-bottom: 10px;
+
+  @apply dark:border-gray-500;
 }
 
 ul.list li a {
-    display: block;
-    text-decoration: none;
-}
-
-.icon {
-    position: absolute;
-    opacity: 0.1;
-    right: 0;
-    top: 0;
-    z-index: 2;
-    display: none;
+  display: block;
+  text-decoration: none;
 }
 
 .li-first {
-    font-size: 1.5em;
-    line-height: 2em;
-    color: #666;
-}
-
-.li-warning {
-    font-size: 1.2em;
-    line-height: 2em;
-    color: #900;
+  font-size: 1.5em;
+  line-height: 2em;
+  color: #666;
 }
 
 .li-second {
-    font-size: 1.3em;
-    margin-left: 5px;
-    color: #999;
+  font-size: 1.3em;
+  margin-left: 5px;
+  color: #999;
 }
 
 .button {
-    float: right;
-    font-size: 1.4em;
-    line-height: 2em;
-    text-decoration: none;
-    text-transform: uppercase;
-    display: inline-block;
-    color: #ddd;
+  float: right;
+  font-size: 1.4em;
+  line-height: 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  color: #ddd;
 
-    border-bottom: 1px solid #ddd;
-    border-left: 1px solid #ddd;
-    border-right: 1px solid #ddd;
-    border-top: 3px solid #fefefe;
-    padding: 0 6px;
-    font-weight: bold;
-    background-color: #fefefe;
-    box-shadow: #ddd 0 1px 1px 0;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-top: 3px solid #fefefe;
+  padding: 0 6px;
+  font-weight: bold;
+  background-color: #fefefe;
+  box-shadow: #ddd 0 1px 1px 0;
+
+  @apply dark:bg-red-400 dark:text-gray-300 dark:border-red-400;
 }
 
 .button:before {
-    content: " ";
-}
-
-.button2 {
-    font-size: 1.4em;
-    line-height: 2em;
-    text-decoration: none;
-    text-transform: uppercase;
-    display: inline-block;
-    color: #999;
-
-    border: 1px solid #ddd;
-    padding: 0 6px;
-    font-weight: bold;
-    background-color: #fefefe;
-    box-shadow: #ddd 0 1px 1px 0;
-}
-
-.button2:before {
-    content: " ";
+  content: " ";
 }
 
 .right li:hover .button {
-    color: #666;
+  color: #666;
 }
 
-/** HOME LIST HOVER **/
+/** LIST HOVER **/
 
 ul.list li:hover {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
+  @apply dark:bg-gray-700;
 }
 
 ul.list li.nolink:hover {
-    cursor: default;
+  cursor: default;
 }
 
 ul.list li:hover .button {
-    color: #444;
+  color: #444;
 }
 
 ul.list li:hover .button:before {
-    content: url('/assets/cursor.png');
-    position: relative;
-    top: 2px;
-    right: 2px;
-    animation: cursorMove 1s linear infinite;
-    -webkit-animation: cursorMove 1s linear infinite;
-}
-
-.button2:hover {
-    color: #444;
-}
-
-.button2:hover:before {
-    content: url('/assets/cursor.png');
-    position: relative;
-    top: 2px;
-    right: 2px;
-    animation: cursorMove 1s linear infinite;
-    -webkit-animation: cursorMove 1s linear infinite;
+  content: url('/assets/cursor.png');
+  position: relative;
+  top: 2px;
+  right: 2px;
+  animation: cursorMove 1s linear infinite;
+  -webkit-animation: cursorMove 1s linear infinite;
 }
 
 @keyframes cursorMove {
-    50% {
-        right: 6px;
-    }
-    100% {
-        right: 2px;
-    }
+  50% {
+    right: 6px;
+  }
+  100% {
+    right: 2px;
+  }
 }
 
 @-webkit-keyframes cursorMove {
-    50% {
-        right: 6px;
-    }
-    100% {
-        right: 2px;
-    }
+  50% {
+    right: 6px;
+  }
+  100% {
+    right: 2px;
+  }
+}
+
+.lang-en {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  font-variant: small-caps;
 }
 
 /**
- * HISTORY
+ * FOOTER
  */
 
-.line {
-    text-align: center;
+ footer {
+  @apply bg-gray-400 dark:bg-gray-900 text-center text-gray-300 py-10;
+  background: url(/assets/fanart/000-the-prelude.jpg) top right #999;
 }
 
-/**
- * LIST FOOTER
- */
+footer a {
+  line-height: 1.8em;
+  color: #ddd;
+}
+
+footer a:hover {
+  color: #eee;
+  text-decoration: none;
+  border-bottom: 1px dotted #eee;
+}
 
 footer ul {
     list-style: none;
@@ -320,22 +246,10 @@ footer ul {
 }
 
 footer ul li {
-    display: inline;
+  display: inline;
 }
 
 footer ul li.muted {
-    margin: 0 5px;
-    color: #fff;
-}
-
-.lang-en {
-    background-color: #444;
-    color: #fff;
-    border-radius: 5px;
-    font-variant: small-caps;
-}
-
-.uk-icon-refresh:hover {
-    cursor: pointer;
-    font-weight: bold;
+  margin: 0 5px;
+  color: #fff;
 }
