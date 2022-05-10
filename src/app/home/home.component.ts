@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -32,6 +32,13 @@ export class HomeComponent implements OnInit {
       this.featured = chapters.filter(e => e.featured);
       this.next = chapters.filter(e => e.next);
     });
+  }
+
+  downloadFile(ext: string) {
+    const name = 'Final-Fantasy-VII-Expérience-2.0.1';
+    let headers = new HttpHeaders();
+    headers = headers.set('Accept', 'application/pdf');
+    return this.http.get(`assets/downloads/${name}.${ext}`, { headers: headers, responseType: 'blob' });
   }
 
   savePlayer(ev) {}
