@@ -231,6 +231,14 @@
   dependencies:
     tslib "^2.3.0"
 
+"@angular/youtube-player@^14.0.4":
+  version "14.0.4"
+  resolved "https://registry.yarnpkg.com/@angular/youtube-player/-/youtube-player-14.0.4.tgz#61d7ccc2501e6553dab048e03285779fdbd71f99"
+  integrity sha512-nc+cyIqcKC0m1X/Ujmh32Q9OdX08Q/LCEmLUuv9uE55lUqImfGxa+9SkmxlunWllH1mbTvwIZoJuvUilG0nGBA==
+  dependencies:
+    "@types/youtube" "^0.0.42"
+    tslib "^2.3.0"
+
 "@assemblyscript/loader@^0.10.1":
   version "0.10.1"
   resolved "https://registry.yarnpkg.com/@assemblyscript/loader/-/loader-0.10.1.tgz#70e45678f06c72fa2e350e8553ec4a4d72b92e06"
@@ -1702,10 +1710,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/youtube@0.0.46":
-  version "0.0.46"
-  resolved "https://registry.yarnpkg.com/@types/youtube/-/youtube-0.0.46.tgz#925afdf741f35279114da7c58c98013868a949f5"
-  integrity sha512-Yf1Y4bDj/QIn8v+zdy0l7+OW6s1uoUvzVn5cGqPNCsL4iUW4gYUlIdQIRtH9NOHVgwZNLbVeeRDEn6N4RMq6Nw==
+"@types/youtube@^0.0.42":
+  version "0.0.42"
+  resolved "https://registry.yarnpkg.com/@types/youtube/-/youtube-0.0.42.tgz#c3568e3e82e04cbd00cac3b66564ebcd21fd9d90"
+  integrity sha512-Nqo3HMPFPcNyZ7HNFZJjpH+N4yXqpxBItG+41e7nL9zednovMRZMXWj36CctSznbBcbj6ucvkJDo5iZ8SKqLIw==
 
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
@@ -5152,14 +5160,6 @@ ngx-disqus@^2.4.3:
   integrity sha512-Fyby5h8LnLuQBW8t8vv1r9XsiMh3+71+gCxhHu6dAhqkjUemeq3PO6DiPGgy+Ojt2aIDIWJd72wq99xDEhHxUg==
   dependencies:
     tslib "^1.9.0"
-
-ngx-youtube-player@^12.0.1:
-  version "12.0.1"
-  resolved "https://registry.yarnpkg.com/ngx-youtube-player/-/ngx-youtube-player-12.0.1.tgz#281dc7ccd69307bb3d738e1ec20b0f0d3b282cb8"
-  integrity sha512-RWcKOAoh/1DiQ0X470EPwCYSni0gUyoJje4hRxLZW7H8ZMepIcTj23zwBHzdHAjym69u1RpxrAnhVYmXO+QhZA==
-  dependencies:
-    "@types/youtube" "0.0.46"
-    tslib "^2.0.0"
 
 nice-napi@^1.0.2:
   version "1.0.2"

@@ -22,6 +22,12 @@ export class HomeComponent implements OnInit {
   constructor(public http: HttpClient) { }
 
   ngOnInit() {
+    // This code loads the IFrame Player API code asynchronously, according to the instructions at
+    // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
+    const tag = document.createElement('script');
+    tag.src = 'https://www.youtube.com/iframe_api';
+    document.body.appendChild(tag);
+
     this.http.get('assets/data/chapters.json').subscribe((data: any) => {
       const chapters = [];
       for (const book of data) {
