@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Book, Chapter } from 'src/app/shared/models/chapter';
+
+let apiLoaded = false;
 
 @Component({
   selector: 'app-home',
@@ -16,20 +19,23 @@ export class HomeComponent implements OnInit {
 
   teaser = '3NI6BUgH-P4';
 
-  featured;
-  next;
+  featured: Chapter[] = [];
+  next: Chapter[] = []
 
   constructor(public http: HttpClient) { }
 
   ngOnInit() {
-    // This code loads the IFrame Player API code asynchronously, according to the instructions at
-    // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
-    const tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    document.body.appendChild(tag);
+    if (!apiLoaded) {
+      // This code loads the IFrame Player API code asynchronously, according to the instructions at
+      // https://developers.google.com/youtube/iframe_api_reference#Getting_Started
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      document.body.appendChild(tag);
+      apiLoaded = true;
+    }
 
-    this.http.get('assets/data/chapters.json').subscribe((data: any) => {
-      const chapters = [];
+    this.http.get<Book[]>('assets/data/chapters.json').subscribe(data => {
+      const chapters: Chapter[] = [];
       for (const book of data) {
         for (const chapter of book.chapters) {
           chapters.push(chapter);
@@ -46,8 +52,4 @@ export class HomeComponent implements OnInit {
     headers = headers.set('Accept', 'application/pdf');
     return this.http.get(`assets/downloads/${name}.${ext}`, { headers: headers, responseType: 'blob' });
   }
-
-  savePlayer(ev) {}
-  onStateChange(ev) {}
-
 }

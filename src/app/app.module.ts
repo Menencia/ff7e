@@ -5,14 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { ChaptersComponent } from './chapters/chapters.component';
-import { HistoryComponent } from './history/history.component';
-import { TeamComponent } from './team/team.component';
-import { LinksComponent } from './links/links.component';
-import { CommentsComponent } from './comments/comments.component';
+import { HomeComponent } from './views/home/home.component';
+import { ChaptersComponent } from './views/chapters/chapters.component';
+import { HistoryComponent } from './views/history/history.component';
+import { TeamComponent } from './views/team/team.component';
+import { LinksComponent } from './views/links/links.component';
+import { CommentsComponent } from './views/comments/comments.component';
 
-import { DisqusModule } from 'ngx-disqus';
+import { DISQUS_SHORTNAME, DisqusModule } from 'ngx-disqus';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @NgModule({
@@ -29,10 +29,15 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    DisqusModule.forRoot('ff7e'),
+    DisqusModule,
     YouTubePlayerModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: DISQUS_SHORTNAME,
+      useValue: 'ff7e'
+    },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

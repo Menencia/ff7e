@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
-import { ChaptersComponent } from './chapters/chapters.component';
-import { HistoryComponent } from './history/history.component';
-import { TeamComponent } from './team/team.component';
-import { LinksComponent } from './links/links.component';
-import { CommentsComponent } from './comments/comments.component';
+import { HomeComponent } from './views/home/home.component';
+import { ChaptersComponent } from './views/chapters/chapters.component';
+import { HistoryComponent } from './views/history/history.component';
+import { TeamComponent } from './views/team/team.component';
+import { LinksComponent } from './views/links/links.component';
+import { CommentsComponent } from './views/comments/comments.component';
 
 const appRoutes: Routes = [
   { path: 'presentation', component: HomeComponent },

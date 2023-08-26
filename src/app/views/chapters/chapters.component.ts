@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Book, Chapter } from 'src/app/shared/models/chapter';
 
 @Component({
   selector: 'app-chapters',
@@ -8,13 +9,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ChaptersComponent implements OnInit {
 
-  chapters;
+  chapters: Chapter[] = [];
 
   constructor(public http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get('assets/data/chapters.json').subscribe((data: any) => {
-      const chapters = [];
+    this.http.get<Book[]>('assets/data/chapters.json').subscribe(data => {
+      const chapters: Chapter[] = [];
       for (const book of data) {
         for (const chapter of book.chapters) {
           chapters.push(chapter);

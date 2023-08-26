@@ -7,6 +7,12 @@ enum Theme {
   Dark = 'dark',
 }
 
+interface Quote {
+  chapter: number;
+  content: string;
+  character: string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -14,22 +20,25 @@ enum Theme {
 })
 export class AppComponent implements OnInit {
 
-  quotes;
-  quote;
+  quotes: Quote[] = [];
+  quote: Quote | undefined;
   theme: Theme;
 
-  constructor(public http: HttpClient, @Inject(DOCUMENT) private document: Document) {}
+  constructor(
+    public http: HttpClient,
+    @Inject(DOCUMENT) private document: Document
+  ) {
+    // default theme
+    const theme = localStorage.getItem('theme') as Theme;
+    this.theme = theme || Theme.Light;
+    this.applyTheme();
+  }
 
   ngOnInit() {
-    this.http.get('assets/data/quotes.json').subscribe((data: any) => {
+    this.http.get<Quote[]>('assets/data/quotes.json').subscribe(data => {
       this.quotes = data;
       this.changeQuote();
     });
-
-    // default theme
-    const theme = localStorage.getItem('theme') as Theme;
-    this.theme = theme ? theme: Theme.Light;
-    this.applyTheme();
   }
 
   changeQuote() {
@@ -44,9 +53,9 @@ export class AppComponent implements OnInit {
   applyTheme() {
     localStorage.setItem('theme', this.theme);
     if (this.theme === Theme.Dark) {
-      this.document.querySelector('html').classList.add('dark')
+      this.document.querySelector('html')?.classList.add('dark')
     } else {
-      this.document.querySelector('html').classList.remove('dark')
+      this.document.querySelector('html')?.classList.remove('dark')
     }
   }
 
