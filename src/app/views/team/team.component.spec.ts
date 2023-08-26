@@ -1,16 +1,15 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TeamComponent } from './team.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('TeamComponent', () => {
   let component: TeamComponent;
   let fixture: ComponentFixture<TeamComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ TeamComponent ]
-    })
-    .compileComponents();
+  beforeEach(() => TestBed.configureTestingModule({
+    imports: [HttpClientModule],
+    declarations: [TeamComponent]
   }));
 
   beforeEach(() => {

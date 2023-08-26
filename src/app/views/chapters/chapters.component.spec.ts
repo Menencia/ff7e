@@ -1,16 +1,14 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ChaptersComponent } from './chapters.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('ChaptersComponent', () => {
   let component: ChaptersComponent;
   let fixture: ComponentFixture<ChaptersComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [ ChaptersComponent ]
-    })
-    .compileComponents();
+  beforeEach(() => TestBed.configureTestingModule({
+    imports: [ HttpClientModule ],
+    declarations: [ ChaptersComponent ]
   }));
 
   beforeEach(() => {
