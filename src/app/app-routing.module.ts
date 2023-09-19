@@ -7,6 +7,7 @@ import { HistoryComponent } from './views/history/history.component';
 import { TeamComponent } from './views/team/team.component';
 import { LinksComponent } from './views/links/links.component';
 import { CommentsComponent } from './views/comments/comments.component';
+import { ReaderComponent } from './views/reader/reader.component';
 
 const appRoutes: Routes = [
   { path: 'presentation', component: HomeComponent },
@@ -15,6 +16,7 @@ const appRoutes: Routes = [
   { path: 'equipe', component: TeamComponent },
   { path: 'liens', component: LinksComponent },
   { path: 'commentaires', component: CommentsComponent },
+  { path: 'lecture', component: ReaderComponent },
   { path: '', redirectTo: '/presentation', pathMatch: 'full' },
 ];
 

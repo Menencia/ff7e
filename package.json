@@ -23,6 +23,7 @@
     "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.15",
     "ngx-disqus": "^3.0.1",
+    "ngx-indexed-db": "^16.0.0",
     "postcss": "^8.4.28",
     "rxjs": "~7.8.0",
     "tailwindcss": "^3.3.3",

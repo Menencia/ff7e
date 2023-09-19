@@ -15,6 +15,21 @@ import { CommentsComponent } from './views/comments/comments.component';
 import { DISQUS_SHORTNAME, DisqusModule } from 'ngx-disqus';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 
+import { DBConfig, NgxIndexedDBModule } from 'ngx-indexed-db';
+
+const dbConfig: DBConfig  = {
+  name: 'ff7e-db',
+  version: 1,
+  objectStoresMeta: [{
+    store: 'chapters',
+    storeConfig: { keyPath: 'id', autoIncrement: true },
+    storeSchema: [
+      { name: 'number', keypath: 'number', options: { unique: false } },
+      { name: 'content', keypath: 'content', options: { unique: false } }
+    ]
+  }]
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,13 +45,14 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     AppRoutingModule,
     HttpClientModule,
     DisqusModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    NgxIndexedDBModule.forRoot(dbConfig)
   ],
   providers: [
     {
       provide: DISQUS_SHORTNAME,
       useValue: 'ff7e'
-    },
+    }
   ],
   bootstrap: [AppComponent]
 })
