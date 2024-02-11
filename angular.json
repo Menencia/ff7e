@@ -58,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ff7e:build:production"
+              "buildTarget": "ff7e:build:production"
             },
             "development": {
-              "browserTarget": "ff7e:build:development"
+              "buildTarget": "ff7e:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -69,7 +69,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ff7e:build"
+            "buildTarget": "ff7e:build"
           }
         },
         "test": {
