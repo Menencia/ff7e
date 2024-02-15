@@ -6,8 +6,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommentsComponent implements OnInit {
 
-  disqusId = 'ff7e';
-
   constructor() { }
 
   ngOnInit() {

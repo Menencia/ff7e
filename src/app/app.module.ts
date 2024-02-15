@@ -12,8 +12,8 @@ import { TeamComponent } from './views/team/team.component';
 import { LinksComponent } from './views/links/links.component';
 import { CommentsComponent } from './views/comments/comments.component';
 
-import { DISQUS_SHORTNAME, DisqusModule } from 'ngx-disqus';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { UiModule } from './shared/ui/ui.module';
 
 @NgModule({
   declarations: [
@@ -29,15 +29,10 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    DisqusModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    UiModule
   ],
-  providers: [
-    {
-      provide: DISQUS_SHORTNAME,
-      useValue: 'ff7e'
-    },
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

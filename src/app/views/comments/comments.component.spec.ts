@@ -1,20 +1,14 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CommentsComponent } from './comments.component';
-import { DISQUS_SHORTNAME, DisqusModule } from 'ngx-disqus';
 
 describe('CommentsComponent', () => {
   let component: CommentsComponent;
   let fixture: ComponentFixture<CommentsComponent>;
 
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [DisqusModule],
+    imports: [],
     declarations: [CommentsComponent],
-    providers: [
-      {
-        provide: DISQUS_SHORTNAME,
-        useValue: 'ff7e'
-      }
-    ]
+    providers: []
   }));
 
   beforeEach(() => {
