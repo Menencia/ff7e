@@ -10,6 +10,7 @@ import {
 } from '@angular/core';
 
 @Component({
+  standalone: true,
   selector: 'app-disqus',
   template: '<div id="disqus_thread"></div>',
   changeDetection: ChangeDetectionStrategy.OnPush

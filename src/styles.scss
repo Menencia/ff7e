@@ -14,7 +14,6 @@ body {
 /** DESIGN TWO COLUMNS **/
 
 header {
-@apply text-center bg-gray-500 dark:bg-gray-900 dark:text-gray-300;
   background: url(/assets/fanart/000-the-prelude.jpg) top left #464646;
 }
 
@@ -49,22 +48,16 @@ nav a.current {
 /** GENERAL **/
 
 h1 {
-  @apply tracking-wide uppercase font-bold text-white m-0 inline-block text-3xl;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 h2 {
-  @apply font-bold m-0 inline-block text-xl;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 legend {
   font-size: 1.6em;
   color: #3d73a9;
-}
-
-.lead {
-  @apply text-justify text-gray-500 text-xl;
 }
 
 .quote {

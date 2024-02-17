@@ -4,7 +4,7 @@
   </div>
   <div class="col-span-2">
 
-    <h2>Équipe</h2>
+    <app-section-title>Équipe</app-section-title>
 
     <ul class="list" *ngIf="contributors">
       <li *ngFor="let e of contributors.staffActive" class="nolink">
@@ -21,7 +21,7 @@
       </li>
     </ul>
 
-    <h2>Contributions</h2>
+    <app-section-title>Contributions</app-section-title>
 
     <p class="lead" *ngIf="contributors">
       <span *ngFor="let e of contributors['contributors'];  let last = last;" class="nolink">
