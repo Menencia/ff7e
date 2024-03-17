@@ -46,18 +46,6 @@
         </a>
       </li>
       <li>
-        <a href="/assets/downloads/Final-Fantasy-VII-Expérience-2.0.1.mobi" download target="_self">
-          <div class="button">Télécharger</div>
-          <span class="li-first">
-            <span class="material-icons-outlined">
-              cloud_download
-            </span>
-            Version 2.0 - MOBI
-          </span>
-          <span class="li-second">Pour KINDLE</span>
-        </a>
-      </li>
-      <li>
         <a href="/assets/downloads/Final-Fantasy-VII-Expérience-2.0.1.epub" download target="_self">
           <div class="button">Télécharger</div>
           <span class="li-first">
@@ -67,19 +55,6 @@
             Version 2.0 - EPUB
           </span>
           <span class="li-second">Pour les autres liseuses</span>
-        </a>
-      </li>
-      <li *ngFor="let chapter of featured">
-        <a href="https://docs.google.com/document/d/{{chapter.id}}/edit" target="_blank">
-          <div class="button">Lire</div>
-          <span class="li-first">
-            <span class="material-icons-outlined">
-              bookmark
-            </span>
-            {{chapter.title}}
-            <span class="label featured2">nouveau</span>
-          </span>
-          <span class="li-second">{{chapter.date}}</span>
         </a>
       </li>
     </ul>

@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
   }
 
   downloadFile(ext: string) {
-    const name = 'Final-Fantasy-VII-Expérience-2.0.1';
+    const name = 'Final-Fantasy-VII-Expérience-2.0.2';
     let headers = new HttpHeaders();
     headers = headers.set('Accept', 'application/pdf');
     return this.http.get(`assets/downloads/${name}.${ext}`, { headers: headers, responseType: 'blob' });
