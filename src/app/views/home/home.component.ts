@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Book, Chapter } from 'src/app/shared/models/chapter';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 let apiLoaded = false;
 
@@ -12,7 +13,7 @@ let apiLoaded = false;
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  imports: [CommonModule, YouTubePlayerModule]
+  imports: [CommonModule, RouterModule, YouTubePlayerModule]
 })
 export class HomeComponent implements OnInit {
 
