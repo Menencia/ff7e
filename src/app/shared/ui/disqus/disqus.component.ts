@@ -1,4 +1,4 @@
-import { DOCUMENT } from '@angular/common';
+
 import {
   Component,
   Input,
@@ -6,7 +6,8 @@ import {
   ElementRef,
   Renderer2,
   ChangeDetectionStrategy,
-  Inject
+  Inject,
+  DOCUMENT
 } from '@angular/core';
 
 @Component({

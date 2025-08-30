@@ -1,14 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Book, Chapter } from 'src/app/shared/models/chapter';
-import { CommonModule } from '@angular/common';
 
 @Component({
-  standalone: true,
   selector: 'app-chapters',
   templateUrl: './chapters.component.html',
   styleUrls: ['./chapters.component.scss'],
-  imports: [CommonModule]
 })
 export class ChaptersComponent implements OnInit {
 

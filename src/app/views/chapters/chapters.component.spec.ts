@@ -1,15 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ChaptersComponent } from './chapters.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('ChaptersComponent', () => {
   let component: ChaptersComponent;
   let fixture: ComponentFixture<ChaptersComponent>;
 
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [ HttpClientModule ],
-    declarations: [ ChaptersComponent ]
-  }));
+    declarations: [ChaptersComponent],
+    imports: [],
+    providers: [provideHttpClient(withInterceptorsFromDi())]
+}));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ChaptersComponent);

@@ -3,65 +3,72 @@
 
     <div class="container mx-auto">
 
-      <h1 class="tracking-wide uppercase font-bold text-white m-0 inline-block text-3xl">
+      <h1 class="inline-block m-0 text-3xl font-bold tracking-wide text-white uppercase">
         『Final Fantasy VII: Expérience』
       </h1>
-      <div class="cursor-pointer inline-block text-white" (click)="toggleDark()">
-        <span *ngIf="theme === 'light'" class="material-icons-outlined">
-          light_mode
-        </span>
-        <span *ngIf="theme === 'dark'" class="material-icons-outlined">
-          dark_mode
-        </span>
+      <div class="inline-block text-white cursor-pointer" (click)="toggleDark()">
+        @if (theme === 'light') {
+          <span class="material-icons-outlined">
+            light_mode
+          </span>
+        }
+        @if (theme === 'dark') {
+          <span class="material-icons-outlined">
+            dark_mode
+          </span>
+        }
       </div>
 
-      <p class="teaser" *ngIf="quote">「{{ quote.content }}」 — {{ quote.character }}, chapitre {{ quote.chapter }}
-      <span class="material-icons-outlined cursor-pointer" (click)="changeQuote()">
-        refresh
-      </span>
+      @if (quote) {
+        <p class="teaser">「{{ quote.content }}」 — {{ quote.character }}, chapitre {{ quote.chapter }}
+          <span class="cursor-pointer material-icons-outlined" (click)="changeQuote()">
+            refresh
+          </span>
+        </p>
+      }
     </div>
 
   </div>
 
 
-<div class="dark:text-white pb-4">
-  <div class="container mx-auto">
+  <div class="pb-4 dark:text-white">
+    <div class="container mx-auto">
 
-        <nav>
-          <ul>
-            <li>
-              <a routerLink="/presentation" routerLinkActive="current">
-                Présentation
-              </a>
-            </li>
-            <li>
-              <a routerLink="/chapitres" routerLinkActive="current">
-                Chapitres
-              </a>
-            </li>
-            <li>
-              <a routerLink="/historique" routerLinkActive="current">
-                Historique
-              </a>
-            </li>
-            <li>
-              <a routerLink="/equipe" routerLinkActive="current">
-                Équipe
-              </a>
-            </li>
-            <li>
-              <a routerLink="/liens" routerLinkActive="current">
-                Liens
-              </a>
-            </li>
-            <li>
-              <a routerLink="/commentaires" routerLinkActive="current">
-                Commentaires
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <nav>
+        <ul>
+          <li>
+            <a routerLink="/presentation" routerLinkActive="current">
+              Présentation
+            </a>
+          </li>
+          <li>
+            <a routerLink="/chapitres" routerLinkActive="current">
+              Chapitres
+            </a>
+          </li>
+          <li>
+            <a routerLink="/historique" routerLinkActive="current">
+              Historique
+            </a>
+          </li>
+          <li>
+            <a routerLink="/equipe" routerLinkActive="current">
+              Équipe
+            </a>
+          </li>
+          <li>
+            <a routerLink="/liens" routerLinkActive="current">
+              Liens
+            </a>
+          </li>
+          <li>
+            <a routerLink="/commentaires" routerLinkActive="current">
+              Commentaires
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
   </div>
 
@@ -107,25 +114,17 @@
       <li>
         &nbsp;
         <a
-          href="mailto:contact@ff7e.com"
-          target="_blank"
-        >Contact</a>
-      </li>
-      <li class="muted">·</li>
-      <li>
-        &nbsp;
-        <a
           href="https://www.facebook.com/ff7experience"
           target="_blank"
         >Facebook</a>
       </li>
       <li class="muted">·</li>
       <li>
-          &nbsp;
-          <a
-            href="https://twitter.com/ff7experience"
-            target="_blank"
-          >Twitter</a>
+        &nbsp;
+        <a
+          href="https://twitter.com/ff7experience"
+          target="_blank"
+        >Twitter</a>
       </li>
     </ul>
 

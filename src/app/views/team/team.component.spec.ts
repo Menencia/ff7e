@@ -1,16 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TeamComponent } from './team.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('TeamComponent', () => {
   let component: TeamComponent;
   let fixture: ComponentFixture<TeamComponent>;
 
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [HttpClientModule],
-    declarations: [TeamComponent]
-  }));
+    declarations: [TeamComponent],
+    imports: [],
+    providers: [provideHttpClient(withInterceptorsFromDi())]
+}));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TeamComponent);

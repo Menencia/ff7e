@@ -1,16 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LinksComponent } from './links.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('LinksComponent', () => {
   let component: LinksComponent;
   let fixture: ComponentFixture<LinksComponent>;
 
   beforeEach(() => TestBed.configureTestingModule({
-    imports: [HttpClientModule],
-    declarations: [LinksComponent]
-  }));
+    declarations: [LinksComponent],
+    imports: [],
+    providers: [provideHttpClient(withInterceptorsFromDi())]
+}));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(LinksComponent);

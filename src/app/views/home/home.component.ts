@@ -2,18 +2,16 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Book, Chapter } from 'src/app/shared/models/chapter';
 import { YouTubePlayerModule } from '@angular/youtube-player';
-import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 let apiLoaded = false;
 
 @Component({
-  standalone: true,
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  imports: [CommonModule, RouterModule, YouTubePlayerModule]
+  imports: [RouterModule, YouTubePlayerModule]
 })
 export class HomeComponent implements OnInit {
 

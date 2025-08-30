@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 
 import { HomeComponent } from './views/home/home.component';
 import { ChaptersComponent } from './views/chapters/chapters.component';
@@ -8,7 +7,7 @@ import { TeamComponent } from './views/team/team.component';
 import { LinksComponent } from './views/links/links.component';
 import { CommentsComponent } from './views/comments/comments.component';
 
-const appRoutes: Routes = [
+export const routes: Routes = [
   { path: 'presentation', component: HomeComponent },
   { path: 'chapitres', component: ChaptersComponent },
   { path: 'historique', component: HistoryComponent },
@@ -17,15 +16,3 @@ const appRoutes: Routes = [
   { path: 'commentaires', component: CommentsComponent },
   { path: '', redirectTo: '/presentation', pathMatch: 'full' },
 ];
-
-@NgModule({
-  imports: [
-    RouterModule.forRoot(appRoutes, { useHash: true, scrollPositionRestoration: 'enabled' })
-  ],
-  exports: [
-    RouterModule
-  ],
-  providers: [
-  ]
-})
-export class AppRoutingModule {}

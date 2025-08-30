@@ -1,28 +1,33 @@
 <div class="py-5 grid sm:grid-cols-1 md:grid-cols-3 gap-8">
   <div>
-      <img src="/assets/covers/ff7e.jpg" alt="" class="uk-thumbnail cover"/>
+    <img src="/assets/covers/ff7e.jpg" alt="" class="uk-thumbnail cover"/>
   </div>
   <div class="col-span-2">
 
     <app-section-title>Ressources</app-section-title>
 
-    <ul class="list" *ngIf="links; else loading">
-      <li *ngFor="let e of links">
-        <a [href]="e.url" target="_blank">
-          <div class="button">{{ e.action || 'Voir' }}</div>
-          <div class="li-first">
-            <span *ngIf="e.lang" class="label lang-en">en anglais</span>
-            {{ e.title }}
-          </div>
-          <div class="li-second">{{ e.desc }}</div>
-        </a>
-      </li>
-    </ul>
-    <ng-template #loading>
+    @if (links) {
+      <ul class="list">
+        @for (e of links; track e) {
+          <li>
+            <a [href]="e.url" target="_blank">
+              <div class="button">{{ e.action || 'Voir' }}</div>
+              <div class="li-first">
+                @if (e.lang) {
+                  <span class="label lang-en">en anglais</span>
+                }
+                {{ e.title }}
+              </div>
+              <div class="li-second">{{ e.desc }}</div>
+            </a>
+          </li>
+        }
+      </ul>
+    } @else {
       <span class="material-icons-outlined">
         pending
       </span> ~loading~
-    </ng-template>
+    }
 
   </div>
 
