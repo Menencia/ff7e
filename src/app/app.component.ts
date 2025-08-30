@@ -44,6 +44,10 @@ export class AppComponent implements OnInit {
 
   changeQuote() {
     this.quote = this.quotes[Math.floor(Math.random() * this.quotes.length)];
+    setTimeout(() => {
+      this.quote = undefined;
+      setTimeout(() => { this.changeQuote() }, 500);
+    }, 15000);
   }
 
   toggleDark() {

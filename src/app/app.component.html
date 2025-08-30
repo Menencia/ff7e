@@ -19,13 +19,13 @@
         }
       </div>
 
-      @if (quote) {
-        <p class="teaser">「{{ quote.content }}」 — {{ quote.character }}, chapitre {{ quote.chapter }}
-          <span class="cursor-pointer material-icons-outlined" (click)="changeQuote()">
-            refresh
-          </span>
-        </p>
-      }
+      <div class="h-5 mt-5 teaser-container">
+        @if (quote) {
+          <p class="teaser" animate.enter="enter-teaser" animate.leave="leave-teaser">
+            「{{ quote.content }}」 — {{ quote.character }}, chapitre {{ quote.chapter }}
+          </p>
+        }
+      </div>
     </div>
 
   </div>
