@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit, DOCUMENT } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 enum Theme {
   Light = 'light',
@@ -15,7 +15,7 @@ interface Quote {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
