@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@use "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
 
