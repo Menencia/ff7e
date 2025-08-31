@@ -3,20 +3,18 @@
 
     <div class="container mx-auto">
 
-      <h1 class="inline-block m-0 text-3xl font-bold tracking-wide text-white uppercase">
-        『Final Fantasy VII: Expérience』
-      </h1>
-      <div class="inline-block text-white cursor-pointer" (click)="toggleDark()">
-        @if (theme === 'light') {
-          <span class="material-icons-outlined">
-            light_mode
-          </span>
-        }
-        @if (theme === 'dark') {
-          <span class="material-icons-outlined">
-            dark_mode
-          </span>
-        }
+      <div class="flex justify-center">
+        <h1 class="text-3xl font-bold tracking-wide text-white uppercase">
+          『Final Fantasy VII: Expérience』
+        </h1>
+        <div class="text-white cursor-pointer" (click)="toggleDark()">
+          @if (theme === 'light') {
+            <fa-icon [icon]="faSun" />
+          }
+          @if (theme === 'dark') {
+            <fa-icon [icon]="faMoon" />
+          }
+        </div>
       </div>
 
       <div class="h-5 mt-5 teaser-container">

@@ -1,6 +1,8 @@
 import { Component, Inject, OnInit, DOCUMENT } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 
 enum Theme {
   Light = 'light',
@@ -15,7 +17,7 @@ interface Quote {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, FontAwesomeModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
@@ -24,6 +26,9 @@ export class AppComponent implements OnInit {
   quotes: Quote[] = [];
   quote: Quote | undefined;
   theme: Theme;
+
+  faSun = faSun;
+  faMoon = faMoon;
 
   constructor(
     public http: HttpClient,

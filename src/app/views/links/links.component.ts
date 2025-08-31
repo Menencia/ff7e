@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { SectionTitleComponent } from 'src/app/shared/ui/section-title/section-title.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faRefresh } from '@fortawesome/free-solid-svg-icons';
 
 interface Link {
   title: string;
@@ -13,11 +15,13 @@ interface Link {
 @Component({
   selector: 'app-links',
   templateUrl: './links.component.html',
-  imports: [SectionTitleComponent]
+  imports: [SectionTitleComponent, FontAwesomeModule],
 })
 export class LinksComponent implements OnInit {
 
   links: Link[] = [];
+
+  faRefresh = faRefresh;
 
   constructor(public http: HttpClient) {}
 

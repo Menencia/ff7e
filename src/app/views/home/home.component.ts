@@ -3,6 +3,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Book, Chapter } from 'src/app/shared/models/chapter';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { RouterModule } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faBook, faCloudArrowDown, faStar, faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 
 let apiLoaded = false;
 
@@ -10,7 +12,7 @@ let apiLoaded = false;
   selector: 'app-home',
   templateUrl: './home.component.html',
   encapsulation: ViewEncapsulation.None,
-  imports: [RouterModule, YouTubePlayerModule]
+  imports: [RouterModule, YouTubePlayerModule, FontAwesomeModule]
 })
 export class HomeComponent implements OnInit {
 
@@ -23,6 +25,11 @@ export class HomeComponent implements OnInit {
 
   featured: Chapter[] = [];
   next: Chapter[] = []
+
+  faBook = faBook;
+  faStar = faStar;
+  faCloudArrowDown = faCloudArrowDown;
+  faQuestionCircle = faQuestionCircle;
 
   constructor(public http: HttpClient) { }
 
