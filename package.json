@@ -6,6 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "lint": "biome check",
+    "lint:ci": "biome ci",
     "deploy": "ng build && firebase deploy"
   },
   "private": true,
@@ -35,6 +37,7 @@
     "@angular/build": "^20.2.1",
     "@angular/cli": "~20.2.1",
     "@angular/compiler-cli": "^20.2.3",
+    "@biomejs/biome": "2.2.2",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",

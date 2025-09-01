@@ -26,5 +26,7 @@
 .leave-teaser {
   opacity: 0;
   transform: scale(1.1);
-  transition: opacity 500ms ease-out, transform 500ms ease-out;
+  transition:
+    opacity 500ms ease-out,
+    transform 500ms ease-out;
 }

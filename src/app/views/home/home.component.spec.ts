@@ -1,8 +1,10 @@
+import {
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-
-import { HomeComponent } from './home.component';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { HomeComponent } from './home.component';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -10,11 +12,10 @@ describe('HomeComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-    declarations: [HomeComponent],
-    imports: [YouTubePlayerModule],
-    providers: [provideHttpClient(withInterceptorsFromDi())]
-})
-    .compileComponents();
+      declarations: [HomeComponent],
+      imports: [YouTubePlayerModule],
+      providers: [provideHttpClient(withInterceptorsFromDi())],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

@@ -6,9 +6,11 @@ describe('HistoryComponent', () => {
   let component: HistoryComponent;
   let fixture: ComponentFixture<HistoryComponent>;
 
-  beforeEach(() => TestBed.configureTestingModule({
-    declarations: [ HistoryComponent ]
-  }));
+  beforeEach(() =>
+    TestBed.configureTestingModule({
+      declarations: [HistoryComponent],
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(HistoryComponent);

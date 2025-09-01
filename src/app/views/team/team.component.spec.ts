@@ -1,17 +1,21 @@
+import {
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TeamComponent } from './team.component';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('TeamComponent', () => {
   let component: TeamComponent;
   let fixture: ComponentFixture<TeamComponent>;
 
-  beforeEach(() => TestBed.configureTestingModule({
-    declarations: [TeamComponent],
-    imports: [],
-    providers: [provideHttpClient(withInterceptorsFromDi())]
-}));
+  beforeEach(() =>
+    TestBed.configureTestingModule({
+      declarations: [TeamComponent],
+      imports: [],
+      providers: [provideHttpClient(withInterceptorsFromDi())],
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TeamComponent);

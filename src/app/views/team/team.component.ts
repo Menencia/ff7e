@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 import { SectionTitleComponent } from 'src/app/shared/ui/section-title/section-title.component';
 
 interface ContributorsJson {
@@ -14,21 +14,21 @@ interface ContributorsJson {
 @Component({
   selector: 'app-team',
   templateUrl: './team.component.html',
-  imports: [SectionTitleComponent]
+  imports: [SectionTitleComponent],
 })
 export class TeamComponent implements OnInit {
-
   contributors: ContributorsJson = {
     staffActive: [],
-    contributors: []
+    contributors: [],
   };
 
-  constructor(public http: HttpClient) { }
+  constructor(public http: HttpClient) {}
 
   ngOnInit() {
-    this.http.get<ContributorsJson>('assets/data/contributors.json').subscribe(data => {
-      this.contributors = data;
-    });
+    this.http
+      .get<ContributorsJson>('assets/data/contributors.json')
+      .subscribe((data) => {
+        this.contributors = data;
+      });
   }
-
 }

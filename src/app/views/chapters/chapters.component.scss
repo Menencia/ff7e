@@ -64,7 +64,8 @@
   filter: sepia(0%);
 }
 
-h2 a, h2 a:visited {
+h2 a,
+h2 a:visited {
   color: #999;
   font-size: 12px;
   text-decoration: none;
@@ -77,16 +78,18 @@ h2 a:hover {
 /* RIBBON */
 .ribbon {
   position: absolute;
-  right: -5px; top: -5px;
+  right: -5px;
+  top: -5px;
   z-index: 1;
   overflow: hidden;
-  width: 75px; height: 75px;
+  width: 75px;
+  height: 75px;
   text-align: right;
 }
 .ribbon span {
   font-size: 10px;
   font-weight: bold;
-  color: #FFF;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-align: center;
@@ -97,18 +100,23 @@ h2 a:hover {
   display: block;
   box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
   position: absolute;
-  top: 19px; right: -21px;
+  top: 19px;
+  right: -21px;
 }
 .ribbon span::before {
   content: "";
-  position: absolute; left: 0px; top: 100%;
+  position: absolute;
+  left: 0px;
+  top: 100%;
   z-index: -1;
   border-right: 3px solid transparent;
   border-bottom: 3px solid transparent;
 }
 .ribbon span::after {
   content: "";
-  position: absolute; right: 0px; top: 100%;
+  position: absolute;
+  right: 0px;
+  top: 100%;
   z-index: -1;
   border-left: 3px solid transparent;
   border-bottom: 3px solid transparent;
@@ -116,28 +124,28 @@ h2 a:hover {
 
 /* RIBBON SPECIAL */
 .special span {
-  background: linear-gradient(#F6005E 0%, #BA0047 100%);
+  background: linear-gradient(#f6005e 0%, #ba0047 100%);
 }
 .special span::before {
-  border-left: 3px solid #BA0047;
-  border-top: 3px solid #BA0047;
+  border-left: 3px solid #ba0047;
+  border-top: 3px solid #ba0047;
 }
 .special span::after {
-  border-right: 3px solid #BA0047;
-  border-top: 3px solid #BA0047;
+  border-right: 3px solid #ba0047;
+  border-top: 3px solid #ba0047;
 }
 
 /* RIBBON FEATURED */
 .featured span {
-  background: linear-gradient(#008DA1 0%, #006B7A 100%);
+  background: linear-gradient(#008da1 0%, #006b7a 100%);
 }
 .featured span::before {
-  border-left: 3px solid #006B7A;
-  border-top: 3px solid #006B7A;
+  border-left: 3px solid #006b7a;
+  border-top: 3px solid #006b7a;
 }
 .featured span::after {
-  border-right: 3px solid #006B7A;
-  border-top: 3px solid #006B7A;
+  border-right: 3px solid #006b7a;
+  border-top: 3px solid #006b7a;
 }
 
 .featured2 {

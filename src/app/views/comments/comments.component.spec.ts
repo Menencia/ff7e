@@ -5,11 +5,13 @@ describe('CommentsComponent', () => {
   let component: CommentsComponent;
   let fixture: ComponentFixture<CommentsComponent>;
 
-  beforeEach(() => TestBed.configureTestingModule({
-    imports: [],
-    declarations: [CommentsComponent],
-    providers: []
-  }));
+  beforeEach(() =>
+    TestBed.configureTestingModule({
+      imports: [],
+      declarations: [CommentsComponent],
+      providers: [],
+    }),
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(CommentsComponent);

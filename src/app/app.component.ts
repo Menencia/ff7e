@@ -1,8 +1,8 @@
-import { Component, Inject, OnInit, DOCUMENT } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Component, DOCUMENT, Inject, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
 enum Theme {
   Light = 'light',
@@ -22,7 +22,6 @@ interface Quote {
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-
   quotes: Quote[] = [];
   quote: Quote | undefined;
   theme: Theme;
@@ -32,7 +31,7 @@ export class AppComponent implements OnInit {
 
   constructor(
     public http: HttpClient,
-    @Inject(DOCUMENT) private document: Document
+    @Inject(DOCUMENT) private document: Document,
   ) {
     // default theme
     const theme = localStorage.getItem('theme') as Theme;
@@ -41,7 +40,7 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.http.get<Quote[]>('assets/data/quotes.json').subscribe(data => {
+    this.http.get<Quote[]>('assets/data/quotes.json').subscribe((data) => {
       this.quotes = data;
       this.changeQuote();
     });
@@ -51,7 +50,9 @@ export class AppComponent implements OnInit {
     this.quote = this.quotes[Math.floor(Math.random() * this.quotes.length)];
     setTimeout(() => {
       this.quote = undefined;
-      setTimeout(() => { this.changeQuote() }, 500);
+      setTimeout(() => {
+        this.changeQuote();
+      }, 500);
     }, 15000);
   }
 
@@ -63,10 +64,9 @@ export class AppComponent implements OnInit {
   applyTheme() {
     localStorage.setItem('theme', this.theme);
     if (this.theme === Theme.Dark) {
-      this.document.querySelector('html')?.classList.add('dark')
+      this.document.querySelector('html')?.classList.add('dark');
     } else {
-      this.document.querySelector('html')?.classList.remove('dark')
+      this.document.querySelector('html')?.classList.remove('dark');
     }
   }
-
 }

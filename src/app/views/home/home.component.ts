@@ -1,10 +1,15 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Book, Chapter } from 'src/app/shared/models/chapter';
-import { YouTubePlayerModule } from '@angular/youtube-player';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faBook, faCloudArrowDown, faStar, faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBook,
+  faCloudArrowDown,
+  faQuestionCircle,
+  faStar,
+} from '@fortawesome/free-solid-svg-icons';
+import { Book, Chapter } from 'src/app/shared/models/chapter';
 
 let apiLoaded = false;
 
@@ -12,10 +17,9 @@ let apiLoaded = false;
   selector: 'app-home',
   templateUrl: './home.component.html',
   encapsulation: ViewEncapsulation.None,
-  imports: [RouterModule, YouTubePlayerModule, FontAwesomeModule]
+  imports: [RouterModule, YouTubePlayerModule, FontAwesomeModule],
 })
 export class HomeComponent implements OnInit {
-
   pdf = '0B-rTqD9hKNHPWkI0WUlxMk1QdFU';
   epub = '0B-rTqD9hKNHPWnNpQ0w4MktTUG8';
   kepub = '0B-rTqD9hKNHPbGFJeUs5MVlqZ3c';
@@ -24,14 +28,14 @@ export class HomeComponent implements OnInit {
   teaser = '3NI6BUgH-P4';
 
   featured: Chapter[] = [];
-  next: Chapter[] = []
+  next: Chapter[] = [];
 
   faBook = faBook;
   faStar = faStar;
   faCloudArrowDown = faCloudArrowDown;
   faQuestionCircle = faQuestionCircle;
 
-  constructor(public http: HttpClient) { }
+  constructor(public http: HttpClient) {}
 
   ngOnInit() {
     if (!apiLoaded) {
@@ -43,15 +47,15 @@ export class HomeComponent implements OnInit {
       apiLoaded = true;
     }
 
-    this.http.get<Book[]>('assets/data/chapters.json').subscribe(data => {
+    this.http.get<Book[]>('assets/data/chapters.json').subscribe((data) => {
       const chapters: Chapter[] = [];
       for (const book of data) {
         for (const chapter of book.chapters) {
           chapters.push(chapter);
         }
       }
-      this.featured = chapters.filter(e => e.featured);
-      this.next = chapters.filter(e => e.next);
+      this.featured = chapters.filter((e) => e.featured);
+      this.next = chapters.filter((e) => e.next);
     });
   }
 
@@ -59,6 +63,9 @@ export class HomeComponent implements OnInit {
     const name = 'Final-Fantasy-VII-Expérience-2.0.2';
     let headers = new HttpHeaders();
     headers = headers.set('Accept', 'application/pdf');
-    return this.http.get(`assets/downloads/${name}.${ext}`, { headers: headers, responseType: 'blob' });
+    return this.http.get(`assets/downloads/${name}.${ext}`, {
+      headers: headers,
+      responseType: 'blob',
+    });
   }
 }
