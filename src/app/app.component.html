@@ -17,11 +17,16 @@
         </div>
       </div>
 
-      <div class="h-5 mt-5 teaser-container">
+      <div class="relative h-5 mt-5">
         @if (quote) {
-          <p class="teaser" animate.enter="enter-teaser" animate.leave="leave-teaser">
-            「{{ quote.content }}」 — {{ quote.character }}, chapitre {{ quote.chapter }}
-          </p>
+          <div
+            class="absolute w-full"
+            animate.enter="enter-teaser" animate.leave="leave-teaser"
+          >
+            <div class="italic tracking-wider text-gray-400">
+              「{{ quote.content }}」 — {{ quote.character }}, chapitre {{ quote.chapter }}
+            </div>
+        </div>
         }
       </div>
     </div>

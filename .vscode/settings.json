@@ -9,5 +9,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.biome": "explicit"
   },
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "editor.fontFamily": "Operator Mono, Consolas, 'Courier New', monospace"
 }
