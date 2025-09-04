@@ -1,0 +1,78 @@
+<header class="text-center bg-gray-500 dark:bg-gray-900 dark:text-gray-300">
+  <div class="py-8">
+
+    <div class="container mx-auto">
+
+      <div class="flex justify-center">
+        <h1 class="text-3xl font-bold tracking-wide text-white uppercase">
+          『Final Fantasy VII: Expérience』
+        </h1>
+        <div class="text-white cursor-pointer" (click)="toggleDark()">
+          @if (theme === 'light') {
+            <fa-icon [icon]="faSun" />
+          }
+          @if (theme === 'dark') {
+            <fa-icon [icon]="faMoon" />
+          }
+        </div>
+      </div>
+
+      <div class="relative h-5 mt-5">
+        @if (quote) {
+          <div
+            class="absolute w-full"
+            animate.enter="enter-teaser" animate.leave="leave-teaser"
+          >
+            <div class="italic tracking-wider text-gray-400">
+              「{{ quote.content }}」 — {{ quote.character }}, chapitre {{ quote.chapter }}
+            </div>
+        </div>
+        }
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="pb-4 dark:text-white">
+    <div class="container mx-auto">
+
+      <nav>
+        <ul>
+          <li>
+            <a routerLink="/presentation" routerLinkActive="current">
+              Présentation
+            </a>
+          </li>
+          <li>
+            <a routerLink="/chapitres" routerLinkActive="current">
+              Chapitres
+            </a>
+          </li>
+          <li>
+            <a routerLink="/historique" routerLinkActive="current">
+              Historique
+            </a>
+          </li>
+          <li>
+            <a routerLink="/equipe" routerLinkActive="current">
+              Équipe
+            </a>
+          </li>
+          <li>
+            <a routerLink="/liens" routerLinkActive="current">
+              Liens
+            </a>
+          </li>
+          <li>
+            <a routerLink="/commentaires" routerLinkActive="current">
+              Commentaires
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+  </div>
+
+</header>
