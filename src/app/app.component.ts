@@ -3,6 +3,7 @@ import { Component, DOCUMENT, Inject, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { FooterComponent } from './shared/ui/footer/footer.component';
 
 enum Theme {
   Light = 'light',
@@ -17,7 +18,13 @@ interface Quote {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, RouterLinkActive, FontAwesomeModule],
+  imports: [
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+    FontAwesomeModule,
+    FooterComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })

@@ -208,37 +208,3 @@ ul.list li:hover .button:before {
   border-radius: 5px;
   font-variant: small-caps;
 }
-
-/**
- * FOOTER
- */
-
- footer {
-  @apply bg-gray-400 dark:bg-gray-900 text-center text-gray-300 py-10;
-  background: url(/assets/fanart/000-the-prelude.jpg) top right #999;
-}
-
-footer a {
-  line-height: 1.8em;
-  color: #ddd;
-}
-
-footer a:hover {
-  color: #eee;
-  text-decoration: none;
-  border-bottom: 1px dotted #eee;
-}
-
-footer ul {
-    list-style: none;
-    padding: 0;
-}
-
-footer ul li {
-  display: inline;
-}
-
-footer ul li.muted {
-  margin: 0 5px;
-  color: #fff;
-}
