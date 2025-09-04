@@ -11,30 +11,6 @@ body {
   font-size: 14px;
 }
 
-/** DESIGN TWO COLUMNS **/
-
-header {
-  background: url(/assets/fanart/000-the-prelude.jpg) top left #464646;
-}
-
-nav ul li {
-  @apply uppercase align-middle mr-5 inline-block;
-  letter-spacing: 1px;
-  font-size: 1.3em;
-}
-
-nav a, nav a:visited {
-  @apply text-gray-400 no-underline;
-}
-
-nav a:hover {
-  @apply text-gray-300 underline;
-}
-
-nav a.current {
-  @apply text-gray-300 text-2xl;
-}
-
 /** COMBINED vIEWS **/
 
 .cover {

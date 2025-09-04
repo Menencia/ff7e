@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, DOCUMENT, Inject } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,6 +15,11 @@ interface Quote {
   character: string;
 }
 
+interface Link {
+  url: string;
+  label: string;
+}
+
 @Component({
   imports: [RouterLink, RouterLinkActive, FontAwesomeModule],
   selector: 'app-header',
@@ -25,14 +30,24 @@ export class HeaderComponent {
   quotes: Quote[] = [];
   quote: Quote | undefined;
   theme: Theme;
+  links: Link[];
 
   faSun = faSun;
   faMoon = faMoon;
 
   constructor(
     public http: HttpClient,
+    public router: Router,
     @Inject(DOCUMENT) private document: Document,
   ) {
+    this.links = [
+      { url: '/presentation', label: 'Présentation' },
+      { url: '/chapitres', label: 'Chapitres' },
+      { url: '/historique', label: 'Historique' },
+      { url: '/equipe', label: 'Équipe' },
+      { url: '/liens', label: 'Liens' },
+      { url: '/commentaires', label: 'Commentaires' },
+    ];
     // default theme
     const theme = localStorage.getItem('theme') as Theme;
     this.theme = theme || Theme.Light;

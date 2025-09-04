@@ -36,39 +36,20 @@
 
   <div class="pb-4 dark:text-white">
     <div class="container mx-auto">
-
       <nav>
         <ul>
-          <li>
-            <a routerLink="/presentation" routerLinkActive="current">
-              Présentation
-            </a>
-          </li>
-          <li>
-            <a routerLink="/chapitres" routerLinkActive="current">
-              Chapitres
-            </a>
-          </li>
-          <li>
-            <a routerLink="/historique" routerLinkActive="current">
-              Historique
-            </a>
-          </li>
-          <li>
-            <a routerLink="/equipe" routerLinkActive="current">
-              Équipe
-            </a>
-          </li>
-          <li>
-            <a routerLink="/liens" routerLinkActive="current">
-              Liens
-            </a>
-          </li>
-          <li>
-            <a routerLink="/commentaires" routerLinkActive="current">
-              Commentaires
-            </a>
-          </li>
+          @for (link of links; track $index) {
+            <li class="inline-block mr-5 text-lg tracking-wider uppercase align-middle">
+              <a
+                class="no-underline hover:text-gray-300 hover:underline"
+                [class]="{ 'text-gray-400': !router.isActive(link.url, true) }"
+                [routerLink]="link.url"
+                routerLinkActive="text-gray-300 text-2xl"
+                [routerLinkActiveOptions]="{ exact: true }">
+                {{ link.label }}
+              </a>
+            </li>
+          }
         </ul>
       </nav>
     </div>
