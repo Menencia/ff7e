@@ -20,25 +20,16 @@ body {
 /** GENERAL **/
 
 h1 {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h2 {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 legend {
   font-size: 1.6em;
   color: #3d73a9;
-}
-
-.quote {
-  @apply text-justify text-gray-400 text-xl mx-10 my-12;
-}
-
-.quote span {
-  @apply text-blue-700 font-bold uppercase;
-  @apply dark:text-blue-300;
 }
 
 .info {
@@ -65,7 +56,8 @@ hr {
   border: none;
 }
 
-b, strong {
+b,
+strong {
   font-weight: 700;
 }
 
@@ -164,6 +156,7 @@ ul.list li:hover .button:before {
   50% {
     right: 6px;
   }
+
   100% {
     right: 2px;
   }
@@ -173,6 +166,7 @@ ul.list li:hover .button:before {
   50% {
     right: 6px;
   }
+
   100% {
     right: 2px;
   }
