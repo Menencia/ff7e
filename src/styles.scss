@@ -1,73 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
-
 @use "tailwindcss";
 
-@custom-variant dark (&:where(.dark, .dark *));
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 body {
   font-family: 'Open Sans Condensed', sans-serif;
   font-size: 14px;
 }
 
-/** COMBINED vIEWS **/
-
-.cover {
-  box-shadow: #eee 2px 1px 2px 1px;
-}
-
-/** GENERAL **/
-
-h1 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-h2 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-legend {
-  font-size: 1.6em;
-  color: #3d73a9;
-}
-
-.info {
-  font-size: 1.6em;
-  text-align: justify;
-  color: #666;
-  line-height: 1.4em;
-}
-
-.label {
-  font-size: 0.7em;
-  margin: 0 2px;
-  display: inline-block;
-  padding: 0 4px;
-  border-radius: 4px;
-  vertical-align: 10%;
-  line-height: normal;
-  font-variant: small-caps;
-  letter-spacing: 2px;
-}
-
-hr {
-  margin-top: 75px;
-  border: none;
-}
-
-b,
-strong {
-  font-weight: 700;
-}
-
 *+p {
   margin-top: 15px;
-}
-
-.lang-en {
-  background-color: #444;
-  color: #fff;
-  border-radius: 5px;
-  font-variant: small-caps;
 }

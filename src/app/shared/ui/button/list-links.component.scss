@@ -44,6 +44,18 @@ ul.list li a {
   color: #666;
 }
 
+.label {
+  font-size: 0.7em;
+  margin: 0 2px;
+  display: inline-block;
+  padding: 0 4px;
+  border-radius: 4px;
+  vertical-align: 10%;
+  line-height: normal;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+}
+
 /** LIST HOVER **/
 
 ul.list li.nolink:hover {
