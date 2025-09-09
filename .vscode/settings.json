@@ -11,5 +11,5 @@
   },
   "files.trimTrailingWhitespace": true,
   "tailwindCSS.experimental.configFile": "src/styles.scss",
-  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontFamily": "FiraCode Nerd Font"
 }
