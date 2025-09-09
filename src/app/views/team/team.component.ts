@@ -14,6 +14,7 @@ interface ContributorsJson {
 @Component({
   selector: 'app-team',
   templateUrl: './team.component.html',
+  styleUrl: './team.component.scss',
   imports: [SectionTitleComponent],
 })
 export class TeamComponent implements OnInit {

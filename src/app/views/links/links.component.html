@@ -7,22 +7,7 @@
     <app-section-title>Ressources</app-section-title>
 
     @if (links) {
-      <ul class="list">
-        @for (e of links; track e) {
-          <li>
-            <a [href]="e.url" target="_blank">
-              <div class="button">{{ e.action || 'Voir' }}</div>
-              <div class="li-first">
-                @if (e.lang) {
-                  <span class="label lang-en">en anglais</span>
-                }
-                {{ e.title }}
-              </div>
-              <div class="li-second">{{ e.desc }}</div>
-            </a>
-          </li>
-        }
-      </ul>
+      <app-list-links [links]="links" />
     } @else {
       <fa-icon [icon]="faRefresh" /> ~loading~
     }

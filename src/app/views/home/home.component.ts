@@ -10,6 +10,10 @@ import {
   faStar,
 } from '@fortawesome/free-solid-svg-icons';
 import { Book, Chapter } from 'src/app/shared/models/chapter';
+import {
+  Link,
+  ListLinksComponent,
+} from 'src/app/shared/ui/button/list-links.component';
 
 let apiLoaded = false;
 
@@ -17,7 +21,12 @@ let apiLoaded = false;
   selector: 'app-home',
   templateUrl: './home.component.html',
   encapsulation: ViewEncapsulation.None,
-  imports: [RouterModule, YouTubePlayerModule, FontAwesomeModule],
+  imports: [
+    RouterModule,
+    YouTubePlayerModule,
+    FontAwesomeModule,
+    ListLinksComponent,
+  ],
 })
 export class HomeComponent implements OnInit {
   pdf = '0B-rTqD9hKNHPWkI0WUlxMk1QdFU';
@@ -35,7 +44,43 @@ export class HomeComponent implements OnInit {
   faCloudArrowDown = faCloudArrowDown;
   faQuestionCircle = faQuestionCircle;
 
-  constructor(public http: HttpClient) {}
+  links: Link[];
+
+  constructor(public http: HttpClient) {
+    this.links = [
+      {
+        type: 'internal',
+        url: '/chapitres',
+        action: 'Lire',
+        icon: faBook,
+        text: 'Lire en ligne',
+        subtext: 'via Reedsy',
+      },
+      {
+        type: 'download',
+        url: '/assets/downloads/Final-Fantasy-VII-Experience-2.0.2.pdf',
+        action: 'Télécharger',
+        icon: faCloudArrowDown,
+        text: 'Version PDF',
+        subtext: 'Lire hors-ligne',
+      },
+      {
+        type: 'download',
+        url: '/assets/downloads/Final-Fantasy-VII-Experience-2.0.2.epub',
+        action: 'Télécharger',
+        icon: faCloudArrowDown,
+        text: 'Version EPUB',
+        subtext: 'Kindle & Kobo',
+      },
+      {
+        type: 'direct_link',
+        url: 'https://editor.reedsy.com/s/IUYE14a/c/ZfdHjgtvY_knmswB/anecdotes-de-redaction',
+        action: 'Lire',
+        icon: faStar,
+        text: 'Anecdotes de rédaction',
+      },
+    ];
+  }
 
   ngOnInit() {
     if (!apiLoaded) {

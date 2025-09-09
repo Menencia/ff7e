@@ -22,48 +22,7 @@
       toute-puissante qui exploite sans vergogne l'énergie de la Planète, la tuant à petit feu...
     </p>
 
-    <ul class="list">
-      <li>
-        <a routerLink="/chapitres">
-          <div class="button">Lire</div>
-          <span class="li-first">
-            <fa-icon [icon]="faBook" />
-            Lire en ligne</span>
-          <span class="li-second">via Reedsy</span>
-        </a>
-      </li>
-      <li>
-        <a href="/assets/downloads/Final-Fantasy-VII-Experience-2.0.2.pdf" download target="_self">
-          <div class="button">Télécharger</div>
-          <span class="li-first">
-            <fa-icon [icon]="faCloudArrowDown" />
-            Version PDF
-          </span>
-          <span class="li-second">Lire hors-ligne</span>
-        </a>
-      </li>
-      <li>
-        <a href="/assets/downloads/Final-Fantasy-VII-Experience-2.0.2.epub" download target="_self">
-          <div class="button">Télécharger</div>
-          <span class="li-first">
-            <fa-icon [icon]="faCloudArrowDown" />
-            Version EPUB
-          </span>
-          <span class="li-second">Kindle & Kobo</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://editor.reedsy.com/s/IUYE14a/c/ZfdHjgtvY_knmswB/anecdotes-de-redaction" target="_blank">
-          <div class="button">Lire</div>
-          <span class="li-first">
-            <fa-icon [icon]="faStar" />
-            Anecdotes de rédaction
-          </span>
-          <span class="li-second"></span>
-        </a>
-      </li>
-    </ul>
-
+    <app-list-links [links]="links" />
   </div>
 </div>
 

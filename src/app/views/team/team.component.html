@@ -9,7 +9,7 @@
     @if (contributors) {
       <ul class="list">
         @for (e of contributors.staffActive; track e) {
-          <li class="nolink">
+          <li class="group border-t-1 border-gray-200 px-3 dark:border-gray-500 hover:bg-gray-100 hover:dark:bg-gray-700">
             <div class="li-first">
               @if (e.avatar) {
                 <img

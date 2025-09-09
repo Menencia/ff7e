@@ -10,5 +10,6 @@
     "source.fixAll.biome": "explicit"
   },
   "files.trimTrailingWhitespace": true,
-  "editor.fontFamily": "Operator Mono, Consolas, 'Courier New', monospace"
+  "tailwindCSS.experimental.configFile": "src/styles.scss",
+  "editor.fontFamily": "FiraCode Nerd Font",
 }
