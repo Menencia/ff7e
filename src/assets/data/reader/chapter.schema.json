@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema#",
+  "$id": "https://ff7e.com/assets/data/reader/chapter.schema.json",
+  "title": "Chapter",
+  "description": "Architecture of a chapter",
+  "type": "object",
+  "properties": {
+    "infos": {
+      "description": "Chapter various infos",
+      "type": "object",
+      "properties": {
+        "title": {
+          "description": "Chapter title",
+          "type": "string"
+        },
+        "folder": {
+          "description": "Folder name related to the chapter (for images)",
+          "type": "string"
+        }
+      }
+    },
+    "parts": {
+      "description": "Chapters parts",
+      "type": "array",
+      "items": {
+        "description": "Part infos",
+        "type": "object",
+        "properties": {
+          "content": {
+            "description": "Text of the part",
+            "type": "string"
+          },
+          "images": {
+            "description": "All images related to the part",
+            "type": "array"
+          },
+          "highlights": {
+            "description": "All words to highlight",
+            "type": "array",
+            "items": {
+              "description": "Highlights infos",
+              "type": "object",
+              "properties": {
+                "word": {
+                  "description": "Word to be highlighted",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "Type of the word to be highlighted",
+                  "type": "string"
+                }
+              },
+              "required": ["word", "type"]
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": ["infos", "parts"]
+}
