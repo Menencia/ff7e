@@ -1,5 +1,6 @@
+import { provideHttpClient } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { provideRouter } from '@angular/router';
 import { HistoryComponent } from './history.component';
 
 describe('HistoryComponent', () => {
@@ -8,7 +9,8 @@ describe('HistoryComponent', () => {
 
   beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [HistoryComponent],
+      imports: [HistoryComponent],
+      providers: [provideHttpClient(), provideRouter([])],
     }),
   );
 

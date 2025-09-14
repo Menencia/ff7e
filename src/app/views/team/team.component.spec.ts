@@ -1,8 +1,6 @@
-import {
-  provideHttpClient,
-  withInterceptorsFromDi,
-} from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import { TeamComponent } from './team.component';
 
 describe('TeamComponent', () => {
@@ -11,9 +9,8 @@ describe('TeamComponent', () => {
 
   beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [TeamComponent],
-      imports: [],
-      providers: [provideHttpClient(withInterceptorsFromDi())],
+      imports: [TeamComponent],
+      providers: [provideHttpClient(), provideRouter([])],
     }),
   );
 

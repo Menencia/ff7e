@@ -1,8 +1,6 @@
-import {
-  provideHttpClient,
-  withInterceptorsFromDi,
-} from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import { ChaptersComponent } from './chapters.component';
 
 describe('ChaptersComponent', () => {
@@ -11,9 +9,8 @@ describe('ChaptersComponent', () => {
 
   beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [ChaptersComponent],
-      imports: [],
-      providers: [provideHttpClient(withInterceptorsFromDi())],
+      imports: [ChaptersComponent],
+      providers: [provideHttpClient(), provideRouter([])],
     }),
   );
 

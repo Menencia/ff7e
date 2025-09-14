@@ -35,5 +35,8 @@ jobs:
       - name: Lint
         run: pnpm run lint
 
+      - name: Test
+        run: pnpm run test:ci
+
       - name: Build
         run: pnpm ng build --configuration production

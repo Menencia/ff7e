@@ -1,5 +1,5 @@
+import { provideHttpClient } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ReaderComponent } from './reader.component';
 
 describe('ReaderComponent', () => {
@@ -8,7 +8,8 @@ describe('ReaderComponent', () => {
 
   beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [ReaderComponent],
+      imports: [ReaderComponent],
+      providers: [provideHttpClient()],
     }),
   );
 

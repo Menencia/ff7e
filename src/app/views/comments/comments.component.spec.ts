@@ -1,4 +1,6 @@
+import { provideHttpClient } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import { CommentsComponent } from './comments.component';
 
 describe('CommentsComponent', () => {
@@ -7,9 +9,8 @@ describe('CommentsComponent', () => {
 
   beforeEach(() =>
     TestBed.configureTestingModule({
-      imports: [],
-      declarations: [CommentsComponent],
-      providers: [],
+      imports: [CommentsComponent],
+      providers: [provideHttpClient(), provideRouter([])],
     }),
   );
 
