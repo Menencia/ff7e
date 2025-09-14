@@ -1,5 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { faCog } from '@fortawesome/free-solid-svg-icons';
+import { OptionsModalComponent } from 'src/app/shared/ui/options-modal/options-modal.component';
 
 interface Chapter {
   infos: {
@@ -21,6 +24,7 @@ interface Part {
 
 @Component({
   selector: 'app-reader',
+  imports: [OptionsModalComponent, FontAwesomeModule],
   templateUrl: './reader.component.html',
 })
 export class ReaderComponent implements OnInit {
@@ -30,6 +34,8 @@ export class ReaderComponent implements OnInit {
   content = '';
   previousButton = false;
   nextButton = true;
+  showOptions = false;
+  faCog = faCog;
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
