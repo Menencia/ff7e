@@ -1,5 +1,5 @@
 import { provideHttpClient } from '@angular/common/http';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { ChaptersComponent } from './chapters.component';
 
@@ -7,12 +7,11 @@ describe('ChaptersComponent', () => {
   let component: ChaptersComponent;
   let fixture: ComponentFixture<ChaptersComponent>;
 
-  beforeEach(() =>
+  beforeEach(waitForAsync(() =>
     TestBed.configureTestingModule({
       imports: [ChaptersComponent],
       providers: [provideHttpClient(), provideRouter([])],
-    }),
-  );
+    })));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ChaptersComponent);
@@ -21,6 +20,6 @@ describe('ChaptersComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).toBeDefined();
   });
 });

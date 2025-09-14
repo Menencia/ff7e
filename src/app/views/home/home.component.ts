@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
 
   links: Link[];
 
-  constructor(public http: HttpClient) {
+  constructor(private http: HttpClient) {
     this.links = [
       {
         type: 'internal',

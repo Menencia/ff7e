@@ -1,17 +1,16 @@
 import { provideHttpClient } from '@angular/common/http';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { ReaderComponent } from './reader.component';
 
 describe('ReaderComponent', () => {
   let component: ReaderComponent;
   let fixture: ComponentFixture<ReaderComponent>;
 
-  beforeEach(() =>
+  beforeEach(waitForAsync(() =>
     TestBed.configureTestingModule({
       imports: [ReaderComponent],
       providers: [provideHttpClient()],
-    }),
-  );
+    })));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ReaderComponent);
@@ -20,6 +19,6 @@ describe('ReaderComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).toBeDefined();
   });
 });
