@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { DefaultLayoutComponent } from 'src/app/shared/ui/default-layout/default-layout.component';
 
 @Component({
   standalone: true,
   selector: 'app-history',
   templateUrl: './history.component.html',
+  imports: [DefaultLayoutComponent],
 })
 export class HistoryComponent {
   quotes = [

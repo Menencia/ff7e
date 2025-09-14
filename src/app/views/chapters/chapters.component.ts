@@ -1,11 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Book, Chapter } from 'src/app/shared/models/chapter';
+import { DefaultLayoutComponent } from 'src/app/shared/ui/default-layout/default-layout.component';
 
 @Component({
   selector: 'app-chapters',
   templateUrl: './chapters.component.html',
   styleUrls: ['./chapters.component.scss'],
+  imports: [DefaultLayoutComponent],
 })
 export class ChaptersComponent implements OnInit {
   chapters: Chapter[] = [];

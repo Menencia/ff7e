@@ -14,6 +14,7 @@ import {
   Link,
   ListLinksComponent,
 } from 'src/app/shared/ui/button/list-links.component';
+import { DefaultLayoutComponent } from 'src/app/shared/ui/default-layout/default-layout.component';
 
 let apiLoaded = false;
 
@@ -26,6 +27,7 @@ let apiLoaded = false;
     YouTubePlayerModule,
     FontAwesomeModule,
     ListLinksComponent,
+    DefaultLayoutComponent,
   ],
 })
 export class HomeComponent implements OnInit {

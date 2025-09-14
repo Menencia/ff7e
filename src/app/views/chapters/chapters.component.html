@@ -1,12 +1,9 @@
-<div class="py-5 text-center">
+<app-default-layout>
+  <div class="py-5 text-center">
 
   @for (e of chapters; track e) {
     <div class="chapter">
-      <a
-        class="read-chapter"
-        [href]="e.id"
-        target="_blank"
-        >
+      <a class="read-chapter" [href]="e.id" target="_blank">
 
         <img
           [src]="'/assets/chapters/chapitre-' + e.number + '.jpg'"
@@ -31,3 +28,4 @@
     }
 
   </div>
+</app-default-layout>

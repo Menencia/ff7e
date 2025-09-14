@@ -6,6 +6,7 @@ import {
   Link,
   ListLinksComponent,
 } from 'src/app/shared/ui/button/list-links.component';
+import { DefaultLayoutComponent } from 'src/app/shared/ui/default-layout/default-layout.component';
 import { SectionTitleComponent } from 'src/app/shared/ui/section-title/section-title.component';
 
 interface DataLink {
@@ -19,7 +20,12 @@ interface DataLink {
 @Component({
   selector: 'app-links',
   templateUrl: './links.component.html',
-  imports: [SectionTitleComponent, FontAwesomeModule, ListLinksComponent],
+  imports: [
+    SectionTitleComponent,
+    FontAwesomeModule,
+    ListLinksComponent,
+    DefaultLayoutComponent,
+  ],
 })
 export class LinksComponent implements OnInit {
   links: Link[] = [];
