@@ -20,13 +20,13 @@
 
   <div class="p-3 flex bg-gray-200">
     <div>
-      @if (previousButton) {
-        <button (click)="next()">Précédent</button>
+      @if (previousButton()) {
+        <button (click)="previous()">Précédent</button>
       }
     </div>
     <div class="grow"></div>
     <div>
-      @if (nextButton) {
+      @if (nextButton()) {
         <button (click)="next()">Suivant</button>
       }
     </div>

@@ -17,7 +17,7 @@ export const routes: Routes = [
   { path: 'liens', component: LinksComponent },
   { path: 'commentaires', component: CommentsComponent },
   { path: 'lecture/options', component: ReaderOptionsComponent },
+  { path: 'lecture/glossary/:word', component: GlossaryComponent },
   { path: 'lecture/:chapter', component: ReaderComponent },
-  { path: 'glossary', component: GlossaryComponent },
   { path: '', redirectTo: '/presentation', pathMatch: 'full' },
 ];

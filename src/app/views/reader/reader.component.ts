@@ -22,8 +22,6 @@ export class ReaderComponent implements OnInit {
   currentPart?: Part;
   images: string[] = [];
   content = '';
-  previousButton = false;
-  nextButton = true;
   showOptions = false;
   faCog = faCog;
   faMusic = faMusic;
@@ -95,9 +93,19 @@ export class ReaderComponent implements OnInit {
     }
   }
 
+  previous() {
+    if (this.currentPart && this.data) {
+      const oldPartIndex = this.data.parts.indexOf(this.currentPart);
+
+      if (typeof oldPartIndex !== 'undefined' && oldPartIndex - 1 >= 0) {
+        this.read(oldPartIndex - 1);
+      }
+    }
+  }
+
   next() {
     if (this.currentPart && this.data) {
-      const oldPartIndex = this.data?.parts.indexOf(this.currentPart);
+      const oldPartIndex = this.data.parts.indexOf(this.currentPart);
 
       if (
         typeof oldPartIndex !== 'undefined' &&
@@ -122,5 +130,21 @@ export class ReaderComponent implements OnInit {
 
   saveProgress(readerState: ReaderState) {
     this.saveService.setSave(readerState);
+  }
+
+  previousButton() {
+    if (this.data) {
+      const firstPart = this.data.parts.at(0);
+      return firstPart !== this.currentPart;
+    }
+    return false;
+  }
+
+  nextButton() {
+    if (this.data) {
+      const lastPart = this.data.parts.at(-1);
+      return lastPart !== this.currentPart;
+    }
+    return false;
   }
 }
