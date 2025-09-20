@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faCog } from '@fortawesome/free-solid-svg-icons';
+import { faCog, faMusic } from '@fortawesome/free-solid-svg-icons';
+import { MusicService } from 'src/app/shared/services/music.service';
 import { OptionsModalComponent } from 'src/app/shared/ui/options-modal/options-modal.component';
 
 interface Chapter {
@@ -36,7 +37,11 @@ export class ReaderComponent implements OnInit {
   nextButton = true;
   showOptions = false;
   faCog = faCog;
-  constructor(private http: HttpClient) {}
+  faMusic = faMusic;
+  constructor(
+    private http: HttpClient,
+    private musicService: MusicService,
+  ) {}
 
   ngOnInit() {
     this.http
@@ -66,6 +71,7 @@ export class ReaderComponent implements OnInit {
         `<span class="font-bold text-blue-600">$1</span>`,
       );
     }
+    this.musicService.loadMusic();
   }
 
   next() {
@@ -83,5 +89,13 @@ export class ReaderComponent implements OnInit {
 
   getImageSrc(image: string) {
     return `assets/reader/${this.data?.infos.folder}/${image}`;
+  }
+
+  toggleMusic() {
+    this.musicService.toggle();
+  }
+
+  isMusicActive() {
+    return this.musicService.active;
   }
 }

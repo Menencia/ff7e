@@ -1,6 +1,9 @@
 <div class="flex flex-col h-dvh">
   <div class="p-3 flex bg-gray-200">
     <div class="grow font-bold">Reader</div>
+    <button class="cursor-pointer" [class]="{'text-gray-500': !isMusicActive()}" (click)="toggleMusic()">
+      <fa-icon [icon]="faMusic" />
+    </button>
     <button class="cursor-pointer" (click)="showOptions = true">
       <fa-icon [icon]="faCog" />
     </button>
