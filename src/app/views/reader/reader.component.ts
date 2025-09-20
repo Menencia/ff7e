@@ -16,6 +16,7 @@ interface Chapter {
 interface Part {
   content: string;
   music: string;
+  stopMusic: boolean;
   images: string[];
   highlights: {
     word: string;
@@ -65,13 +66,18 @@ export class ReaderComponent implements OnInit {
       this.images = part.images;
     }
     this.content = part.content;
-    for (const highlight of part.highlights) {
+    for (const highlight of part.highlights || []) {
       this.content = this.content.replace(
         new RegExp(`\\b(${highlight.word})\\b`, 'i'),
         `<span class="font-bold text-blue-600">$1</span>`,
       );
     }
-    this.musicService.loadMusic();
+    if (part.music) {
+      this.musicService.loadMusic(part.music);
+    }
+    if (part.stopMusic) {
+      this.musicService.pause();
+    }
   }
 
   next() {

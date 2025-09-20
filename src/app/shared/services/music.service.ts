@@ -6,9 +6,9 @@ export class MusicService {
   sound?: Howl;
   active = false;
 
-  loadMusic() {
+  loadMusic(music: string) {
     this.sound = new Howl({
-      src: ['assets/music/105-tifa-s-theme.mp3'],
+      src: [`assets/music/${music}`],
     });
   }
 
@@ -20,5 +20,10 @@ export class MusicService {
       this.sound?.play();
       this.active = true;
     }
+  }
+
+  pause() {
+    this.sound?.pause();
+    this.active = false;
   }
 }
