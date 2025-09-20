@@ -4,9 +4,9 @@
     <button class="cursor-pointer" [class]="{'text-gray-500': !isMusicActive()}" (click)="toggleMusic()">
       <fa-icon [icon]="faMusic" />
     </button>
-    <button class="cursor-pointer" (click)="showOptions = true">
+    <a routerLink="/lecture/options">
       <fa-icon [icon]="faCog" />
-    </button>
+    </a>
   </div>
 
   <div class="p-3 grow text-justify text-xl overflow-y">
@@ -31,9 +31,4 @@
       }
     </div>
   </div>
-
-  <!-- Main modal -->
-  @if (showOptions) {
-    <app-options-modal (hideOptions)="showOptions = false" />
-  }
 <div>
