@@ -21,7 +21,7 @@ export class ReaderOptionsComponent {
   closeOptions() {
     const save = this.saveService.getSave();
     if (save?.url) {
-      this.router.navigateByUrl(`/lecture/${save.url}`);
+      this.router.navigateByUrl(`/reader/${save.url}`);
     }
     // todo navigate <reader home>
   }

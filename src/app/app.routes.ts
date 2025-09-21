@@ -5,6 +5,7 @@ import { HistoryComponent } from './views/history/history.component';
 import { HomeComponent } from './views/home/home.component';
 import { LinksComponent } from './views/links/links.component';
 import { GlossaryComponent } from './views/reader/glossary/glossary.component';
+import { GlossaryWordComponent } from './views/reader/glossary-word/glossary-word.component';
 import { ReaderOptionsComponent } from './views/reader/options/options.component';
 import { ReaderComponent } from './views/reader/reader.component';
 import { TeamComponent } from './views/team/team.component';
@@ -16,8 +17,9 @@ export const routes: Routes = [
   { path: 'equipe', component: TeamComponent },
   { path: 'liens', component: LinksComponent },
   { path: 'commentaires', component: CommentsComponent },
-  { path: 'lecture/options', component: ReaderOptionsComponent },
-  { path: 'lecture/glossary/:word', component: GlossaryComponent },
-  { path: 'lecture/:chapter', component: ReaderComponent },
+  { path: 'reader/options', component: ReaderOptionsComponent },
+  { path: 'reader/glossary', component: GlossaryComponent },
+  { path: 'reader/glossary/:word', component: GlossaryWordComponent },
+  { path: 'reader/:chapter', component: ReaderComponent },
   { path: '', redirectTo: '/presentation', pathMatch: 'full' },
 ];
