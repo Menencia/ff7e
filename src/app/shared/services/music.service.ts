@@ -4,12 +4,18 @@ import { Howl } from 'howler';
 @Injectable({ providedIn: 'root' })
 export class MusicService {
   sound?: Howl;
+  name?: string;
   active = false;
 
-  loadMusic(music: string) {
+  loadMusic(name: string) {
     this.sound = new Howl({
-      src: [`assets/music/${music}`],
+      src: [`assets/music/${name}`],
     });
+    this.name = name;
+  }
+
+  hasLoaded(name: string) {
+    return this.name === name;
   }
 
   toggle() {
@@ -23,7 +29,14 @@ export class MusicService {
   }
 
   pause() {
-    this.sound?.pause();
+    if (this.sound?.playing()) {
+      this.sound?.pause();
+      this.active = false;
+    }
+  }
+
+  stop() {
+    this.sound?.stop();
     this.active = false;
   }
 }

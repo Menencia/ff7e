@@ -18,16 +18,18 @@ import { SaveService } from 'src/app/shared/services/save.service';
   templateUrl: './reader.component.html',
 })
 export class ReaderComponent implements OnInit {
+  url = '';
   data?: Chapter;
   currentPart?: Part;
-  images: string[] = [];
   content = '';
-  showOptions = false;
+  images: string[] = [];
+  music?: string;
+  glossary: Highlight[] = [];
+
+  // icons
   faCog = faCog;
   faMusic = faMusic;
   faBook = faBook;
-  glossary: Highlight[] = [];
-  url = '';
 
   constructor(
     private http: HttpClient,
@@ -60,16 +62,14 @@ export class ReaderComponent implements OnInit {
     }
   }
 
-  private read(index: number, readPreviousParts = true) {
-    // replay previous parts
-    if (readPreviousParts) {
-      if (index > 0) {
-        for (let i = 0; i < index; i++) {
-          this.read(i, false);
-        }
-      }
-      this.saveProgress({ url: this.url, index });
+  private read(index: number) {
+    // load data from previous parts
+    if (index > 0) {
+      this.images = this.getPreviousImages(index);
+      this.music = this.getPreviousMusic(index);
     }
+    this.saveProgress({ url: this.url, index });
+
     const part = this.data?.parts[index];
     if (!part) {
       throw new Error('Part not found in data');
@@ -87,11 +87,38 @@ export class ReaderComponent implements OnInit {
       this.glossary.push(highlight);
     }
     if (part.music) {
-      this.musicService.loadMusic(part.music);
+      this.music = part.music;
     }
-    if (part.stopMusic) {
-      this.musicService.pause();
+
+    // loading music
+    if (this.music) {
+      if (!this.musicService.hasLoaded(this.music)) {
+        this.musicService.stop();
+        this.musicService.loadMusic(this.music);
+      }
     }
+  }
+
+  getPreviousImages(index: number): string[] {
+    if (this.data && index >= 0) {
+      const { images } = this.data.parts[index];
+      if (images) {
+        return images;
+      }
+      return this.getPreviousImages(index - 1);
+    }
+    return [];
+  }
+
+  getPreviousMusic(index: number): string | undefined {
+    if (this.data && index >= 0) {
+      const { music } = this.data.parts[index];
+      if (music) {
+        return music;
+      }
+      return this.getPreviousMusic(index - 1);
+    }
+    return undefined;
   }
 
   previous() {
