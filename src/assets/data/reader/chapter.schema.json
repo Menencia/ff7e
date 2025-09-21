@@ -34,11 +34,6 @@
             "description": "Music beginning at this part",
             "type": "string"
           },
-          "stopMusic": {
-            "description": "Stop current music",
-            "type": "boolean",
-            "default": false
-          },
           "images": {
             "description": "All images related to the part",
             "type": "array"

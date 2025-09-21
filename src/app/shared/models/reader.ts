@@ -9,7 +9,6 @@ export interface Chapter {
 export interface Part {
   content: string;
   music: string;
-  stopMusic: boolean;
   images: string[];
   highlights: Highlight[];
 }
