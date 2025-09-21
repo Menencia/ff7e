@@ -1,6 +1,6 @@
 import { provideHttpClient } from '@angular/common/http';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { provideRouter } from '@angular/router';
+import { ActivatedRoute, provideRouter } from '@angular/router';
 import { ReaderComponent } from './reader.component';
 
 describe('ReaderComponent', () => {
@@ -10,7 +10,23 @@ describe('ReaderComponent', () => {
   beforeEach(waitForAsync(() =>
     TestBed.configureTestingModule({
       imports: [ReaderComponent],
-      providers: [provideHttpClient(), provideRouter([])],
+      providers: [
+        provideHttpClient(),
+        provideRouter([]),
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: {
+              paramMap: {
+                get: (key: string) => {
+                  if (key === 'chapter') return '0';
+                  return null;
+                },
+              },
+            },
+          },
+        },
+      ],
     })));
 
   beforeEach(() => {

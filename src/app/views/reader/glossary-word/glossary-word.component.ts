@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ReaderLayoutComponent } from 'src/app/shared/ui/reader-layout/reader-layout.component';
+import { ProgressComponent } from '../progress/progress.component';
 
 interface Word {
   notes: Note[];
@@ -14,7 +15,7 @@ interface Note {
 
 @Component({
   selector: 'app-glossary-word',
-  imports: [ReaderLayoutComponent],
+  imports: [ReaderLayoutComponent, ProgressComponent],
   templateUrl: './glossary-word.component.html',
   styleUrls: ['./glossary-word.component.scss'],
 })

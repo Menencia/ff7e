@@ -1,19 +1,34 @@
 import { Injectable } from '@angular/core';
-import { ReaderState } from '../models/reader';
+import { Progress } from '../models/reader';
+import { comparePositions } from '../utils/position.utils';
 
-const LOCALSTORAGE_STATE_KEY = 'reader.state';
+const CURRENT_PROGRESS = 'current-progress';
+const MAX_PROGRESS = 'max-progress';
 
 @Injectable({ providedIn: 'root' })
 export class SaveService {
-  getSave() {
-    const save = localStorage.getItem(LOCALSTORAGE_STATE_KEY);
+  getCurrentProgress() {
+    const save = localStorage.getItem(CURRENT_PROGRESS);
     if (save) {
-      return JSON.parse(save) as ReaderState;
+      return JSON.parse(save) as Progress;
     }
     return undefined;
   }
 
-  setSave(data: ReaderState) {
-    localStorage.setItem(LOCALSTORAGE_STATE_KEY, JSON.stringify(data));
+  getMaxProgress() {
+    const save = localStorage.getItem(MAX_PROGRESS);
+    if (save) {
+      return JSON.parse(save) as Progress;
+    }
+    return undefined;
+  }
+
+  setCurrentProgress(progress: Progress) {
+    localStorage.setItem(CURRENT_PROGRESS, JSON.stringify(progress));
+
+    const maxProgress = this.getMaxProgress();
+    if (!maxProgress || comparePositions(progress, '>', maxProgress)) {
+      localStorage.setItem(MAX_PROGRESS, JSON.stringify(progress));
+    }
   }
 }

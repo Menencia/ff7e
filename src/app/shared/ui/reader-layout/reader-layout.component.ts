@@ -20,9 +20,9 @@ export class ReaderLayoutComponent {
   ) {}
 
   closeOptions() {
-    const save = this.saveService.getSave();
-    if (save) {
-      this.router.navigateByUrl(`/reader/${save.url}`);
+    const progress = this.saveService.getCurrentProgress();
+    if (progress) {
+      this.router.navigateByUrl(`/reader/${progress.chapter}`);
     }
   }
 }

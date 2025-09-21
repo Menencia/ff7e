@@ -3,12 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faBook, faCog, faMusic } from '@fortawesome/free-solid-svg-icons';
-import {
-  Chapter,
-  Highlight,
-  Part,
-  ReaderState,
-} from 'src/app/shared/models/reader';
+import { Chapter, Highlight, Part } from 'src/app/shared/models/reader';
 import { MusicService } from 'src/app/shared/services/music.service';
 import { SaveService } from 'src/app/shared/services/save.service';
 
@@ -18,7 +13,7 @@ import { SaveService } from 'src/app/shared/services/save.service';
   templateUrl: './reader.component.html',
 })
 export class ReaderComponent implements OnInit {
-  url = '';
+  url?: number;
   data?: Chapter;
   currentPart?: Part;
   content = '';
@@ -39,9 +34,11 @@ export class ReaderComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.url = this.route.snapshot.paramMap.get('chapter') ?? '';
+    const chapter = this.route.snapshot.paramMap.get('chapter');
+    if (!chapter) throw new Error('No chapter to read');
+    this.url = +chapter;
     this.http
-      .get<Chapter>(`assets/data/reader/${this.url}.json`)
+      .get<Chapter>(`assets/data/reader/chapter-${chapter}.json`)
       .subscribe((data) => {
         this.data = data;
 
@@ -50,16 +47,14 @@ export class ReaderComponent implements OnInit {
   }
 
   startReading() {
-    if (this.data) {
-      let index = 0;
+    let part = 0;
 
-      const save = this.saveService.getSave();
-      if (save && save.url === this.url) {
-        index = save.index;
-      }
-
-      this.read(index);
+    const progress = this.saveService.getCurrentProgress();
+    if (progress && progress?.chapter === this.url) {
+      part = progress.part;
     }
+
+    this.read(part);
   }
 
   private read(index: number) {
@@ -68,7 +63,9 @@ export class ReaderComponent implements OnInit {
       this.images = this.getPreviousImages(index);
       this.music = this.getPreviousMusic(index);
     }
-    this.saveProgress({ url: this.url, index });
+    if (this.url !== undefined) {
+      this.saveService.setCurrentProgress({ chapter: this.url, part: index });
+    }
 
     const part = this.data?.parts[index];
     if (!part) {
@@ -154,10 +151,6 @@ export class ReaderComponent implements OnInit {
 
   isMusicActive() {
     return this.musicService.active;
-  }
-
-  saveProgress(readerState: ReaderState) {
-    this.saveService.setSave(readerState);
   }
 
   previousButton() {

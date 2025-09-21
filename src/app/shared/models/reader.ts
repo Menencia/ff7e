@@ -18,7 +18,7 @@ export interface Highlight {
   type: string;
 }
 
-export interface ReaderState {
-  url: string;
-  index: number;
+export interface Progress {
+  chapter: number;
+  part: number;
 }

@@ -1,4 +1,6 @@
 <app-reader-layout title="Glossaire: {{ word }}">
+  <app-progress [displaySavePosition]="true"></app-progress>
+
   <p>Notes :</p>
   @for (note of notes; track $index) {
     <div>{{ note.content }}</div>
