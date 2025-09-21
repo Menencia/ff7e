@@ -27,13 +27,17 @@
   <div class="p-3 flex bg-gray-200">
     <div>
       @if (previousButton()) {
-        <button (click)="previous()">Précédent</button>
+        <a href="#" class="px-5 py-3 text-xl hover:bg-gray-300 rounded-t-full" (click)="previous($event)">
+          <fa-icon [icon]="faArrowLeft" />
+        </a>
       }
     </div>
     <div class="grow"></div>
     <div>
       @if (nextButton()) {
-        <button (click)="next()">Suivant</button>
+        <a href="#" class="px-5 py-3 text-xl hover:bg-gray-300 rounded-t-full" (click)="next($event)">
+          <fa-icon [icon]="faArrowRight" />
+        </a>
       }
     </div>
   </div>

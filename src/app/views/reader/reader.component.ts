@@ -2,7 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faBook, faCog, faMusic } from '@fortawesome/free-solid-svg-icons';
+import {
+  faArrowLeft,
+  faArrowRight,
+  faBook,
+  faCog,
+  faMusic,
+} from '@fortawesome/free-solid-svg-icons';
 import { Chapter, Highlight, Part } from 'src/app/shared/models/reader';
 import { MusicService } from 'src/app/shared/services/music.service';
 import { SaveService } from 'src/app/shared/services/save.service';
@@ -25,6 +31,8 @@ export class ReaderComponent implements OnInit {
   faCog = faCog;
   faMusic = faMusic;
   faBook = faBook;
+  faArrowLeft = faArrowLeft;
+  faArrowRight = faArrowRight;
 
   constructor(
     private http: HttpClient,
@@ -118,7 +126,8 @@ export class ReaderComponent implements OnInit {
     return undefined;
   }
 
-  previous() {
+  previous(event: PointerEvent) {
+    event.preventDefault();
     if (this.currentPart && this.data) {
       const oldPartIndex = this.data.parts.indexOf(this.currentPart);
 
@@ -128,7 +137,8 @@ export class ReaderComponent implements OnInit {
     }
   }
 
-  next() {
+  next(event: PointerEvent) {
+    event.preventDefault();
     if (this.currentPart && this.data) {
       const oldPartIndex = this.data.parts.indexOf(this.currentPart);
 
