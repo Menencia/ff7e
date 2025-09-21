@@ -1,1 +1,6 @@
-Glossary
+<app-reader-layout title="Glossaire: {{ word }}">
+  <p>Notes :</p>
+  @for (note of notes; track $index) {
+    <div>{{ note.content }}</div>
+  }
+</app-reader-layout>

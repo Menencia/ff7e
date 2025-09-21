@@ -1,3 +1,11 @@
 <app-reader-layout title="Glossaire">
-  <p class="text-gray-700">Pas de mots encore :(</p>
+  <p>Personnages</p>
+  @for (character of characters; track $index) {
+    <div><a [routerLink]="'/reader/glossary/'+character">{{ character }}</a></div>
+  }
+
+  <p>Lieux</p>
+  @for (location of locations; track $index) {
+    <div><a [routerLink]="'/reader/glossary/'+location">{{ location }}</a></div>
+  }
 </app-reader-layout>

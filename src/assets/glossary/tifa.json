@@ -1,0 +1,16 @@
+{
+  "name": "Tifa",
+  "appearance": "prologue#5",
+  "notes": [
+    {
+      "content": "Tifa habite dans le village de Nibelheim."
+    },
+    {
+      "content": "Tifa et Cloud sont amis d'enfance."
+    },
+    {
+      "condition": "prologue#5",
+      "content": "Tifa est en retard au rendez-vous que Cloud lui a donné."
+    }
+  ]
+}

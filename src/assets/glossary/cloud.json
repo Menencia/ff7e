@@ -1,0 +1,16 @@
+{
+  "name": "Cloud",
+  "appearance": "prologue#3",
+  "notes": [
+    {
+      "content": "Cloud habite dans le village de Nibelheim."
+    },
+    {
+      "content": "Cloud et Tifa sont amis d'enfance."
+    },
+    {
+      "condition": "prologue#5",
+      "content": "Cloud a invité son amie au puits le soir."
+    }
+  ]
+}
