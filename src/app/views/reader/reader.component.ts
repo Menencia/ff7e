@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faCog, faMusic } from '@fortawesome/free-solid-svg-icons';
+import { faBook, faCog, faMusic } from '@fortawesome/free-solid-svg-icons';
 import {
   Chapter,
   Highlight,
@@ -25,6 +25,7 @@ export class ReaderComponent implements OnInit {
   showOptions = false;
   faCog = faCog;
   faMusic = faMusic;
+  faBook = faBook;
   glossary: Highlight[] = [];
   url = '';
 
