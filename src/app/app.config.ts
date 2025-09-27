@@ -1,8 +1,10 @@
 import { provideHttpClient } from '@angular/common/http';
 import { ApplicationConfig } from '@angular/core';
-import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
+import { providePrimeNG } from 'primeng/config';
 import { routes } from './app.routes';
+import MyPreset from './mypreset';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -11,6 +13,15 @@ export const appConfig: ApplicationConfig = {
       withInMemoryScrolling({ scrollPositionRestoration: 'enabled' }),
     ),
     provideHttpClient(),
-    provideAnimations(),
+    provideAnimationsAsync(),
+    providePrimeNG({
+      ripple: true,
+      theme: {
+        preset: MyPreset,
+        options: {
+          darkModeSelector: '.dark',
+        },
+      },
+    }),
   ],
 };
