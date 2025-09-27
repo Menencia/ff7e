@@ -5,9 +5,12 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: 'Open Sans Condensed', sans-serif;
-  font-size: 14px;
 }
 
 *+p {

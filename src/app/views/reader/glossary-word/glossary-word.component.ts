@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { faBook } from '@fortawesome/free-solid-svg-icons';
 import { ReaderLayoutComponent } from 'src/app/shared/ui/reader-layout/reader-layout.component';
 import { ProgressComponent } from '../progress/progress.component';
 
@@ -22,6 +23,8 @@ interface Note {
 export class GlossaryWordComponent implements OnInit {
   word?: string;
   notes: Note[] = [];
+
+  faBook = faBook;
 
   constructor(
     private route: ActivatedRoute,

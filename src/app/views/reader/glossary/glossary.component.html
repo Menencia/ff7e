@@ -1,11 +1,21 @@
-<app-reader-layout title="Glossaire">
-  <p>Personnages</p>
+<app-reader-layout [icon]="faBook" title="Glossaire">
+  <app-progress [displaySavePosition]="true"></app-progress>
+
+  <p class="font-bold">Personnages</p>
   @for (character of characters; track $index) {
-    <div><a [routerLink]="'/reader/glossary/'+character">{{ character }}</a></div>
+  <a
+    class="bg-gray-200 p-1 rounded-e-full m-1 cursor hover:bg-gray-300 block"
+    [routerLink]="'/reader/glossary/' + character"
+    >{{ character }}</a
+  >
   }
 
-  <p>Lieux</p>
+  <p class="font-bold">Lieux</p>
   @for (location of locations; track $index) {
-    <div><a [routerLink]="'/reader/glossary/'+location">{{ location }}</a></div>
+  <a
+    class="bg-gray-200 p-1 rounded-e-full m-1 cursor hover:bg-gray-300 block"
+    [routerLink]="'/reader/glossary/' + location"
+    >{{ location }}</a
+  >
   }
 </app-reader-layout>
