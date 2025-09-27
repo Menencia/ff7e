@@ -5,6 +5,9 @@
   "[json]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.biome": "explicit"

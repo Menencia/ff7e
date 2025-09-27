@@ -1,3 +1,17 @@
 <app-reader-layout title="Options">
-  <p class="text-gray-700">Pas d'options encore :(</p>
+  <app-option>
+    <div class="grow text-xl">Jouer musique</div>
+    <p-toggleswitch
+      [(ngModel)]="musicActive"
+      (ngModelChange)="changeMusicActive($event)"
+    />
+  </app-option>
+  <app-option>
+    <div class="grow text-xl">Volume de la musique</div>
+    <p-slider
+      [(ngModel)]="musicVolume"
+      (ngModelChange)="changeMusicVolume($event)"
+      class="w-56"
+    />
+  </app-option>
 </app-reader-layout>

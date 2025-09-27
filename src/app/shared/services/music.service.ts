@@ -5,11 +5,13 @@ import { Howl } from 'howler';
 export class MusicService {
   sound?: Howl;
   name?: string;
+  volume = 1;
   active = false;
 
   loadMusic(name: string) {
     this.sound = new Howl({
       src: [`assets/music/${name}`],
+      volume: this.volume,
     });
     this.name = name;
   }
@@ -19,11 +21,23 @@ export class MusicService {
   }
 
   toggle() {
-    if (this.sound?.playing()) {
-      this.sound?.pause();
+    if (!this.sound) throw new Error('Music not loaded');
+    if (this.sound.playing()) {
+      this.sound.pause();
       this.active = false;
     } else {
-      this.sound?.play();
+      this.sound.play();
+      this.active = true;
+    }
+  }
+
+  setActive(state: boolean) {
+    if (!this.sound) throw new Error('Music not loaded');
+    if (!state) {
+      this.sound.pause();
+      this.active = false;
+    } else {
+      this.sound.play();
       this.active = true;
     }
   }
@@ -38,5 +52,11 @@ export class MusicService {
   stop() {
     this.sound?.stop();
     this.active = false;
+  }
+
+  setVolume(vol: number) {
+    if (this.sound) {
+      this.sound.volume(vol);
+    }
   }
 }
