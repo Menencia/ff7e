@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
@@ -26,6 +26,7 @@ export class ReaderComponent implements OnInit {
   images: string[] = [];
   music?: string;
   glossary: Highlight[] = [];
+  autoPlay = false;
 
   // icons
   faCog = faCog;
@@ -40,6 +41,17 @@ export class ReaderComponent implements OnInit {
     private saveService: SaveService,
     private route: ActivatedRoute,
   ) {}
+
+  @HostListener('document:visibilitychange', ['$event'])
+  appVisibility() {
+    if (document.hidden && this.musicService.active) {
+      this.autoPlay = true;
+      this.musicService.pause();
+    } else if (!document.hidden && this.autoPlay) {
+      this.autoPlay = false;
+      this.musicService.setActive(true);
+    }
+  }
 
   ngOnInit() {
     const chapter = this.route.snapshot.paramMap.get('chapter');
