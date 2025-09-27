@@ -55,8 +55,8 @@ export class MusicService {
   }
 
   setVolume(vol: number) {
-    if (this.sound) {
-      this.sound.volume(vol);
-    }
+    if (!this.sound) throw new Error('Music not loaded');
+    this.sound.volume(vol);
+    this.volume = vol;
   }
 }
