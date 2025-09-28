@@ -1,7 +1,7 @@
 <app-reader-layout
   [icon]="faBook"
-  title="Glossaire: {{ word }}"
-  [url]="'/reader/glossary'"
+  [parent]="{ url: 'glossary', label: 'Glossaire' }"
+  [title]="word ?? ''"
 >
   <app-progress [displaySavePosition]="true"></app-progress>
 

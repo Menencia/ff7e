@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faClose, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { SaveService } from '../../services/save.service';
 
 @Component({
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule, RouterLink],
   selector: 'app-reader-layout',
   templateUrl: './reader-layout.component.html',
   styleUrls: ['./reader-layout.component.scss'],
@@ -13,8 +13,8 @@ import { SaveService } from '../../services/save.service';
 export class ReaderLayoutComponent {
   faClose = faClose;
   @Input() icon?: IconDefinition;
+  @Input() parent?: { url: string; label: string };
   @Input() title = '';
-  @Input() url?: string;
 
   constructor(
     private router: Router,
@@ -24,7 +24,7 @@ export class ReaderLayoutComponent {
   closeOptions() {
     const progress = this.saveService.getCurrentProgress();
     if (progress) {
-      this.router.navigateByUrl(this.url ?? `/reader/${progress.chapter}`);
+      this.router.navigateByUrl(`/reader/${progress.chapter}`);
     }
   }
 }

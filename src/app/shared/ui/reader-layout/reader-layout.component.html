@@ -3,6 +3,10 @@
     <div class="grow font-bold">
       @if(icon) {
       <fa-icon [icon]="icon" />
+      } @if(parent) {
+      <span>
+        <a [routerLink]="'/reader/' + parent.url">{{ parent.label }}</a> -
+      </span>
       }
       {{ title }}
     </div>

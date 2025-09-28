@@ -99,7 +99,8 @@ export class ReaderComponent implements OnInit {
     for (const highlight of part.highlights || []) {
       this.content = this.content.replace(
         new RegExp(`\\b(${highlight.word})\\b`, 'i'),
-        `<span class="font-bold text-blue-600">$1</span>`,
+        (_match, p1: string) =>
+          `<a href="reader/glossary/${p1.toLowerCase()}" class="font-bold text-blue-600">${p1}</a>`,
       );
       this.glossary.push(highlight);
     }
