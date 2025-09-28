@@ -1,44 +1,50 @@
 <div class="flex flex-col h-dvh">
   <div class="px-3 flex items-center bg-gray-200">
     <div class="grow text-xl font-bold">Lecture</div>
-    <button
-      class="px-5 py-3 text-xl hover:bg-gray-300 rounded-b-full cursor-pointer"
-      [class]="{'text-gray-500': !isMusicActive()}"
-      (click)="toggleMusic()">
-      <fa-icon [icon]="faMusic" />
-    </button>
-    <a class="px-5 py-3 text-xl hover:bg-gray-300 rounded-b-full" routerLink="/reader/glossary">
+    <a
+      class="px-5 py-3 text-xl hover:bg-gray-300 rounded-b-full"
+      routerLink="/reader/glossary"
+    >
       <fa-icon [icon]="faBook" />
     </a>
-    <a class="px-5 py-3 text-xl hover:bg-gray-300 rounded-b-full" routerLink="/reader/options">
+    <a
+      class="px-5 py-3 text-xl hover:bg-gray-300 rounded-b-full"
+      routerLink="/reader/options"
+    >
       <fa-icon [icon]="faCog" />
     </a>
   </div>
 
-  <div class="px-3 grow text-justify text-xl overflow-y">
-    @for (image of images; track $index) {
-      <img [src]="getImageSrc(image)" />
-    }
-    @if (content) {
-      <div [innerHTML]="content"></div>
-    }
+  <div class="px-3 grow text-justify text-xl min-h-0">
+    <app-text-panel
+      [content]="content"
+      (updateProgress)="updateProgress($event)"
+    />
   </div>
 
   <div class="p-3 flex bg-gray-200">
     <div>
       @if (previousButton()) {
-        <a href="#" class="px-5 py-3 text-xl hover:bg-gray-300 rounded-t-full" (click)="previous($event)">
-          <fa-icon [icon]="faArrowLeft" />
-        </a>
+      <a
+        href="#"
+        class="px-5 py-3 text-xl hover:bg-gray-300 rounded-t-full"
+        (click)="previous($event)"
+      >
+        <fa-icon [icon]="faArrowLeft" />
+      </a>
       }
     </div>
-    <div class="grow"></div>
+    <div class="grow">{{ position }}%</div>
     <div>
       @if (nextButton()) {
-        <a href="#" class="px-5 py-3 text-xl hover:bg-gray-300 rounded-t-full" (click)="next($event)">
-          <fa-icon [icon]="faArrowRight" />
-        </a>
+      <a
+        href="#"
+        class="px-5 py-3 text-xl hover:bg-gray-300 rounded-t-full"
+        (click)="next($event)"
+      >
+        <fa-icon [icon]="faArrowRight" />
+      </a>
       }
     </div>
   </div>
-<div>
+</div>

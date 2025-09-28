@@ -1,5 +1,11 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, HostListener, OnInit } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
@@ -9,13 +15,20 @@ import {
   faCog,
   faMusic,
 } from '@fortawesome/free-solid-svg-icons';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { Chapter, Highlight, Part } from 'src/app/shared/models/reader';
 import { MusicService } from 'src/app/shared/services/music.service';
 import { SaveService } from 'src/app/shared/services/save.service';
+import TextPanelComponent from 'src/app/shared/ui/text-panel/text-panel.component';
 
 @Component({
   selector: 'app-reader',
-  imports: [FontAwesomeModule, RouterLink],
+  imports: [
+    FontAwesomeModule,
+    RouterLink,
+    ScrollPanelModule,
+    TextPanelComponent,
+  ],
   templateUrl: './reader.component.html',
 })
 export class ReaderComponent implements OnInit {
@@ -27,6 +40,7 @@ export class ReaderComponent implements OnInit {
   music?: string;
   glossary: Highlight[] = [];
   autoPlay = false;
+  position = 0;
 
   // icons
   faCog = faCog;
@@ -34,6 +48,8 @@ export class ReaderComponent implements OnInit {
   faBook = faBook;
   faArrowLeft = faArrowLeft;
   faArrowRight = faArrowRight;
+
+  @ViewChild('test2') test2?: ElementRef;
 
   constructor(
     private http: HttpClient,
@@ -58,12 +74,34 @@ export class ReaderComponent implements OnInit {
     if (!chapter) throw new Error('No chapter to read');
     this.url = +chapter;
     this.http
-      .get<Chapter>(`assets/data/reader/chapter-${chapter}.json`)
+      .get(`assets/data/reader/chapter-${chapter}.txt`, {
+        responseType: 'text',
+      })
       .subscribe((data) => {
-        this.data = data;
-
-        this.startReading();
+        this.content = this.parse(data);
       });
+  }
+
+  parse(data: string) {
+    let content = data
+      .split(/\r?\n/)
+      .map((e) => `<p>${e}</p>`)
+      .join('');
+
+    const highlights: Highlight[] = [{ word: 'nibelheim', type: 'location' }];
+    for (const highlight of highlights) {
+      content = content.replace(
+        new RegExp(`\\b(${highlight.word})\\b`, 'i'),
+        (_match, p1: string) =>
+          `<a href="reader/glossary/${p1.toLowerCase()}" class="font-bold text-blue-600">${p1}</a>`,
+      );
+    }
+
+    return content;
+  }
+
+  updateProgress(event: number) {
+    this.position = event;
   }
 
   startReading() {
@@ -91,19 +129,7 @@ export class ReaderComponent implements OnInit {
     if (!part) {
       throw new Error('Part not found in data');
     }
-    this.currentPart = part;
-    if (part.images) {
-      this.images = part.images;
-    }
-    this.content = part.content;
-    for (const highlight of part.highlights || []) {
-      this.content = this.content.replace(
-        new RegExp(`\\b(${highlight.word})\\b`, 'i'),
-        (_match, p1: string) =>
-          `<a href="reader/glossary/${p1.toLowerCase()}" class="font-bold text-blue-600">${p1}</a>`,
-      );
-      this.glossary.push(highlight);
-    }
+
     if (part.music) {
       this.music = part.music;
     }
