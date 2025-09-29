@@ -1,28 +1,33 @@
 <div class="flex flex-col h-dvh">
-  <div class="px-3 flex items-center bg-gray-200">
+  <div
+    class="px-3 flex items-center bg-gray-200 dark:bg-gray-800 border-b-1 border-gray-200 dark:border-gray-700"
+  >
     <div class="grow text-xl font-bold">Lecture</div>
+    <app-theme-button></app-theme-button>
     <a
-      class="px-5 py-3 text-xl hover:bg-gray-300 rounded-b-full"
+      class="px-5 py-3 text-xl hover:bg-gray-300 rounded-b-full dark:hover:bg-gray-700"
       routerLink="/reader/glossary"
     >
       <fa-icon [icon]="faBook" />
     </a>
     <a
-      class="px-5 py-3 text-xl hover:bg-gray-300 rounded-b-full"
+      class="px-5 py-3 text-xl hover:bg-gray-300 rounded-b-full dark:hover:bg-gray-700"
       routerLink="/reader/options"
     >
       <fa-icon [icon]="faCog" />
     </a>
   </div>
 
-  <div class="px-3 grow text-justify text-xl min-h-0">
+  <div class="px-3 grow text-justify text-xl min-h-0 dark:bg-gray-800">
     <app-text-panel
       [content]="content"
       (updateProgress)="updateProgress($event)"
     />
   </div>
 
-  <div class="p-3 flex bg-gray-200">
+  <div
+    class="p-3 flex bg-gray-200 dark:bg-gray-800 border-t-1 border-gray-200 dark:border-gray-700"
+  >
     <div>
       @if (previousButton()) {
       <a

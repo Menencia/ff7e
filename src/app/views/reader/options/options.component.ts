@@ -3,7 +3,6 @@ import { FormsModule } from '@angular/forms';
 import { SliderModule } from 'primeng/slider';
 import { ToggleSwitchModule } from 'primeng/toggleswitch';
 import { MusicService } from 'src/app/shared/services/music.service';
-import OptionComponent from 'src/app/shared/ui/option/option.component';
 import { ReaderLayoutComponent } from 'src/app/shared/ui/reader-layout/reader-layout.component';
 
 @Component({
@@ -13,7 +12,6 @@ import { ReaderLayoutComponent } from 'src/app/shared/ui/reader-layout/reader-la
     SliderModule,
     FormsModule,
     ToggleSwitchModule,
-    OptionComponent,
   ],
   templateUrl: './options.component.html',
   styleUrls: ['./options.component.scss'],

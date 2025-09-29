@@ -13,13 +13,14 @@ import {
   faArrowRight,
   faBook,
   faCog,
-  faMusic,
 } from '@fortawesome/free-solid-svg-icons';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { Chapter, Highlight, Part } from 'src/app/shared/models/reader';
 import { MusicService } from 'src/app/shared/services/music.service';
 import { SaveService } from 'src/app/shared/services/save.service';
+import { Theme } from 'src/app/shared/services/theme.service';
 import TextPanelComponent from 'src/app/shared/ui/text-panel/text-panel.component';
+import ThemeButtonComponent from 'src/app/shared/ui/theme-button/theme-button.component';
 
 @Component({
   selector: 'app-reader',
@@ -28,6 +29,7 @@ import TextPanelComponent from 'src/app/shared/ui/text-panel/text-panel.componen
     RouterLink,
     ScrollPanelModule,
     TextPanelComponent,
+    ThemeButtonComponent,
   ],
   templateUrl: './reader.component.html',
 })
@@ -41,10 +43,10 @@ export class ReaderComponent implements OnInit {
   glossary: Highlight[] = [];
   autoPlay = false;
   position = 0;
+  theme?: Theme;
 
   // icons
   faCog = faCog;
-  faMusic = faMusic;
   faBook = faBook;
   faArrowLeft = faArrowLeft;
   faArrowRight = faArrowRight;

@@ -10,7 +10,7 @@ import {
 @Component({
   selector: 'app-text-panel',
   template: `<div class="overflow-y-auto h-full px-10" #panel>
-    <div class="crimson-text-regular" [innerHTML]="content"></div>
+    <div class="crimson-text-regular text-black dark:text-white" [innerHTML]="content"></div>
   </div>`,
   styles: [
     `.crimson-text-regular {
@@ -19,7 +19,6 @@ import {
       font-style: normal;
       font-size: 22px;
       line-height: 40px;
-      color: #1d2730;
     }`,
   ],
 })
