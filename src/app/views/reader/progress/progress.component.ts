@@ -27,6 +27,6 @@ export class ProgressComponent implements OnInit {
     const chapter =
       progress.chapter === 0 ? 'Prologue' : `Chapitre ${progress.chapter}`;
 
-    return `${chapter} (#${progress.part})`;
+    return `${chapter} (#${progress.position})`;
   }
 }

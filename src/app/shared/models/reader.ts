@@ -20,5 +20,5 @@ export interface Highlight {
 
 export interface Progress {
   chapter: number;
-  part: number;
+  position: number;
 }

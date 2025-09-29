@@ -6,17 +6,17 @@ export function comparePositions(
   right: Progress,
 ) {
   if (operator === '=') {
-    return left.chapter === right.chapter && left.part === right.part;
+    return left.chapter === right.chapter && left.position === right.position;
   }
   if (operator === '>') {
     if (left.chapter === right.chapter) {
-      return left.part > right.part;
+      return left.position > right.position;
     }
     return left.chapter > right.chapter;
   }
   if (operator === '<') {
     if (left.chapter === right.chapter) {
-      return left.part < right.part;
+      return left.position < right.position;
     }
     return left.chapter < right.chapter;
   }

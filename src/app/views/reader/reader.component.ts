@@ -44,6 +44,7 @@ export class ReaderComponent implements OnInit {
   autoPlay = false;
   position = 0;
   theme?: Theme;
+  defaultScroll = 0;
 
   // icons
   faCog = faCog;
@@ -81,6 +82,11 @@ export class ReaderComponent implements OnInit {
       })
       .subscribe((data) => {
         this.content = this.parse(data);
+
+        const progress = this.saveService.getCurrentProgress();
+        if (progress && progress?.chapter === this.url) {
+          this.defaultScroll = progress.position;
+        }
       });
   }
 
@@ -106,117 +112,8 @@ export class ReaderComponent implements OnInit {
     this.position = event;
   }
 
-  startReading() {
-    let part = 0;
-
-    const progress = this.saveService.getCurrentProgress();
-    if (progress && progress?.chapter === this.url) {
-      part = progress.part;
-    }
-
-    this.read(part);
-  }
-
-  private read(index: number) {
-    // load data from previous parts
-    if (index > 0) {
-      this.images = this.getPreviousImages(index);
-      this.music = this.getPreviousMusic(index);
-    }
-    if (this.url !== undefined) {
-      this.saveService.setCurrentProgress({ chapter: this.url, part: index });
-    }
-
-    const part = this.data?.parts[index];
-    if (!part) {
-      throw new Error('Part not found in data');
-    }
-
-    if (part.music) {
-      this.music = part.music;
-    }
-
-    // loading music
-    if (this.music) {
-      if (!this.musicService.hasLoaded(this.music)) {
-        this.musicService.stop();
-        this.musicService.loadMusic(this.music);
-      }
-    }
-  }
-
-  getPreviousImages(index: number): string[] {
-    if (this.data && index >= 0) {
-      const { images } = this.data.parts[index];
-      if (images) {
-        return images;
-      }
-      return this.getPreviousImages(index - 1);
-    }
-    return [];
-  }
-
-  getPreviousMusic(index: number): string | undefined {
-    if (this.data && index >= 0) {
-      const { music } = this.data.parts[index];
-      if (music) {
-        return music;
-      }
-      return this.getPreviousMusic(index - 1);
-    }
-    return undefined;
-  }
-
-  previous(event: PointerEvent) {
-    event.preventDefault();
-    if (this.currentPart && this.data) {
-      const oldPartIndex = this.data.parts.indexOf(this.currentPart);
-
-      if (typeof oldPartIndex !== 'undefined' && oldPartIndex - 1 >= 0) {
-        this.read(oldPartIndex - 1);
-      }
-    }
-  }
-
-  next(event: PointerEvent) {
-    event.preventDefault();
-    if (this.currentPart && this.data) {
-      const oldPartIndex = this.data.parts.indexOf(this.currentPart);
-
-      if (
-        typeof oldPartIndex !== 'undefined' &&
-        oldPartIndex + 1 < this.data.parts.length
-      ) {
-        this.read(oldPartIndex + 1);
-      }
-    }
-  }
-
-  getImageSrc(image: string) {
-    return `assets/reader/${this.data?.infos.folder}/${image}`;
-  }
-
-  toggleMusic() {
-    this.musicService.toggle();
-  }
-
-  isMusicActive() {
-    return this.musicService.active;
-  }
-
-  previousButton() {
-    if (this.data) {
-      const firstPart = this.data.parts.at(0);
-      return firstPart !== this.currentPart;
-    }
-    return false;
-  }
-
-  nextButton() {
-    if (this.data) {
-      const lastPart = this.data.parts.at(-1);
-      return lastPart !== this.currentPart;
-    }
-    return false;
+  saveProgress(event: number) {
+    if (this.url === undefined) throw new Error('No chapter specified');
+    this.saveService.setCurrentProgress({ chapter: this.url, position: event });
   }
 }

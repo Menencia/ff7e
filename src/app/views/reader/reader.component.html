@@ -21,35 +21,15 @@
   <div class="px-3 grow text-justify text-xl min-h-0 dark:bg-gray-800">
     <app-text-panel
       [content]="content"
+      [defaultScroll]="defaultScroll"
       (updateProgress)="updateProgress($event)"
+      (saveProgress)="saveProgress($event)"
     />
   </div>
 
   <div
     class="p-3 flex bg-gray-200 dark:bg-gray-800 border-t-1 border-gray-200 dark:border-gray-700"
   >
-    <div>
-      @if (previousButton()) {
-      <a
-        href="#"
-        class="px-5 py-3 text-xl hover:bg-gray-300 rounded-t-full"
-        (click)="previous($event)"
-      >
-        <fa-icon [icon]="faArrowLeft" />
-      </a>
-      }
-    </div>
-    <div class="grow">{{ position }}%</div>
-    <div>
-      @if (nextButton()) {
-      <a
-        href="#"
-        class="px-5 py-3 text-xl hover:bg-gray-300 rounded-t-full"
-        (click)="next($event)"
-      >
-        <fa-icon [icon]="faArrowRight" />
-      </a>
-      }
-    </div>
+    <div class="grow text-center">{{ position }}%</div>
   </div>
 </div>
