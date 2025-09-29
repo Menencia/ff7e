@@ -4,7 +4,7 @@
   <p class="font-bold">Personnages</p>
   @for (character of characters; track $index) {
   <a
-    class="bg-gray-200 p-1 rounded-e-full m-1 cursor hover:bg-gray-300 block"
+    class="bg-gray-200 p-1 rounded-e-full m-1 cursor hover:bg-gray-300 block dark:bg-gray-700 dark:hover:bg-gray-600"
     [routerLink]="'/reader/glossary/' + character"
     >{{ character }}</a
   >
@@ -13,7 +13,7 @@
   <p class="font-bold">Lieux</p>
   @for (location of locations; track $index) {
   <a
-    class="bg-gray-200 p-1 rounded-e-full m-1 cursor hover:bg-gray-300 block"
+    class="bg-gray-200 p-1 rounded-e-full m-1 cursor hover:bg-gray-300 block dark:bg-gray-700 dark:hover:bg-gray-600"
     [routerLink]="'/reader/glossary/' + location"
     >{{ location }}</a
   >
