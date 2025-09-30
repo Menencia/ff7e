@@ -11,6 +11,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { Chapter, Highlight, Part } from 'src/app/shared/models/reader';
+import { ChaptersService } from 'src/app/shared/services/chapters.service';
 import { MusicService } from 'src/app/shared/services/music.service';
 import { SaveService } from 'src/app/shared/services/save.service';
 import { Theme } from 'src/app/shared/services/theme.service';
@@ -40,6 +41,7 @@ export class ReaderComponent implements OnInit {
   position = 0;
   theme?: Theme;
   defaultScroll = 0;
+  title = '';
 
   // icons
   faCog = faCog;
@@ -52,6 +54,7 @@ export class ReaderComponent implements OnInit {
     private http: HttpClient,
     private musicService: MusicService,
     private saveService: SaveService,
+    private chaptersService: ChaptersService,
     private route: ActivatedRoute,
   ) {}
 
@@ -82,6 +85,12 @@ export class ReaderComponent implements OnInit {
           this.defaultScroll = progress.position;
         }
       });
+    this.chaptersService.chapters$.subscribe((chapters) => {
+      const found = chapters.find((e) => e.number === +chapter);
+      if (found) {
+        this.title = found.title;
+      }
+    });
   }
 
   parse(data: string) {
