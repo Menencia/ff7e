@@ -1,11 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import {
-  Component,
-  ElementRef,
-  HostListener,
-  OnInit,
-  ViewChild,
-} from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
@@ -13,6 +7,7 @@ import {
   faArrowRight,
   faBook,
   faCog,
+  faList,
 } from '@fortawesome/free-solid-svg-icons';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { Chapter, Highlight, Part } from 'src/app/shared/models/reader';
@@ -51,8 +46,7 @@ export class ReaderComponent implements OnInit {
   faBook = faBook;
   faArrowLeft = faArrowLeft;
   faArrowRight = faArrowRight;
-
-  @ViewChild('test2') test2?: ElementRef;
+  faList = faList;
 
   constructor(
     private http: HttpClient,

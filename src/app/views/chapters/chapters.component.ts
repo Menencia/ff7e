@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Book, Chapter } from 'src/app/shared/models/chapter';
+import { Chapter } from 'src/app/shared/models/chapter';
+import { ChaptersService } from 'src/app/shared/services/chapters.service';
 import { DefaultLayoutComponent } from 'src/app/shared/ui/default-layout/default-layout.component';
 
 @Component({
@@ -12,16 +12,10 @@ import { DefaultLayoutComponent } from 'src/app/shared/ui/default-layout/default
 export class ChaptersComponent implements OnInit {
   chapters: Chapter[] = [];
 
-  constructor(public http: HttpClient) {}
+  constructor(private chaptersService: ChaptersService) {}
 
   ngOnInit() {
-    this.http.get<Book[]>('assets/data/chapters.json').subscribe((data) => {
-      const chapters: Chapter[] = [];
-      for (const book of data) {
-        for (const chapter of book.chapters) {
-          chapters.push(chapter);
-        }
-      }
+    this.chaptersService.chapters$.subscribe((chapters) => {
       this.chapters = chapters;
     });
   }

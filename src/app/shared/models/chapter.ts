@@ -8,6 +8,7 @@ export interface Chapter {
   number: number;
   date: string;
   id: string;
+  reader?: boolean;
   special?: boolean;
   featured?: boolean;
   next?: boolean;

@@ -1,0 +1,7 @@
+<app-reader-layout title="Chapters">
+  @for (chapter of chapters; track $index) {
+  <a [routerLink]="'/reader/' + chapter.number">
+    <app-option>{{ chapter.title }}</app-option>
+  </a>
+  }
+</app-reader-layout>
