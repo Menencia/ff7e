@@ -5,9 +5,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faArrowLeft,
   faArrowRight,
+  faBars,
   faBook,
   faCog,
-  faList,
 } from '@fortawesome/free-solid-svg-icons';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
 import { Chapter, Highlight, Part } from 'src/app/shared/models/reader';
@@ -48,7 +48,7 @@ export class ReaderComponent implements OnInit {
   faBook = faBook;
   faArrowLeft = faArrowLeft;
   faArrowRight = faArrowRight;
-  faList = faList;
+  faBars = faBars;
 
   constructor(
     private http: HttpClient,

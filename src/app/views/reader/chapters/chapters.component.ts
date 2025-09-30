@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { Chapter } from 'src/app/shared/models/chapter';
 import { ChaptersService } from 'src/app/shared/services/chapters.service';
 import OptionComponent from 'src/app/shared/ui/option/option.component';
@@ -12,6 +13,8 @@ import { ReaderLayoutComponent } from 'src/app/shared/ui/reader-layout/reader-la
 })
 export class ReaderChaptersComponent {
   chapters: Chapter[] = [];
+
+  faBars = faBars;
 
   constructor(private chaptersService: ChaptersService) {
     this.chaptersService.chapters$.subscribe((chapters) => {
