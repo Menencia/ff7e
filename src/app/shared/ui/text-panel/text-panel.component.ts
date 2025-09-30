@@ -23,7 +23,20 @@ import { debounceTime, map, share } from 'rxjs/operators';
       font-style: normal;
       font-size: 22px;
       line-height: 40px;
-    }`,
+    }
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--p-gray-700);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--p-gray-500);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--p-gray-400);
+    }
+    `,
   ],
 })
 export default class TextPanelComponent implements AfterViewInit, OnDestroy {
