@@ -70,9 +70,12 @@ export class ReaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    const chapter = this.route.snapshot.paramMap.get('chapter');
-    if (!chapter) throw new Error('No chapter to read');
-    this.url = +chapter;
+    const chapterString = this.route.snapshot.paramMap.get('chapter');
+    if (!chapterString) throw new Error('No chapter to read');
+    const chapter = +chapterString;
+    this.url = chapter;
+
+    // display chapter content
     this.http
       .get(`assets/data/reader/chapter-${chapter}.txt`, {
         responseType: 'text',
@@ -81,12 +84,19 @@ export class ReaderComponent implements OnInit {
         this.content = this.parse(data);
 
         const progress = this.saveService.getCurrentProgress();
-        if (progress && progress?.chapter === this.url) {
+        if (progress && progress?.chapter === chapter) {
           this.defaultScroll = progress.position;
+        } else {
+          this.saveService.setCurrentProgress({
+            chapter,
+            position: 0,
+          });
         }
       });
+
+    // chapter title
     this.chaptersService.chapters$.subscribe((chapters) => {
-      const found = chapters.find((e) => e.number === +chapter);
+      const found = chapters.find((e) => e.number === chapter);
       if (found) {
         this.title = found.title;
       }
