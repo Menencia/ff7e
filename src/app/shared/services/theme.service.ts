@@ -7,21 +7,25 @@ export enum Theme {
 
 @Injectable({ providedIn: 'root' })
 export default class ThemeService {
-  theme: Theme;
+  theme = Theme.Light;
 
-  constructor(@Inject(DOCUMENT) private document: Document) {
-    // default theme
+  constructor(@Inject(DOCUMENT) private document: Document) {}
+
+  /** This method should be called once in app.component */
+  setupTheme() {
     const theme = localStorage.getItem('theme') as Theme;
     this.theme = theme || Theme.Light;
     this.applyTheme();
   }
 
+  /** Toggles between light & dark themes */
   toggleDark() {
     this.theme = this.theme === Theme.Light ? Theme.Dark : Theme.Light;
     this.applyTheme();
   }
 
-  applyTheme() {
+  /** Applies specific theme */
+  private applyTheme() {
     localStorage.setItem('theme', this.theme);
     if (this.theme === Theme.Dark) {
       this.document.querySelector('html')?.classList.add('dark');
