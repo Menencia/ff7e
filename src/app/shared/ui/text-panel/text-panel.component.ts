@@ -13,7 +13,7 @@ import { debounceTime, map, share } from 'rxjs/operators';
 
 @Component({
   selector: 'app-text-panel',
-  template: `<div class="overflow-y-auto h-full px-10" #panel>
+  template: `<div class="overflow-y-auto h-full px-5" #panel>
     <div class="crimson-text-regular text-black dark:text-white" [innerHTML]="content"></div>
   </div>`,
   styles: [
