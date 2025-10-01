@@ -12,12 +12,6 @@
     <app-theme-button></app-theme-button>
     <a
       class="px-5 py-3 text-xl hover:bg-gray-300 rounded-b-full dark:hover:bg-gray-700"
-      routerLink="/reader/glossary"
-    >
-      <fa-icon [icon]="faBook" />
-    </a>
-    <a
-      class="px-5 py-3 text-xl hover:bg-gray-300 rounded-b-full dark:hover:bg-gray-700"
       routerLink="/reader/options"
     >
       <fa-icon [icon]="faCog" />
@@ -37,7 +31,14 @@
   <div
     class="px-3 flex items-center bg-gray-200 dark:bg-gray-800 border-t-1 border-gray-200 dark:border-gray-700"
   >
-    <div></div>
+    <div>
+      <a
+        class="px-5 py-3 text-xl hover:bg-gray-300 rounded-t-full dark:hover:bg-gray-700"
+        routerLink="/reader/glossary"
+      >
+        <fa-icon [icon]="faBook" />
+      </a>
+    </div>
     <div class="grow text-center">{{ position }}%</div>
     <div>
       @if (late()) {
