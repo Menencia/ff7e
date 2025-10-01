@@ -48,6 +48,8 @@ export default class TextPanelComponent implements AfterViewInit, OnDestroy {
     }
   }
 
+  @Output() defaultScrollChange = new EventEmitter<number>();
+
   @Output() updateProgress = new EventEmitter<number>();
 
   @Output() saveProgress = new EventEmitter<number>();
@@ -74,12 +76,13 @@ export default class TextPanelComponent implements AfterViewInit, OnDestroy {
     this.subs.add(
       scroll$.subscribe(({ top, height, client }) => {
         this.updateProgress.emit(Math.ceil((top / (height - client)) * 100));
+        this.defaultScrollChange.emit(top);
       }),
     );
 
     // ⏱ Debounced: do something 2s after scrolling stops
     this.subs.add(
-      scroll$.pipe(debounceTime(2000)).subscribe(({ top }) => {
+      scroll$.pipe(debounceTime(1000)).subscribe(({ top }) => {
         this.saveProgress.emit(top);
       }),
     );

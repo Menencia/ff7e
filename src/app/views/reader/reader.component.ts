@@ -1,15 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, HostListener, OnInit } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faArrowLeft,
   faArrowRight,
   faBars,
   faBook,
+  faBullseye,
   faCog,
 } from '@fortawesome/free-solid-svg-icons';
 import { ScrollPanelModule } from 'primeng/scrollpanel';
+import { Subscription } from 'rxjs';
 import { Chapter, Highlight, Part } from 'src/app/shared/models/reader';
 import { ChaptersService } from 'src/app/shared/services/chapters.service';
 import { MusicService } from 'src/app/shared/services/music.service';
@@ -49,6 +51,9 @@ export class ReaderComponent implements OnInit {
   faArrowLeft = faArrowLeft;
   faArrowRight = faArrowRight;
   faBars = faBars;
+  faBullseye = faBullseye;
+
+  private subs = new Subscription();
 
   constructor(
     private http: HttpClient,
@@ -56,6 +61,7 @@ export class ReaderComponent implements OnInit {
     private saveService: SaveService,
     private chaptersService: ChaptersService,
     private route: ActivatedRoute,
+    private router: Router,
   ) {}
 
   @HostListener('document:visibilitychange', ['$event'])
@@ -70,9 +76,21 @@ export class ReaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    const chapterString = this.route.snapshot.paramMap.get('chapter');
-    if (!chapterString) throw new Error('No chapter to read');
-    const chapter = +chapterString;
+    this.subs.add(
+      this.route.paramMap.subscribe((paramMap) => {
+        const chapterString = paramMap.get('chapter');
+        if (chapterString) {
+          this.loadChapter(+chapterString);
+        }
+      }),
+    );
+  }
+
+  ngOnDestroy() {
+    this.subs.unsubscribe();
+  }
+
+  loadChapter(chapter: number) {
     this.url = chapter;
 
     // display chapter content
@@ -84,7 +102,7 @@ export class ReaderComponent implements OnInit {
         this.content = this.parse(data);
 
         const progress = this.saveService.getCurrentProgress();
-        if (progress && progress?.chapter === chapter) {
+        if (progress.chapter === chapter) {
           this.defaultScroll = progress.position;
         } else {
           this.saveService.setCurrentProgress({
@@ -128,5 +146,20 @@ export class ReaderComponent implements OnInit {
   saveProgress(event: number) {
     if (this.url === undefined) throw new Error('No chapter specified');
     this.saveService.setCurrentProgress({ chapter: this.url, position: event });
+  }
+
+  late() {
+    return this.saveService.late();
+  }
+
+  goToMaxProgress() {
+    const progress = this.saveService.getCurrentProgress();
+    const maxProgress = this.saveService.getMaxProgress();
+    this.saveService.setCurrentProgress(maxProgress);
+    if (progress.chapter !== maxProgress.chapter) {
+      this.router.navigateByUrl(`/reader/${maxProgress.chapter}`);
+    } else {
+      this.defaultScroll = maxProgress.position;
+    }
   }
 }

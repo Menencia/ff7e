@@ -23,8 +23,6 @@ export class ReaderLayoutComponent {
 
   closeOptions() {
     const progress = this.saveService.getCurrentProgress();
-    if (progress) {
-      this.router.navigateByUrl(`/reader/${progress.chapter}`);
-    }
+    this.router.navigateByUrl(`/reader/${progress.chapter}`);
   }
 }

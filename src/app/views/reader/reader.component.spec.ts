@@ -1,6 +1,7 @@
 import { provideHttpClient } from '@angular/common/http';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { ActivatedRoute, provideRouter } from '@angular/router';
+import { of } from 'rxjs';
 import { ReaderComponent } from './reader.component';
 
 describe('ReaderComponent', () => {
@@ -16,14 +17,7 @@ describe('ReaderComponent', () => {
         {
           provide: ActivatedRoute,
           useValue: {
-            snapshot: {
-              paramMap: {
-                get: (key: string) => {
-                  if (key === 'chapter') return '0';
-                  return null;
-                },
-              },
-            },
+            paramMap: of(new Map([['chapter', 0]])),
           },
         },
       ],

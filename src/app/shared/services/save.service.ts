@@ -12,7 +12,7 @@ export class SaveService {
     if (save) {
       return JSON.parse(save) as Progress;
     }
-    return undefined;
+    return { chapter: 0, position: 0 };
   }
 
   getMaxProgress() {
@@ -20,15 +20,21 @@ export class SaveService {
     if (save) {
       return JSON.parse(save) as Progress;
     }
-    return undefined;
+    return { chapter: 0, position: 0 };
   }
 
   setCurrentProgress(progress: Progress) {
     localStorage.setItem(CURRENT_PROGRESS, JSON.stringify(progress));
 
     const maxProgress = this.getMaxProgress();
-    if (!maxProgress || comparePositions(progress, '>', maxProgress)) {
+    if (comparePositions(progress, '>', maxProgress)) {
       localStorage.setItem(MAX_PROGRESS, JSON.stringify(progress));
     }
+  }
+
+  late() {
+    const progress = this.getCurrentProgress();
+    const maxProgress = this.getMaxProgress();
+    return comparePositions(progress, '<', maxProgress);
   }
 }
