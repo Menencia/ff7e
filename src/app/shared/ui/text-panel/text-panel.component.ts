@@ -42,13 +42,11 @@ import { debounceTime, map, share } from 'rxjs/operators';
 export default class TextPanelComponent implements AfterViewInit, OnDestroy {
   @Input() content = '';
 
-  @Input() set defaultScroll(value: number) {
-    if (value) {
-      this.defaultScroll$.next(value);
-    }
+  @Input() set scrollTop(value: number) {
+    this.scrollTop$.next(value);
   }
 
-  @Output() defaultScrollChange = new EventEmitter<number>();
+  @Output() scrollTopChange = new EventEmitter<number>();
 
   @Output() updateProgress = new EventEmitter<number>();
 
@@ -56,8 +54,9 @@ export default class TextPanelComponent implements AfterViewInit, OnDestroy {
 
   @ViewChild('panel') panel?: ElementRef;
 
+  private progress = 0;
+  private scrollTop$ = new Subject<number>();
   private subs = new Subscription();
-  private defaultScroll$ = new Subject<number>();
 
   ngAfterViewInit(): void {
     const div = this.panel?.nativeElement;
@@ -75,8 +74,9 @@ export default class TextPanelComponent implements AfterViewInit, OnDestroy {
     // 👀 Real-time: do something on every scroll event
     this.subs.add(
       scroll$.subscribe(({ top, height, client }) => {
-        this.updateProgress.emit(Math.ceil((top / (height - client)) * 100));
-        this.defaultScrollChange.emit(top);
+        this.progress = Math.ceil((top / (height - client)) * 100);
+        this.updateProgress.emit(this.progress);
+        this.scrollTopChange.emit(top);
       }),
     );
 
@@ -89,7 +89,7 @@ export default class TextPanelComponent implements AfterViewInit, OnDestroy {
 
     // React to input changes
     this.subs.add(
-      this.defaultScroll$.subscribe((top) => {
+      this.scrollTop$.subscribe((top) => {
         setTimeout(() => {
           div.scrollTop = top;
         }, 0);
@@ -99,5 +99,14 @@ export default class TextPanelComponent implements AfterViewInit, OnDestroy {
 
   ngOnDestroy() {
     this.subs.unsubscribe();
+  }
+
+  isBottom() {
+    return this.progress >= 100;
+  }
+
+  forward() {
+    const div = this.panel?.nativeElement;
+    div.scrollTop += div.clientHeight;
   }
 }

@@ -26,15 +26,16 @@
 
   <div class="px-3 grow text-justify text-xl min-h-0 dark:bg-gray-800">
     <app-text-panel
+      #textPanel
       [content]="content"
-      [(defaultScroll)]="defaultScroll"
+      [(scrollTop)]="scrollTop"
       (updateProgress)="updateProgress($event)"
       (saveProgress)="saveProgress($event)"
     />
   </div>
 
   <div
-    class="px-3 flex bg-gray-200 dark:bg-gray-800 border-t-1 border-gray-200 dark:border-gray-700"
+    class="px-3 flex items-center bg-gray-200 dark:bg-gray-800 border-t-1 border-gray-200 dark:border-gray-700"
   >
     <div></div>
     <div class="grow text-center">{{ position }}%</div>
@@ -47,6 +48,12 @@
         <fa-icon [icon]="faBullseye" />
       </button>
       }
+      <button
+        (click)="forward()"
+        class="px-5 py-3 text-xl hover:bg-gray-300 rounded-t-full dark:hover:bg-gray-700 cursor-pointer"
+      >
+        <fa-icon [icon]="getForwardIcon()" />
+      </button>
     </div>
   </div>
 </div>

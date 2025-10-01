@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
+  faArrowDown,
   faArrowLeft,
   faArrowRight,
   faBars,
@@ -32,6 +33,8 @@ import ThemeButtonComponent from 'src/app/shared/ui/theme-button/theme-button.co
   templateUrl: './reader.component.html',
 })
 export class ReaderComponent implements OnInit {
+  @ViewChild('textPanel') textPanel?: TextPanelComponent;
+
   url?: number;
   data?: Chapter;
   currentPart?: Part;
@@ -42,7 +45,7 @@ export class ReaderComponent implements OnInit {
   autoPlay = false;
   position = 0;
   theme?: Theme;
-  defaultScroll = 0;
+  scrollTop = 0;
   title = '';
 
   // icons
@@ -52,6 +55,7 @@ export class ReaderComponent implements OnInit {
   faArrowRight = faArrowRight;
   faBars = faBars;
   faBullseye = faBullseye;
+  faArrowDown = faArrowDown;
 
   private subs = new Subscription();
 
@@ -103,8 +107,9 @@ export class ReaderComponent implements OnInit {
 
         const progress = this.saveService.getCurrentProgress();
         if (progress.chapter === chapter) {
-          this.defaultScroll = progress.position;
+          this.scrollTop = progress.position;
         } else {
+          this.scrollTop = 0;
           this.saveService.setCurrentProgress({
             chapter,
             position: 0,
@@ -159,7 +164,21 @@ export class ReaderComponent implements OnInit {
     if (progress.chapter !== maxProgress.chapter) {
       this.router.navigateByUrl(`/reader/${maxProgress.chapter}`);
     } else {
-      this.defaultScroll = maxProgress.position;
+      this.scrollTop = maxProgress.position;
+    }
+  }
+
+  getForwardIcon() {
+    return this.textPanel?.isBottom() ? faArrowRight : faArrowDown;
+  }
+
+  forward() {
+    if (this.url === undefined) throw new Error('No url found');
+    const nextChapter = this.url + 1;
+    if (this.textPanel?.isBottom()) {
+      this.router.navigateByUrl(`/reader/${nextChapter}`);
+    } else {
+      this.textPanel?.forward();
     }
   }
 }
