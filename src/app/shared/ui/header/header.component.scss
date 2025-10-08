@@ -1,0 +1,38 @@
+header {
+  background: url(/assets/fanart/000-the-prelude.jpg) top left #464646;
+}
+
+h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.teaser {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 10px;
+}
+
+.enter-teaser {
+  animation: slide-fade 1s ease-in;
+}
+
+@keyframes slide-fade {
+  from {
+    opacity: 0;
+    font-size: 1.1em;
+  }
+
+  to {
+    opacity: 1;
+    font-size: 1em;
+  }
+}
+
+.leave-teaser {
+  opacity: 0;
+  font-size: 1.1em;
+  transition:
+    opacity 500ms ease-out,
+    font-size 500ms ease-out;
+}

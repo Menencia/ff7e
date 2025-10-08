@@ -1,0 +1,19 @@
+{
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.biome": "explicit"
+  },
+  "files.trimTrailingWhitespace": true,
+  "tailwindCSS.experimental.configFile": "src/styles.scss",
+  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontLigatures": true
+}

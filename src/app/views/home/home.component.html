@@ -1,0 +1,66 @@
+<app-default-layout>
+  <div class="grid gap-8 py-5 sm:grid-cols-1 md:grid-cols-3">
+    <div class="col-span-1 text-center">
+      <img src="/assets/covers/ff7e.jpg" alt="" class="shadow-md"/>
+
+      <p id="newsletter"></p>
+    </div>
+    <div class="sm:col-span-1 md:col-span-2">
+
+      <p class="mb-10 text-xl text-justify text-gray-500">
+        <strong>Ce projet d'écriture a pour ambition de novéliser le jeu Final Fantasy VII<sup>&reg;</sup></strong>.
+        Créé en 1997 par Square, Final Fantasy VII est un jeu de rôle sur Playstation qui est devenu très
+        populaire, grâce à son univers immense et riche, son scénario aux multiples rebondissements et ses
+        personnages charismatiques. Cette fanfiction n'a pas été écrite dans le but de remplacer l'oeuvre originale,
+        mais se positionne davantage comme un contenu additionnel qui se propose de porter un nouveau regard sur ce
+        chef-d'œuvre vidéoludique.
+      </p>
+
+      <p class="m-12 text-xl text-justify text-gray-400">
+        <span class="font-bold text-blue-700 uppercase dark:text-blue-300">SYNOPSIS</span>
+        Cloud Strife, un jeune mercenaire, rejoint le groupe terroriste Avalanche dans les
+        bas-fonds de Midgar. Leur objectif est de délivrer le monde de la domination de la Shinra, une corporation
+        toute-puissante qui exploite sans vergogne l'énergie de la Planète, la tuant à petit feu...
+      </p>
+
+      <app-list-links [links]="links" />
+    </div>
+  </div>
+
+  <div class="mt-10 text-center">
+    <youtube-player class="inline-block" [videoId]="teaser"></youtube-player>
+  </div>
+
+  <div class="grid py-10 md:px-44 sm:grid-cols-1 md:grid-cols-2 md:gap-16">
+    <div class="col-span-1">
+      <p class="text-xl text-justify text-gray-500">
+        <strong>
+          <fa-icon [icon]="faQuestionCircle" />
+        Y a-t-il une version papier du roman ?</strong><br/>
+        Non, nous n'avons pas les droits malheureusement.
+      </p>
+      <p class="text-xl text-justify text-gray-500">
+        <strong>
+          <fa-icon [icon]="faQuestionCircle" />
+        Depuis combien de temps ce projet existe-t-il ?</strong><br/>
+        La première version du roman a été écrite intégralement par Menencia de 2004 à 2009.
+        Deux ans plus tard, Jam a rejoint le projet en tant qu'auteur. Le 7 Janvier 2020,
+        tous les chapitres sont enfin publiés.
+        (<a routerLink="/historique">en savoir plus</a>)
+      </p>
+    </div>
+
+    <div class="col-span-1">
+      <p class="text-xl text-justify text-gray-500">
+        <strong>
+          <fa-icon [icon]="faQuestionCircle" />
+        Je connais déjà l'histoire de FFVII. Ce n'est pas mieux d'y jouer plutôt ?</strong><br/>
+        Ce roman ne remplace pas l'expérience de jeu. Si vous aimez lire, il peut être aussi immersif,
+        passionnant et surprenant. Une telle adaptation a également l'ambition d'étendre davantage
+        l'histoire du jeu : des scènes inédites ont été écrites, des ajustements ont été apportés pour
+        réduire les incohérences du jeu et certains personnages de l'histoire profitent d'un bien
+        meilleur développement.
+      </p>
+    </div>
+  </div>
+</app-default-layout>

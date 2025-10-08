@@ -1,0 +1,27 @@
+ul.list {
+  list-style: none;
+  padding: 0;
+}
+
+ul.list li {
+  margin-bottom: 10px;
+}
+
+.li-first {
+  font-size: 1.5em;
+  line-height: 2em;
+  color: #666;
+}
+
+.li-second {
+  font-size: 1.3em;
+  margin-left: 5px;
+  color: #999;
+}
+
+.lang-en {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  font-variant: small-caps;
+}

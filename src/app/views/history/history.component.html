@@ -1,0 +1,18 @@
+<app-default-layout>
+  <div class="grid gap-8 py-5 sm:grid-cols-1 md:grid-cols-3">
+    <div>
+      <img src="/assets/covers/ff7e.jpg" alt="" class="shadow-md" />
+    </div>
+    <div class="col-span-2">
+      @for (quote of quotes; track $index) {
+        <p class="text-justify text-gray-400 text-xl mx-10 my-12">
+          <span class="text-blue-700 font-bold uppercase dark:text-blue-300">
+            {{ quote.date }}
+          </span>
+          <span [innerHTML]="quote.content"></span>
+        </p>
+      }
+    </div>
+
+  </div>
+</app-default-layout>

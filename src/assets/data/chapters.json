@@ -1,0 +1,610 @@
+[
+  {
+    "book": 1,
+    "chapters": [
+      {
+        "title": "Prologue",
+        "number": 0,
+        "date": "7 juin 2014",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZCIRXGbaTWNQt0rA/prologue"
+      },
+      {
+        "title": "Chapitre 1 : Avalanche",
+        "number": 1,
+        "date": "22 mai 2011",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcevXxM5UJHL_v-5/avalanche"
+      },
+      {
+        "title": "Chapitre 2 : Le Septième Ciel",
+        "number": 2,
+        "date": "17 oct 2011",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcexqxM5UJHL_wGC/le-septieme-ciel"
+      },
+      {
+        "title": "Chapitre 3 : Opération réacteur numéro 5",
+        "number": 3,
+        "date": "17 oct 2011",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcezORM5UJHL_wIv/operation-reacteur-numero-5"
+      },
+      {
+        "title": "Chapitre 4 : Aerith",
+        "number": 4,
+        "date": "17 oct 2011",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/Zce0KxM5UJHL_wJz/aerith"
+      },
+      {
+        "title": "Chapitre 5 : Don Cornéo",
+        "number": 5,
+        "date": "17 oct 2011",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/Zce9EhM5UJHL_wPB/don-corneo"
+      },
+      {
+        "title": "Chapitre 6 : La bataille du secteur 7",
+        "number": 6,
+        "date": "17 oct 2011",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/Zce9fRM5UJHL_wQ5/la-bataille-du-secteur-7"
+      },
+      {
+        "title": "Chapitre 7 : Le Secret d'Aerith",
+        "number": 7,
+        "date": "17 oct 2011",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/Zce94BM5UJHL_wRO/le-secret-daerith"
+      },
+      {
+        "title": "Chapitre 8 : Au cœur de la Shinra",
+        "number": 8,
+        "date": "17 oct 2011",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/Zce_ORM5UJHL_wRh/au-coeur-de-la-shinra"
+      },
+      {
+        "title": "Chapitre 9 : La Terre Promise",
+        "number": 9,
+        "date": "17 oct 2011",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/Zce_dhM5UJHL_wR1/la-terre-promise"
+      },
+      {
+        "title": "Chapitre 10 : L’Héritier",
+        "number": 10,
+        "date": "17 oct 2011",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/Zce__xM5UJHL_wTP/lheritier"
+      },
+      {
+        "title": "Chapitre 11 : Evasion",
+        "number": 11,
+        "date": "17 oct 2011",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/Zce-PBM5UJHL_wTk/evasion"
+      }
+    ]
+  },
+  {
+    "book": 2,
+    "chapters": [
+      {
+        "title": "Chapitre 12 : L’Homme au Manteau Noir",
+        "number": 12,
+        "date": "21 mars 2012",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/Zce-fBM5UJHL_wT0/lhomme-au-manteau-noir"
+      },
+      {
+        "title": "Chapitre 13 : Nibelheim",
+        "number": 13,
+        "date": "21 mars 2012",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfAARM5UJHL_wUR/nibelheim"
+      },
+      {
+        "title": "Chapitre 14 : Le réacteur de Nibelheim",
+        "number": 14,
+        "date": "21 mars 2012",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfAbBM5UJHL_wUc/le-reacteur-de-nibelheim"
+      },
+      {
+        "title": "Chapitre 15 : Le Projet Jenova",
+        "number": 15,
+        "date": "21 mars 2012",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfA4xM5UJHL_wUp/le-projet-jenova"
+      },
+      {
+        "title": "Chapitre 16 : Les grandes plaines",
+        "number": 16,
+        "date": "4 juil 2012",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfBRBM5UJHL_wU3/les-grandes-plaines"
+      },
+      {
+        "title": "Chapitre 17 : La ferme des Chocobos",
+        "number": 17,
+        "date": "4 juil 2012",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfBmhM5UJHL_wVQ/la-ferme-des-chocobos"
+      },
+      {
+        "title": "Chapitre 18 : Cap vers l'Ouest",
+        "number": 18,
+        "date": "4 juil 2012",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfCUxM5UJHL_wyx/cap-vers-louest"
+      },
+      {
+        "title": "Chapitre 19 : L'Apprentie Ninja",
+        "number": 19,
+        "date": "4 juil 2012",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfCpBM5UJHL_wz7/lapprentie-ninja"
+      },
+      {
+        "title": "Chapitre 20 : Junon",
+        "number": 20,
+        "date": "20 août 2012",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfDSxM5UJHL_w20/junon"
+      },
+      {
+        "title": "Chapitre 21 : La traversée",
+        "number": 21,
+        "date": "20 août 2012",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfD4hM5UJHL_w4e/la-traversee"
+      }
+    ]
+  },
+  {
+    "book": 3,
+    "chapters": [
+      {
+        "title": "Chapitre 22 : Costa Del Sol",
+        "number": 22,
+        "date": "7 mars 2013",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfEpxM5UJHL_w7S/costa-del-sol"
+      },
+      {
+        "title": "Chapitre 23 : Corel",
+        "number": 23,
+        "date": "7 avril 2013",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfFNBM5UJHL_w8Q/corel"
+      },
+      {
+        "title": "Chapitre 24 : Le passé de Barret",
+        "number": 24,
+        "date": "7 mai 2013",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfFdBM5UJHL_w8W/le-passe-de-barret"
+      },
+      {
+        "title": "Chapitre 25 : Le Gold Saucer",
+        "number": 25,
+        "date": "7 juin 2013",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfFzRM5UJHL_w-G/le-gold-saucer"
+      },
+      {
+        "title": "Chapitre 26 : La prison du désert",
+        "number": 26,
+        "date": "7 juillet 2013",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfGQBM5UJHL_xFu/la-prison-du-desert"
+      },
+      {
+        "title": "Chapitre 27 : Course de chocobos",
+        "number": 27,
+        "date": "7 août 2013",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfG7hM5UJHL_xLZ/course-de-chocobos"
+      },
+      {
+        "title": "Chapitre 28 : Gongaga",
+        "number": 28,
+        "date": "7 septembre 2013",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfHdxM5UJHL_xV9/gongaga"
+      },
+      {
+        "title": "Chapitre 29 : Cosmo Canyon",
+        "number": 29,
+        "date": "7 octobre 2013",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfH0xM5UJHL_xW_/cosmo-canyon"
+      },
+      {
+        "title": "Chapitre 30 : Un grand guerrier",
+        "number": 30,
+        "date": "7 novembre 2013",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfIPBM5UJHL_xcQ/un-grand-guerrier"
+      },
+      {
+        "title": "Chapitre 31 : Retour à Nibelheim",
+        "number": 31,
+        "date": "7 décembre 2013",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfIrBM5UJHL_xfd/retour-a-nibelheim"
+      },
+      {
+        "title": "Chapitre 32 : Vincent Valentine",
+        "number": 32,
+        "date": "7 janvier 2014",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfJNBM5UJHL_xgU/vincent-valentine"
+      }
+    ]
+  },
+  {
+    "book": 4,
+    "chapters": [
+      {
+        "title": "Chapitre 33 : Village-Fusée",
+        "number": 33,
+        "date": "7 février 2014",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfJrhM5UJHL_xh6/le-village-fusee"
+      },
+      {
+        "title": "Chapitre 34 : Le Tiny Bronco",
+        "number": 34,
+        "date": "7 février 2014",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfKghM5UJHL_xsR/le-tiny-bronco"
+      },
+      {
+        "title": "Chapitre 35 : Wutai",
+        "number": 35,
+        "date": "7 mars 2014",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfLDBM5UJHL_xu1/wutai"
+      },
+      {
+        "title": "Chapitre 36 : Une Alliance Inattendue",
+        "number": 36,
+        "date": "7 avril 2014",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfMbxM5UJHL_xza/une-alliance-inattendue"
+      },
+      {
+        "title": "Chapitre 37 : La Clé de Pierre",
+        "number": 37,
+        "date": "7 mai 2014",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfOMBM5UJHL_x7D/la-cle-de-pierre"
+      },
+      {
+        "title": "Chapitre 38 : Attractions",
+        "number": 38,
+        "date": "7 juin 2014",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfP-RM5UJHL_yCz/attractions"
+      },
+      {
+        "title": "Chapitre 39 : Le Temple des Anciens",
+        "number": 39,
+        "date": "7 juillet 2014",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfRwRM5UJHL_yRM/le-temple-des-anciens"
+      },
+      {
+        "title": "Chapitre 40 : La Matéria Noire",
+        "number": 40,
+        "date": "7 juillet 2014",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfSaxM5UJHL_ySl/la-materia-noire"
+      },
+      {
+        "title": "Chapitre 41 : Hésitations",
+        "number": 41,
+        "date": "7 août 2014",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfTJhM5UJHL_yWt/hesitations"
+      },
+      {
+        "title": "Chapitre 42 : La Harpe Lunaire",
+        "number": 42,
+        "date": "7 septembre 2014",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfTzxM5UJHL_yY7/la-harpe-lunaire"
+      },
+      {
+        "title": "Chapitre 43 : La Capitale Oubliée",
+        "number": 43,
+        "date": "7 octobre 2014",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfUWRM5UJHL_yfN/la-capitale-oubliee"
+      }
+    ]
+  },
+  {
+    "book": 5,
+    "chapters": [
+      {
+        "title": "Chapitre 44 : Gast et Ifalna",
+        "number": 44,
+        "date": "7 novembre 2014",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfU8hM5UJHL_yiB/gast-et-ifalna"
+      },
+      {
+        "title": "Chapitre 45 : Tempête de neige",
+        "number": 45,
+        "date": "7 décembre 2014",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfWFBM5UJHL_yrd/tempete-de-neige"
+      },
+      {
+        "title": "Chapitre 46 : Ascension",
+        "number": 46,
+        "date": "7 janvier 2015",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfWoBM5UJHL_ytS/ascension"
+      },
+      {
+        "title": "Chapitre 47 : Terra Incognita",
+        "number": 47,
+        "date": "7 février 2015",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfXcxM5UJHL_y_b/terra-incognita"
+      },
+      {
+        "title": "Chapitre 48 : Illusion",
+        "number": 48,
+        "date": "7 mars 2015",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfX7hM5UJHL_zB7/illusion"
+      },
+      {
+        "title": "Chapitre 49 : Réunion",
+        "number": 49,
+        "date": "7 avril 2015",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfYNxM5UJHL_zCN/reunion"
+      },
+      {
+        "title": "Chapitre 50 : Châtiment",
+        "number": 50,
+        "date": "7 mai 2015",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfY1BM5UJHL_zDG/chatiment"
+      },
+      {
+        "title": "Chapitre 51 : Raid sur Junon",
+        "number": 51,
+        "date": "7 juin 2015",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfZUxM5UJHL_zIx/raid-sur-junon"
+      },
+      {
+        "title": "Chapitre 52 : À bord du Hautvent",
+        "number": 52,
+        "date": "7 juillet 2015",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfaIBM5UJHL_zMy/a-bord-du-hautvent"
+      },
+      {
+        "title": "Chapitre 52.5 : Souvenirs inoubliables",
+        "number": 52.5,
+        "date": "24 décembre 2015",
+        "id": "https://editor.reedsy.com/s/IUYE14a/c/Zfc6QLPeRCYGZfQ-/souvenirs-inoubliables",
+        "special": true
+      },
+      {
+        "title": "Chapitre 53 : Mideel",
+        "number": 53,
+        "date": "7 septembre 2015",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfamhM5UJHL_zPC/mideel"
+      }
+    ]
+  },
+  {
+    "book": 6,
+    "chapters": [
+      {
+        "title": "Chapitre 54 : La prochaine étape",
+        "number": 54,
+        "date": "7 octobre 2015",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfbZBM5UJHL_zdS/la-prochaine-etape"
+      },
+      {
+        "title": "Chapitre 55 : À toute vitesse !",
+        "number": 55,
+        "date": "7 novembre 2015",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfcFhM5UJHL_zq1/a-toute-vitesse"
+      },
+      {
+        "title": "Chapitre 56 : Fort Condor",
+        "number": 56,
+        "date": "7 décembre 2015",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/Zcfd5RM5UJHL_z6a/fort-condor"
+      },
+      {
+        "title": "Chapitre 57 : Préparatifs",
+        "number": 57,
+        "date": "7 décembre 2015",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/Zcfe9SX_jHIVVOSL/preparatifs"
+      },
+      {
+        "title": "Chapitre 58 : L'étoffe des héros",
+        "number": 58,
+        "date": "7 janvier 2016",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcffrCX_jHIVVOvR/letoffe-des-heros"
+      },
+      {
+        "title": "Chapitre 59 : Cataclysme",
+        "number": 59,
+        "date": "7 février 2016",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfhIyX_jHIVVPAe/cataclysme"
+      },
+      {
+        "title": "Chapitre 60 : Introspection",
+        "number": 60,
+        "date": "7 mars 2016",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfiRiX_jHIVVPeA/introspection"
+      },
+      {
+        "title": "Chapitre 61 : La vérité",
+        "number": 61,
+        "date": "7 mars 2016",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfirCX_jHIVVPeU/la-verite"
+      },
+      {
+        "title": "Chapitre 62 : Retour en piste",
+        "number": 62,
+        "date": "7 avril 2016",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfjViX_jHIVVPem/retour-en-piste"
+      },
+      {
+        "title": "Chapitre 62.5 : Le professionnel",
+        "number": 62.5,
+        "date": "24 décembre 2016",
+        "id": "https://docs.google.com/document/d/1zsZaB8EaGJzSXaP2y5EGuHQR_ijy984Vxq1MgjhCyu8/edit",
+        "special": true
+      }
+    ]
+  },
+  {
+    "book": 7,
+    "chapters": [
+      {
+        "title": "Chapitre 63 : Réseau Shinra",
+        "number": 63,
+        "date": "7 mai 2016",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfkKiX_jHIVVPmm/reseau-shinra"
+      },
+      {
+        "title": "Chapitre 64 : À l’attaque !",
+        "number": 64,
+        "date": "7 juin 2016",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcfkzSX_jHIVVQJR/a-lattaque"
+      },
+      {
+        "title": "Chapitre 65 : La base sous-marine",
+        "number": 65,
+        "date": "7 juillet 2016",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcflRyX_jHIVVQgw/la-base-sous-marine"
+      },
+      {
+        "title": "Chapitre 66 : Bataille navale",
+        "number": 66,
+        "date": "7 août 2016",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgKRyX_jHIVVQtw/bataille-navale"
+      },
+      {
+        "title": "Chapitre 67 : Choix difficiles",
+        "number": 67,
+        "date": "7 septembre 2016",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgLtSX_jHIVVSxF/choix-difficiles"
+      },
+      {
+        "title": "Chapitre 68 : Fusée Shinra n°26",
+        "number": 68,
+        "date": "7 octobre 2016",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgM1iX_jHIVVTX0/fusee-shinra-n26"
+      },
+      {
+        "title": "Chapitre 69 : Microgravité",
+        "number": 69,
+        "date": "7 novembre 2016",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgN5iX_jHIVVVAd/microgravite"
+      },
+      {
+        "title": "Chapitre 70 : La Forêt Ancestrale",
+        "number": 70,
+        "date": "7 décembre 2016",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgO1SX_jHIVVVmb/la-foret-ancestrale"
+      },
+      {
+        "title": "Chapitre 71 : Le cercle de vie",
+        "number": 71,
+        "date": "7 janvier 2017",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgP-yX_jHIVVWP0/le-cercle-de-vie"
+      }
+    ]
+  },
+  {
+    "book": 8,
+    "chapters": [
+      {
+        "title": "Chapitre 72 : La sagesse de Bugenhagen",
+        "number": 72,
+        "date": "7 février 2017",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgRRCX_jHIVVW9t/la-sagesse-de-bugenhagen"
+      },
+      {
+        "title": "Chapitre 72.5 : Une blessure d'orgueil",
+        "number": 72.5,
+        "date": "24 décembre 2018",
+        "id": "https://editor.reedsy.com/s/IUYE14a/c/Zfc5vrPeRCYGZdoe/une-blessure-dorgueil",
+        "special": true
+      },
+      {
+        "title": "Chapitre 73 : Devenir un héros",
+        "number": 73,
+        "date": "7 janvier 2019",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgSLiX_jHIVVXZ-/devenir-un-heros"
+      },
+      {
+        "title": "Chapitre 74 : L'énigme des Cetras",
+        "number": 74,
+        "date": "7 février 2019",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgU2yX_jHIVVYd2/lenigme-des-cetras"
+      },
+      {
+        "title": "Chapitre 75 : Expédition sous-marine",
+        "number": 75,
+        "date": "7 mars 2019",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgWLyX_jHIVVY7M/expedition-sous-marine"
+      },
+      {
+        "title": "Chapitre 76 : Le Gelnika",
+        "number": 76,
+        "date": "7 avril 2019",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgXbyX_jHIVVZs8/le-gelnika"
+      },
+      {
+        "title": "Chapitre 77 : La fin de la guerre",
+        "number": 77,
+        "date": "7 mai 2019",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgY6SX_jHIVVcbO/la-fin-de-la-guerre"
+      },
+      {
+        "title": "Chapitre 78 : Un monde en ruines",
+        "number": 78,
+        "date": "7 juin 2019",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgabCX_jHIVVdgG/un-monde-en-ruines"
+      },
+      {
+        "title": "Chapitre 79 : l'heure des vengeances",
+        "number": 79,
+        "date": "7 juillet 2019",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/Zcgb7iX_jHIVVesC/lheure-des-vengeances"
+      }
+    ]
+  },
+  {
+    "book": 9,
+    "chapters": [
+      {
+        "title": "Chapitre 80 : Chérir ses rêves...",
+        "number": 80,
+        "date": "7 août 2019",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgdJiX_jHIVVf8c/cherir-ses-reves"
+      },
+      {
+        "title": "Chapitre 81 : ...et protéger la Vie",
+        "number": 81,
+        "date": "7 août 2019",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgeCyX_jHIVVhWN/et-proteger-la-vie"
+      },
+      {
+        "title": "Chapitre 82 : Le Cratère Nord",
+        "number": 82,
+        "date": "7 septembre 2019",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgfwSX_jHIVVii1/le-cratere-nord"
+      },
+      {
+        "title": "Chapitre 83 : Le point de non-retour",
+        "number": 83,
+        "date": "7 octobre 2019",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgggiX_jHIVVjI-/le-point-de-non-retour"
+      },
+      {
+        "title": "Chapitre 84 : La Calamité venue du ciel",
+        "number": 84,
+        "date": "7 novembre 2019",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcghjCX_jHIVVjvA/la-calamite-venue-du-ciel"
+      },
+      {
+        "title": "Chapitre 85 : L'Ennemi de la Planète",
+        "number": 85,
+        "date": "7 décembre 2019",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgiTSX_jHIVVkbh/lennemi-de-la-planete"
+      },
+      {
+        "title": "Chapitre 85.5 : La Dernière Cetra",
+        "number": 85.5,
+        "date": "24 décembre 2019",
+        "id": "https://editor.reedsy.com/s/IUYE14a/c/Zfc6rrPeRCYGZfTG/la-derniere-cetra",
+        "special": true
+      },
+      {
+        "title": "Chapitre 86 : La Rivière de la Vie",
+        "number": 86,
+        "date": "7 janvier 2020",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/ZcgjeCX_jHIVVlhS/la-riviere-de-la-vie"
+      },
+      {
+        "title": "Chapitre 86.5 : La croisée des chemins",
+        "number": 86.5,
+        "date": "24 décembre 2020",
+        "id": "https://editor.reedsy.com/s/IUYE14a/c/Zfc8VbPeRCYGZfXX/la-croisee-des-chemins",
+        "special": true
+      },
+      {
+        "title": "Epilogue",
+        "number": 87,
+        "date": "7 janvier 2020",
+        "id": "https://editor.reedsy.com/s/Ka319J3/c/Zcgpob5SiRFOMMrV/epilogue"
+      }
+    ]
+  }
+]

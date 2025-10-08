@@ -1,0 +1,19 @@
+<app-default-layout>
+  <div class="grid gap-8 py-5 sm:grid-cols-1 md:grid-cols-3">
+    <div>
+      <img src="/assets/covers/ff7e.jpg" alt="" class="shadow-md"/>
+    </div>
+    <div class="col-span-2">
+
+      <app-section-title>Ressources</app-section-title>
+
+      @if (links) {
+        <app-list-links [links]="links" />
+      } @else {
+        <fa-icon [icon]="faRefresh" /> ~loading~
+      }
+
+    </div>
+
+  </div>
+</app-default-layout>

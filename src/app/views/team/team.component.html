@@ -1,0 +1,45 @@
+<app-default-layout>
+  <div class="grid gap-8 py-5 sm:grid-cols-1 md:grid-cols-3">
+    <div>
+      <img src="/assets/covers/ff7e.jpg" alt="" class="shadow-md"/>
+    </div>
+    <div class="col-span-2">
+
+      <app-section-title>Équipe</app-section-title>
+
+      @if (contributors) {
+        <ul class="list">
+          @for (e of contributors.staffActive; track e) {
+            <li class="group border-t-1 border-gray-200 px-3 dark:border-gray-500 hover:bg-gray-100 hover:dark:bg-gray-700">
+              <div class="li-first">
+                @if (e.avatar) {
+                  <img
+                    class="inline-block"
+                    [src]="'/assets/team/' + e.avatar + '.png'"
+                    width="32"
+                    />
+                }
+                {{ e.name }}
+              </div>
+              <div class="li-second">{{ e.role }}</div>
+            </li>
+          }
+        </ul>
+      }
+
+      <app-section-title>Contributions</app-section-title>
+
+      @if (contributors) {
+        <p class="lead">
+          @for (e of contributors['contributors']; track e; let last = $last) {
+            <span class="nolink">
+              {{ e }}{{ last ? '' : ', ' }}
+            </span>
+          }
+        </p>
+      }
+
+    </div>
+
+  </div>
+</app-default-layout>

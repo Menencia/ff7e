@@ -1,0 +1,45 @@
+{
+  "staffActive": [
+    {
+      "name": "Menencia",
+      "avatar": "cloud",
+      "role": "Auteur principal de la première version, co-auteur de la version actuelle, webmaster"
+    },
+    {
+      "name": "Jam",
+      "avatar": "vincent",
+      "role": "Auteur principal de la version actuelle"
+    },
+    {
+      "name": "Laulitta",
+      "avatar": "yuffie",
+      "role": "Correctrice"
+    },
+    {
+      "name": "J. Houvet",
+      "avatar": "cid",
+      "role": "Correcteur"
+    },
+    {
+      "name": "Nathou",
+      "avatar": "redxiii",
+      "role": "Correctrice"
+    }
+  ],
+  "contributors": [
+    "ChrisVIII",
+    "Stelll",
+    "Milyesan",
+    "N'Elo",
+    "Œil de Nuit",
+    "Incanius",
+    "Darksun",
+    "Eléonore",
+    "Jurock",
+    "Guian",
+    "Kagamie",
+    "Aerith",
+    "Silas",
+    "Anthony R."
+  ]
+}

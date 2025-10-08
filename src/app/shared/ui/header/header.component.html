@@ -1,0 +1,59 @@
+<header class="text-center bg-gray-500 dark:bg-gray-900 dark:text-gray-300">
+  <div class="py-8">
+
+    <div class="container mx-auto">
+
+      <div class="flex justify-center">
+        <h1 class="text-3xl font-bold tracking-wide text-white uppercase">
+          『Final Fantasy VII: Expérience』
+        </h1>
+        <div class="text-white cursor-pointer" (click)="toggleDark()">
+          @if (theme === 'light') {
+            <fa-icon [icon]="faSun" />
+          }
+          @if (theme === 'dark') {
+            <fa-icon [icon]="faMoon" />
+          }
+        </div>
+      </div>
+
+      <div class="relative h-5 mt-5">
+        @if (quote) {
+          <div
+            class="absolute w-full"
+            animate.enter="enter-teaser" animate.leave="leave-teaser"
+          >
+            <div class="italic tracking-wider text-gray-400">
+              「{{ quote.content }}」 — {{ quote.character }}, chapitre {{ quote.chapter }}
+            </div>
+        </div>
+        }
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="pb-4 dark:text-white">
+    <div class="container mx-auto">
+      <nav>
+        <ul>
+          @for (link of links; track $index) {
+            <li class="inline-block mr-5 text-lg tracking-wider uppercase align-middle">
+              <a
+                class="no-underline hover:text-gray-300 hover:underline"
+                [class]="{ 'text-gray-400': !router.isActive(link.url, true) }"
+                [routerLink]="link.url"
+                routerLinkActive="text-gray-300 text-2xl"
+                [routerLinkActiveOptions]="{ exact: true }">
+                {{ link.label }}
+              </a>
+            </li>
+          }
+        </ul>
+      </nav>
+    </div>
+
+  </div>
+
+</header>

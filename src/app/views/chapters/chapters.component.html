@@ -1,0 +1,31 @@
+<app-default-layout>
+  <div class="py-5 text-center">
+
+  @for (e of chapters; track e) {
+    <div class="chapter">
+      <a class="read-chapter" [href]="e.id" target="_blank">
+
+        <img
+          [src]="'/assets/chapters/chapitre-' + e.number + '.jpg'"
+          width="200" height="150" alt="" class="screen"
+          />
+          @if (e.featured) {
+            <div class="ribbon featured"><span>nouveau</span></div>
+          }
+          @if (e.special) {
+            <div class="ribbon special"><span>spécial</span></div>
+          }
+          <div class="legend">
+            {{ e.title }}
+            <div class="details">
+              {{ e.date }}
+            </div>
+          </div>
+
+        </a>
+
+      </div>
+    }
+
+  </div>
+</app-default-layout>

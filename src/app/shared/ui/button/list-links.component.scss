@@ -1,0 +1,92 @@
+ul.list {
+  list-style: none;
+  padding: 0;
+}
+
+ul.list li {
+  margin-bottom: 10px;
+}
+
+ul.list li a {
+  display: block;
+  text-decoration: none;
+}
+
+.li-first {
+  font-size: 1.5em;
+  line-height: 2em;
+  color: #666;
+}
+
+.li-second {
+  font-size: 1.3em;
+  margin-left: 5px;
+  color: #999;
+}
+
+.button {
+  float: right;
+  font-size: 1.4em;
+  line-height: 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0 6px;
+  font-weight: bold;
+  box-shadow: #ddd 0 1px 1px 0;
+}
+
+.button:before {
+  content: " ";
+}
+
+.right li:hover .button {
+  color: #666;
+}
+
+.label {
+  font-size: 0.7em;
+  margin: 0 2px;
+  display: inline-block;
+  padding: 0 4px;
+  border-radius: 4px;
+  vertical-align: 10%;
+  line-height: normal;
+  font-variant: small-caps;
+  letter-spacing: 2px;
+}
+
+/** LIST HOVER **/
+
+ul.list li.nolink:hover {
+  cursor: default;
+}
+
+ul.list li:hover .button:before {
+  content: url('/assets/cursor.png');
+  position: relative;
+  top: 2px;
+  right: 2px;
+  animation: cursorMove 1s linear infinite;
+  -webkit-animation: cursorMove 1s linear infinite;
+}
+
+@keyframes cursorMove {
+  50% {
+    right: 6px;
+  }
+
+  100% {
+    right: 2px;
+  }
+}
+
+@-webkit-keyframes cursorMove {
+  50% {
+    right: 6px;
+  }
+
+  100% {
+    right: 2px;
+  }
+}
